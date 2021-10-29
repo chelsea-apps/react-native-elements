@@ -1,5 +1,5 @@
 {
-  "name": "react-native-elements",
+  "name": "@chelsea-apps/react-native-elements",
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
@@ -10,6 +10,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "registry": "http://registry.chelsea-apps.com:4873"
+  },
   "scripts": {
     "compile": "rm -rf lib && tsc -p .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
