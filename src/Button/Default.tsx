@@ -5,7 +5,7 @@ import { t } from 'react-native-tailwindcss'
 import { ReactNode } from '../Txt'
 import Button, { IButtonProps } from './index'
 
-interface DefaultButtonProps extends IButtonProps {
+export interface DefaultButtonProps extends IButtonProps {
   children: ReactNode | string
   textStyle?: StyleProp<TextStyle>
   style?: StyleProp<ViewStyle>

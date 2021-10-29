@@ -1,6 +1,6 @@
 import React from 'react'
 
-type OptionalWrapperProps<T> = {
+export type OptionalWrapperProps<T> = {
   data: T | null
   children: React.ReactNode
   elseComponent?: React.ReactNode

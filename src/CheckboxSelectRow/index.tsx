@@ -13,7 +13,7 @@ import { color, t } from 'react-native-tailwindcss'
 import Txt from '../Txt'
 import OptionalWrapper from '../Wrapper/OptionalWrapper'
 
-type CheckboxSelectRowProps = {
+export type CheckboxSelectRowProps = {
   // Functionality
   label: string | React.ReactElement
   selected: boolean

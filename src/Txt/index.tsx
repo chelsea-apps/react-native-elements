@@ -10,7 +10,7 @@ export type ReactNode =
   | null
   | undefined
 
-interface TxtProps extends TextProps {
+export interface TxtProps extends TextProps {
   children: ReactNode
 }
 

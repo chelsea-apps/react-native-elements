@@ -1,6 +1,6 @@
 import React from 'react'
 
-type LoadingWrapperProps = {
+export type LoadingWrapperProps = {
   loading: boolean
   children: React.ReactNode
   indicator: React.ReactNode

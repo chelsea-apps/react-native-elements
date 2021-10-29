@@ -5,7 +5,7 @@ import { t } from 'react-native-tailwindcss'
 import { ReactNode } from '../Txt'
 import Button, { IButtonProps } from './index'
 
-interface RoundedButtonProps extends IButtonProps {
+export interface RoundedButtonProps extends IButtonProps {
   children: ReactNode | string
   textStyle?: StyleProp<TextStyle>
   style?: StyleProp<ViewStyle>

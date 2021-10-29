@@ -11,7 +11,7 @@ import { color, t } from 'react-native-tailwindcss'
 
 import Txt from '../Txt'
 
-type RowSwitchProps = {
+export type SwitchRowProps = {
   // Functionality
   active: boolean
   setActive: React.Dispatch<React.SetStateAction<boolean>>
@@ -40,7 +40,7 @@ const styles = {
   ],
 }
 
-const RowSwitch = ({
+const SwitchRow = ({
   // Functionality
   active,
   setActive,
@@ -53,7 +53,7 @@ const RowSwitch = ({
   trackActiveColor,
   trackDefaultColor,
   thumbColor,
-}: RowSwitchProps) => {
+}: SwitchRowProps) => {
   return (
     <TouchableOpacity
       style={[styles.container, style]}
@@ -89,4 +89,4 @@ const RowSwitch = ({
   )
 }
 
-export default RowSwitch
+export default SwitchRow

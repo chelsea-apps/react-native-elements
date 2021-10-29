@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import { t } from 'react-native-tailwindcss'
 
-interface WrapperProps extends ScrollViewProps {
+export interface WrapperProps extends ScrollViewProps {
   children: React.ReactNode
   type?: 'scrollView' | 'list' | 'fullScreenView'
   fixed?: boolean

@@ -13,7 +13,7 @@ import { color, t } from 'react-native-tailwindcss'
 import Txt from '../Txt'
 import OptionalWrapper from '../Wrapper/OptionalWrapper'
 
-type RadioSelectRow = {
+export type RadioSelectRowProps = {
   // Functionality
   label: string | ReactElement
   selected: boolean
@@ -66,7 +66,7 @@ const RadioSelectRow = ({
   borderColor,
   selectionActiveColor,
   selectionDefaultColor,
-}: RadioSelectRow) => {
+}: RadioSelectRowProps) => {
   return (
     <View style={[styles.container, style]}>
       <Pressable

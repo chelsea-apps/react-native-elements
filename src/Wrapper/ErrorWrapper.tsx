@@ -8,7 +8,7 @@ import Icon from '../Icon'
 import Txt from '../Txt'
 import OptionalWrapper from './OptionalWrapper'
 
-type ErrorProps = {
+export type ErrorWrapperProps = {
   title: string
   error?: CombinedError
   children: React.ReactNode
@@ -42,7 +42,7 @@ const ErrorWrapper = ({
   onClose,
   style = [t.p4],
   show,
-}: ErrorProps) => {
+}: ErrorWrapperProps) => {
   const [messages, setMessages] = useState<string[]>([])
   const [showError, setShowError] = useState<boolean>(false)
 
