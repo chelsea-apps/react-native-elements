@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { RegisterOptions } from 'react-hook-form'
 
 // Button
 import ButtonElement, { IButtonProps as ButtonElementProps } from './Button'
@@ -17,12 +18,18 @@ import CheckboxSelectRowElement, {
 } from './CheckboxSelectRow'
 // DropdownLink
 import DropdownLinkElement, {
+  DropdownItem as DropdownItemType,
   DropdownLinkProps as DropdownLinkElementProps,
+  DropdownState as DropdownStateType,
 } from './DropdownLink'
 // Icon
 import IconElement, { IconProps as IconElementProps } from './Icon'
 // Input
-import InputElement, { InputProps as InputElementProps } from './Input'
+import InputElement, {
+  FieldsErrors as FieldsErrorsType,
+  FieldType as FieldTypeType,
+  InputProps as InputElementProps,
+} from './Input'
 // InputPressable
 import InputPressableElement, {
   InputPressableProps as InputPressableElementProps,
@@ -89,6 +96,8 @@ export const CheckboxSelectRow = ({ ...props }: CheckboxSelectRowProps) => (
 )
 
 // DropdownLink
+export interface DropdownState extends DropdownStateType {}
+export interface DropdownItem extends DropdownItemType {}
 export interface DropdownLinkProps extends DropdownLinkElementProps {}
 export const DropdownLink = ({ ...props }: DropdownLinkProps) => (
   <DropdownLinkElement {...props} />
@@ -101,6 +110,9 @@ export const Icon = ({ ...props }: IconElementProps) => (
 )
 
 // Input
+export interface FieldsErrors extends FieldsErrorsType {}
+export interface FieldsType extends FieldTypeType {}
+export type InputValidations<T> = { [K in keyof T]: RegisterOptions }
 export interface InputProps extends InputElementProps {}
 export const Input = ({ ...props }: InputProps) => <InputElement {...props} />
 
