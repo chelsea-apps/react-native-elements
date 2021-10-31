@@ -28,28 +28,15 @@ type IconsPackage =
   | 'MaterialIcons'
   | 'Octicons'
 
-type CommonIconProps = {
+export type IconProps = {
   type: 'font' | 'svg'
+  svgComponent?: never
+  fontName: IconsPackage
   style?: StyleProp<TextStyle>
+  name: string
+  size?: number
+  color?: string
 }
-type SvgIconProps =
-  | {
-      type: 'font'
-      fontName: IconsPackage
-      name: string
-      size?: number
-      color?: string
-      svgComponent?: never
-    }
-  | {
-      type: 'svg'
-      svgComponent: React.ReactNode
-      fontName?: never
-      name?: never
-      size?: never
-      color?: never
-    }
-export type IconProps = CommonIconProps & SvgIconProps
 
 const Icon = ({ type, fontName, name, svgComponent, ...props }: IconProps) => {
   const __renderFontIcon = (font: IconsPackage) => {
