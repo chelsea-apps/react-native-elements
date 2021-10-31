@@ -48,7 +48,17 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
+    "@types/react-native-vector-icons": "6.x",
+    "react-hook-form": "7.x",
+    "react-native-haptic-feedback": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "react-native-tailwindcss": "*",
+    "react-native-vector-icons": "*",
+    "urql": "*"
   },
   "jest": {
     "preset": "react-native",
