@@ -25,9 +25,9 @@ const Wrapper = ({
   ...props
 }: WrapperProps) => {
   const styles = {
-    defaultContainer: [t.bgGray900, fixed && t.flex1],
+    defaultContainer: [fixed && t.flex1],
     defaultContent: [t.pX4, t.pT4, t.pB8],
-    fullScreenView: [t.bgGray900, t.flex1],
+    fullScreenView: [t.flex1],
   }
 
   return !type || type === 'scrollView' ? (
