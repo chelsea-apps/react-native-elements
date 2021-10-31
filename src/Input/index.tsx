@@ -19,8 +19,6 @@ export type FieldsErrors = {
 export type FieldType = {
   [x: string]: string | number | boolean | undefined
 }
-
-export type InputValidations<T> = { [K in keyof T]: RegisterOptions }
 export interface InputProps extends TextInputProps {
   // Functionality
   name?: string
