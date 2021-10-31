@@ -1,40 +1,60 @@
 import * as React from 'react'
 
 // Button
-import ButtonElement, { IButtonProps } from './Button'
-import DefaultButtonElement, { DefaultButtonProps } from './Button/Default'
-import OutlineButtonElement, { OutlineButtonProps } from './Button/Outline'
-import RoundedButtonElement, { RoundedButtonProps } from './Button/Rounded'
+import ButtonElement, { IButtonProps as ButtonElementProps } from './Button'
+import DefaultButtonElement, {
+  DefaultButtonProps as DefaultButtonElementProps,
+} from './Button/Default'
+import OutlineButtonElement, {
+  OutlineButtonProps as OutlineButtonElementProps,
+} from './Button/Outline'
+import RoundedButtonElement, {
+  RoundedButtonProps as RoundedButtonElementProps,
+} from './Button/Rounded'
 // CheckboxSelectRow
 import CheckboxSelectRowElement, {
-  CheckboxSelectRowProps,
+  CheckboxSelectRowProps as CheckboxSelectRowElementProps,
 } from './CheckboxSelectRow'
 // DropdownLink
-import DropdownLinkElement, { DropdownLinkProps } from './DropdownLink'
+import DropdownLinkElement, {
+  DropdownLinkProps as DropdownLinkElementProps,
+} from './DropdownLink'
 // Icon
-import IconElement, { IconProps } from './Icon'
+import IconElement, { IconProps as IconElementProps } from './Icon'
 // Input
-import InputElement, { InputProps } from './Input'
+import InputElement, { InputProps as InputElementProps } from './Input'
 // InputPressable
-import InputPressableElement, { InputPressableProps } from './InputPressable'
+import InputPressableElement, {
+  InputPressableProps as InputPressableElementProps,
+} from './InputPressable'
 // RadioSelectRow
-import RadioSelectRowElement, { RadioSelectRowProps } from './RadioSelectRow'
+import RadioSelectRowElement, {
+  RadioSelectRowProps as RadioSelectRowElementProps,
+} from './RadioSelectRow'
 // SwitchRow
-import SwitchRowElement, { SwitchRowProps } from './SwitchRow'
+import SwitchRowElement, {
+  SwitchRowProps as SwitchRowElementProps,
+} from './SwitchRow'
 // Textarea
-import TextareaElement, { TextareaProps } from './Textarea'
+import TextareaElement, {
+  TextareaProps as TextareaElementProps,
+} from './Textarea'
 // TextareaLink
-import TextareaLinkElement, { TextareaLinkProps } from './TextareaLink'
+import TextareaLinkElement, {
+  TextareaLinkProps as TextareaLinkElementProps,
+} from './TextareaLink'
 // Txt
-import TxtElement, { TxtProps } from './Txt'
+import TxtElement, { TxtProps as TxtElementProps } from './Txt'
 // Wrapper
-import WrapperElement, { WrapperProps } from './Wrapper'
-import ErrorWrapperElement, { ErrorWrapperProps } from './Wrapper/ErrorWrapper'
+import WrapperElement, { WrapperProps as WrapperElementProps } from './Wrapper'
+import ErrorWrapperElement, {
+  ErrorWrapperProps as ErrorWrapperElementProps,
+} from './Wrapper/ErrorWrapper'
 import LoadingWrapperElement, {
-  LoadingWrapperProps,
+  LoadingWrapperProps as LoadingWrapperElementProps,
 } from './Wrapper/LoadingWrapper'
 import OptionalWrapperElement, {
-  OptionalWrapperProps,
+  OptionalWrapperProps as OptionalWrapperElementProps,
 } from './Wrapper/OptionalWrapper'
 
 /**
@@ -45,73 +65,94 @@ import OptionalWrapperElement, {
  */
 
 // Button
-export const Button = ({ ...props }: IButtonProps) => (
+export interface ButtonProps extends ButtonElementProps {}
+export const Button = ({ ...props }: ButtonProps) => (
   <ButtonElement {...props} />
 )
+export interface DefaultButtonProps extends DefaultButtonElementProps {}
 export const DefaultButton = ({ ...props }: DefaultButtonProps) => (
   <DefaultButtonElement {...props} />
 )
+export interface OutlineButtonProps extends OutlineButtonElementProps {}
 export const OutlineButton = ({ ...props }: OutlineButtonProps) => (
   <OutlineButtonElement {...props} />
 )
+export interface RoundedButtonProps extends RoundedButtonElementProps {}
 export const RoundedButton = ({ ...props }: RoundedButtonProps) => (
   <RoundedButtonElement {...props} />
 )
 
 // CheckboxSelectRow
+export interface CheckboxSelectRowProps extends CheckboxSelectRowElementProps {}
 export const CheckboxSelectRow = ({ ...props }: CheckboxSelectRowProps) => (
   <CheckboxSelectRowElement {...props} />
 )
 
 // DropdownLink
+export interface DropdownLinkProps extends DropdownLinkElementProps {}
 export const DropdownLink = ({ ...props }: DropdownLinkProps) => (
   <DropdownLinkElement {...props} />
 )
 
 // Icon
-export const Icon = ({ ...props }: IconProps) => <IconElement {...props} />
+export interface IconProps extends IconElementProps {}
+export const Icon = ({ ...props }: IconElementProps) => (
+  <IconElement {...props} />
+)
 
 // Input
+export interface InputProps extends InputElementProps {}
 export const Input = ({ ...props }: InputProps) => <InputElement {...props} />
 
 // InputPressable
+export interface InputPressableProps extends InputPressableElementProps {}
 export const InputPressable = ({ ...props }: InputPressableProps) => (
   <InputPressableElement {...props} />
 )
 
 // RadioSelectRow
+export interface RadioSelectRowProps extends RadioSelectRowElementProps {}
 export const RadioSelectRow = ({ ...props }: RadioSelectRowProps) => (
   <RadioSelectRowElement {...props} />
 )
 
 // SwitchRow
+export interface SwitchRowProps extends SwitchRowElementProps {}
 export const SwitchRow = ({ ...props }: SwitchRowProps) => (
   <SwitchRowElement {...props} />
 )
 
 // Textarea
+export interface TextareaProps extends TextareaElementProps {}
 export const Textarea = ({ ...props }: TextareaProps) => (
   <TextareaElement {...props} />
 )
 
 // TextareaLink
+export interface TextareaLinkProps extends TextareaLinkElementProps {}
 export const TextareaLink = ({ ...props }: TextareaLinkProps) => (
   <TextareaLinkElement {...props} />
 )
 
 // Txt
+export interface TxtProps extends TxtElementProps {}
 export const Txt = ({ ...props }: TxtProps) => <TxtElement {...props} />
 
 // Wrapper
+export interface WrapperProps extends WrapperElementProps {}
 export const Wrapper = ({ ...props }: WrapperProps) => (
   <WrapperElement {...props} />
 )
+export interface LoadingWrapperProps extends LoadingWrapperElementProps {}
 export const LoadingWrapper = ({ ...props }: LoadingWrapperProps) => (
   <LoadingWrapperElement {...props} />
 )
+export interface OptionalWrapperProps<T extends unknown>
+  extends OptionalWrapperElementProps<T> {}
 export const OptionalWrapper = <T extends unknown>({
   ...props
 }: OptionalWrapperProps<T>) => <OptionalWrapperElement {...props} />
+export interface ErrorWrapperProps extends ErrorWrapperElementProps {}
 export const ErrorWrapper = ({ ...props }: ErrorWrapperProps) => (
   <ErrorWrapperElement {...props} />
 )
