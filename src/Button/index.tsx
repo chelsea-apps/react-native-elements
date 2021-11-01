@@ -23,6 +23,16 @@ const styles = {
   text: [t.textBlack],
 }
 
+/**
+ * Initial button component
+ * @param children - Text to show inside the button
+ * @param style - Tailwind styling -> TouchableOpacity Container
+ * @param textStyle - Tailwind Styling -> Txt Component
+ * @param disabled - Clickable / Non Clickable button
+ * @param icon - Icon component, sits left to the
+ * @param ...props - Other Touchable Opacity Props https://reactnative.dev/docs/touchableopacity#props
+ * @returns A pressable text.
+ */
 const Button = ({
   children,
   style,

@@ -26,6 +26,15 @@ const styles = {
   text: [t.textCenter, t.textWhite, t.textLg, t.fontMedium],
 }
 
+/**
+ * Button with a transparent background and rounded border
+ * @param children - Text to show inside the button
+ * @param style - Tailwind styling -> TouchableOpacity Container
+ * @param textStyle - Tailwind Styling -> Txt Component
+ * @param disabled - Clickable / Non Clickable button
+ * @param ...props - Other Initial Button Docs
+ * @returns A pressable button.
+ */
 const OutlineButton = ({
   children,
   style,
