@@ -135,9 +135,12 @@ export const DropdownLink = ({ ...props }: DropdownLinkProps) => (
 
 // Icon
 export interface IconProps extends IconElementProps {}
-export const Icon = ({ ...props }: IconElementProps) => (
-  <IconElement {...props} />
-)
+/**
+ * Global Icon component
+ * @param props
+ * @returns Highly customizable Icon component that can output a Font icon (https://oblador.github.io/react-native-vector-icons/) or a custom SVG icon.
+ */
+export const Icon = ({ ...props }: IconProps) => <IconElement {...props} />
 
 // Input
 export interface FieldsErrors extends FieldsErrorsType {}

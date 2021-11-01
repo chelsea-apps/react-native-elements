@@ -29,12 +29,19 @@ type IconsPackage =
   | 'Octicons'
 
 export type IconProps = {
+  /** Determine weather the Icon will be from a Font or a custom SVG */
   type: 'font' | 'svg'
+  /** Component to be passed if the type is SVG */
   svgComponent?: never
+  /** Font name in case the type is font */
   fontName: IconsPackage
+  /** Style of the Font Icon component */
   style?: StyleProp<TextStyle>
+  /** Name of the font icon (https://oblador.github.io/react-native-vector-icons/) */
   name: string
+  /** Size of the font icon */
   size?: number
+  /** Color of the font icon */
   color?: string
 }
 
