@@ -13,10 +13,15 @@ import Txt from '../Txt'
 import OptionalWrapper from '../Wrapper/OptionalWrapper'
 
 export type IconStylingProps = {
+  /** Icon component that should replace the default Font icon */
   icon?: React.ReactElement
+  /** Color of the current Font Icon color */
   iconColor?: string
+  /** Size of the current Font Icon color - default 24 */
   iconSize?: number
+  /** Styles of the Icon component */
   iconStyle?: StyleProp<ViewStyle>
+  /** Feather Icons icon name */
   iconName?: string
 }
 

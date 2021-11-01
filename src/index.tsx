@@ -124,6 +124,11 @@ export const CheckboxSelectRow = ({ ...props }: CheckboxSelectRowProps) => (
 export interface DropdownState extends DropdownStateType {}
 export interface DropdownItem extends DropdownItemType {}
 export interface DropdownLinkProps extends DropdownLinkElementProps {}
+/**
+ * Dropdown Select Component
+ * @param props
+ * @returns A pressable container that links to the selection page.
+ */
 export const DropdownLink = ({ ...props }: DropdownLinkProps) => (
   <DropdownLinkElement {...props} />
 )
