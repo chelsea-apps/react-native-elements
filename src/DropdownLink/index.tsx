@@ -50,15 +50,22 @@ export interface DropdownLinkProps extends IconStylingProps {
 }
 
 export type DropdownItem = {
+  /** Selection value that will validated */
   value: string
+  /** Selection label that the user will see */
   label: string
 }
 
 export type DropdownState = {
+  /** Choose weather the dropdown should use a Radio component or a Checkbox component (Single selection / Multiple selection) */
   type: 'single' | 'multiple'
+  /** Dropdown selection page title */
   label: string
+  /** Form field name needed for validation */
   name: string
+  /** Dropdown elements */
   items: DropdownItem[]
+  /** Array of current selections */
   currentValues: DropdownItem[] | undefined
 }
 
