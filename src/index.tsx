@@ -101,7 +101,7 @@ export const OutlineButton = ({ ...props }: OutlineButtonProps) => (
 )
 export interface RoundedButtonProps extends RoundedButtonElementProps {}
 /**
- * Button with a full background and full rounded cordenrs
+ * Button with a full background and full rounded corners
  * @param props
  * @returns A pressable button.
  */
@@ -111,6 +111,11 @@ export const RoundedButton = ({ ...props }: RoundedButtonProps) => (
 
 // CheckboxSelectRow
 export interface CheckboxSelectRowProps extends CheckboxSelectRowElementProps {}
+/**
+ * Checkbox Row Component to be used as part of selectDropdown page
+ * @param props
+ * @returns A pressable row that changes dropdown state.
+ */
 export const CheckboxSelectRow = ({ ...props }: CheckboxSelectRowProps) => (
   <CheckboxSelectRowElement {...props} />
 )
