@@ -6,9 +6,13 @@ import { ReactNode } from '../Txt'
 import Button, { IButtonProps } from './index'
 
 export interface DefaultButtonProps extends IButtonProps {
+  /** Text to show inside the button */
   children: ReactNode | string
+  /** Tailwind Styling -> Txt Component */
   textStyle?: StyleProp<TextStyle>
+  /** Tailwind styling -> TouchableOpacity Container */
   style?: StyleProp<ViewStyle>
+  /** Clickable / Non Clickable button */
   disabled?: boolean
 }
 
@@ -24,16 +28,6 @@ const styles = {
   text: [t.textLg, t.textCenter, t.textBlack, t.fontMedium],
 }
 
-/**
- * Button with a full background color and rounded corners
- * @param children - Text to show inside the button
- * @param style - Tailwind styling -> TouchableOpacity Container
- * @param textStyle - Tailwind Styling -> Txt Component
- * @param disabled - Clickable / Non Clickable button
- * @param icon - Icon component, sits left to the
- * @param ...props - Other Initial Button
- * @returns A pressable button.
- */
 const DefaultButton = ({
   children,
   style,

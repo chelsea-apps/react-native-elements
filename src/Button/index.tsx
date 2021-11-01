@@ -11,10 +11,15 @@ import { t } from 'react-native-tailwindcss'
 import Txt, { ReactNode } from '../Txt'
 
 export interface IButtonProps extends TouchableOpacityProps {
+  /** Text to show inside the button */
   children?: ReactNode | string
+  /** Tailwind styling -> TouchableOpacity Container */
   style?: StyleProp<ViewStyle>
+  /** Tailwind Styling -> Txt Component */
   textStyle?: StyleProp<TextStyle>
+  /** Clickable / Non Clickable button */
   disabled?: boolean
+  /** Icon component, sits left to the text */
   icon?: React.ReactNode
 }
 
@@ -23,16 +28,6 @@ const styles = {
   text: [t.textBlack],
 }
 
-/**
- * Initial button component
- * @param children - Text to show inside the button
- * @param style - Tailwind styling -> TouchableOpacity Container
- * @param textStyle - Tailwind Styling -> Txt Component
- * @param disabled - Clickable / Non Clickable button
- * @param icon - Icon component, sits left to the
- * @param ...props - Other Touchable Opacity Props https://reactnative.dev/docs/touchableopacity#props
- * @returns A pressable text.
- */
 const Button = ({
   children,
   style,

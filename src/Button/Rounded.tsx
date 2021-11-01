@@ -16,14 +16,6 @@ const styles = {
   text: [t.textCenter, t.textWhite],
 }
 
-/**
- * Button with a full background and full rounded cordenrs
- * @param children - Text to show inside the button
- * @param style - Tailwind styling -> TouchableOpacity Container
- * @param textStyle - Tailwind Styling -> Txt Component
- * @param ...props - Other Initial Button props
- * @returns A pressable button.
- */
 const RoundedButton = ({
   children,
   style,

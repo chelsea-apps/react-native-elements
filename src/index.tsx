@@ -73,18 +73,38 @@ import OptionalWrapperElement, {
 
 // Button
 export interface ButtonProps extends ButtonElementProps {}
+/**
+ * Initial button component
+ * @param props
+ * @returns A pressable text.
+ */
 export const Button = ({ ...props }: ButtonProps) => (
   <ButtonElement {...props} />
 )
 export interface DefaultButtonProps extends DefaultButtonElementProps {}
+/**
+ * Button with a full background colors and rounded corners
+ * @param props
+ * @returns A pressable button.
+ */
 export const DefaultButton = ({ ...props }: DefaultButtonProps) => (
   <DefaultButtonElement {...props} />
 )
 export interface OutlineButtonProps extends OutlineButtonElementProps {}
+/**
+ * Button with a transparent background color and rounded border
+ * @param props
+ * @returns A pressable button.
+ */
 export const OutlineButton = ({ ...props }: OutlineButtonProps) => (
   <OutlineButtonElement {...props} />
 )
 export interface RoundedButtonProps extends RoundedButtonElementProps {}
+/**
+ * Button with a full background and full rounded cordenrs
+ * @param props
+ * @returns A pressable button.
+ */
 export const RoundedButton = ({ ...props }: RoundedButtonProps) => (
   <RoundedButtonElement {...props} />
 )
