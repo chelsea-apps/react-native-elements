@@ -167,18 +167,33 @@ export const InputPressable = ({ ...props }: InputPressableProps) => (
 
 // RadioSelectRow
 export interface RadioSelectRowProps extends RadioSelectRowElementProps {}
+/**
+ * Radio Row Component to be used as part of selectDropdown page
+ * @param props
+ * @returns A pressable row that changes dropdown state.
+ */
 export const RadioSelectRow = ({ ...props }: RadioSelectRowProps) => (
   <RadioSelectRowElement {...props} />
 )
 
 // SwitchRow
 export interface SwitchRowProps extends SwitchRowElementProps {}
+/**
+ * Switch component
+ * @param props
+ * @returns A component that can change a boolean state with a switch. It's not part of the react hook form.
+ */
 export const SwitchRow = ({ ...props }: SwitchRowProps) => (
   <SwitchRowElement {...props} />
 )
 
 // Textarea
 export interface TextareaProps extends TextareaElementProps {}
+/**
+ * Expandable Textarea component
+ * @param props - Inherited from the InputProps
+ * @returns A textarea that can change its height based on the value inside.
+ */
 export const Textarea = ({ ...props }: TextareaProps) => (
   <TextareaElement {...props} />
 )
