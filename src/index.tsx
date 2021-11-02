@@ -223,17 +223,27 @@ export interface WrapperProps extends WrapperElementProps {}
 /**
  * Wrapper component
  * @param props
- * @returns Component to be used on all pages as the main container.
+ * @returns Component to be used as the main container on all pages.
  */
 export const Wrapper = ({ ...props }: WrapperProps) => (
   <WrapperElement {...props} />
 )
 export interface LoadingWrapperProps extends LoadingWrapperElementProps {}
+/**
+ * Loading Wrapper component
+ * @param props
+ * @returns Container to be used as the loading indicator on all pages.
+ */
 export const LoadingWrapper = ({ ...props }: LoadingWrapperProps) => (
   <LoadingWrapperElement {...props} />
 )
 export interface OptionalWrapperProps<T extends unknown>
   extends OptionalWrapperElementProps<T> {}
+/**
+ * A component that replaces the need to check for data in JSX (data ? <Component /> : <></>)
+ * @param props
+ * @returns A container view.
+ */
 export const OptionalWrapper = <T extends unknown>({
   ...props
 }: OptionalWrapperProps<T>) => <OptionalWrapperElement {...props} />

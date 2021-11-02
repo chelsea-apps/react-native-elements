@@ -1,16 +1,14 @@
 import React from 'react'
 
 export type OptionalWrapperProps<T> = {
+  /** Data to check against */
   data: T | null
+  /** Elements that sit inside this wrapper */
   children: React.ReactNode
+  /** Component to show if data is null | undefined */
   elseComponent?: React.ReactNode
 }
 
-/**
- * Returns the JSX component if data passed in is not null.
- * @param data - The data to to check against.
- * @returns Either the children or null.
- */
 const OptionalWrapper = <T extends unknown>({
   data,
   children,
