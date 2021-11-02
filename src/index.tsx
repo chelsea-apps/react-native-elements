@@ -248,6 +248,11 @@ export const OptionalWrapper = <T extends unknown>({
   ...props
 }: OptionalWrapperProps<T>) => <OptionalWrapperElement {...props} />
 export interface ErrorWrapperProps extends ErrorWrapperElementProps {}
+/**
+ * A variation of the wrapper component.
+ * @param props
+ * @returns A Wrapper component that will check if there were any issues with the API Queries. Can be used only with CA GraphQL APIs.
+ */
 export const ErrorWrapper = ({ ...props }: ErrorWrapperProps) => (
   <ErrorWrapperElement {...props} />
 )
