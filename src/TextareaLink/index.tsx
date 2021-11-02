@@ -16,12 +16,19 @@ import InputError from '../Input/components/InputError'
 import InputPressable, { InputPressableProps } from '../InputPressable'
 
 export interface TextareaLinkProps extends InputPressableProps {
+  /** React hook form name */
   name?: string
+  /** React hook form control */
   control?: Control<FieldType | any>
+  /** React hook form validation */
   validation?: RegisterOptions
+  /** React hook form error */
   error?: FieldError
+  /** Pre-defined value */
   defaultValue?: string
+  /** React hook form set value */
   setValue?: UseFormSetValue<FieldType | any>
+  /** Error Txt styles */
   errorStyle?: StyleProp<TextStyle>
 }
 

@@ -192,7 +192,7 @@ export interface TextareaProps extends TextareaElementProps {}
 /**
  * Expandable Textarea component
  * @param props - Inherited from the InputProps
- * @returns A textarea that can change its height based on the value inside.
+ * @returns A textarea that can change its height based on the value inside. Validation based on react-hook-form.
  */
 export const Textarea = ({ ...props }: TextareaProps) => (
   <TextareaElement {...props} />
@@ -200,12 +200,22 @@ export const Textarea = ({ ...props }: TextareaProps) => (
 
 // TextareaLink
 export interface TextareaLinkProps extends TextareaLinkElementProps {}
+/**
+ * Textarea component that links to a different page
+ * @param props
+ * @returns A textarea that changes the current page to enter the value. Dependent on textareaEdit page. Validation based on react-hook-form.
+ */
 export const TextareaLink = ({ ...props }: TextareaLinkProps) => (
   <TextareaLinkElement {...props} />
 )
 
 // Txt
 export interface TxtProps extends TxtElementProps {}
+/**
+ * Global Text Component
+ * @param props
+ * @returns A text component that has the specific project fonts and sizing. To be used everywhere within the app.
+ */
 export const Txt = ({ ...props }: TxtProps) => <TxtElement {...props} />
 
 // Wrapper
