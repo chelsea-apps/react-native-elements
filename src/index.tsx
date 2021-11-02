@@ -220,6 +220,11 @@ export const Txt = ({ ...props }: TxtProps) => <TxtElement {...props} />
 
 // Wrapper
 export interface WrapperProps extends WrapperElementProps {}
+/**
+ * Wrapper component
+ * @param props
+ * @returns Component to be used on all pages as the main container.
+ */
 export const Wrapper = ({ ...props }: WrapperProps) => (
   <WrapperElement {...props} />
 )
