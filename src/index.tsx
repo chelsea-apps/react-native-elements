@@ -156,6 +156,11 @@ export const Input = ({ ...props }: InputProps) => <InputElement {...props} />
 
 // InputPressable
 export interface InputPressableProps extends InputPressableElementProps {}
+/**
+ * Static "fake" Input
+ * @param props
+ * @returns Input component that can be pressed
+ */
 export const InputPressable = ({ ...props }: InputPressableProps) => (
   <InputPressableElement {...props} />
 )
