@@ -14,15 +14,21 @@ import Txt from '../Txt'
 import OptionalWrapper from '../Wrapper/OptionalWrapper'
 
 export type RadioSelectRowProps = {
-  // Functionality
+  /** Text to be displayed on the left */
   label: string | ReactElement
+  /** Current selection state */
   selected: boolean
+  /** Change current selection state */
   setSelected: React.Dispatch<React.SetStateAction<boolean>>
-  // Styling
+  /** Container styles */
   style?: StyleProp<ViewStyle>
+  /** Label Txt component styles */
   textStyle?: StyleProp<TextStyle>
+  /** Border bottom color */
   borderColor?: string
+  /** Color when not selected */
   selectionDefaultColor?: string
+  /** Color when selected */
   selectionActiveColor?: string
 }
 

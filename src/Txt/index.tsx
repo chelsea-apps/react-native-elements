@@ -11,7 +11,8 @@ export type ReactNode =
   | undefined
 
 export interface TxtProps extends TextProps {
-  children: ReactNode
+  /** Text | Component to be displayed */
+  children: React.ReactNode
 }
 
 const styles = {

@@ -9,11 +9,17 @@ import Txt from '../Txt'
 import OptionalWrapper from './OptionalWrapper'
 
 export type ErrorWrapperProps = {
+  /** Error name */
   title: string
+  /** URQL Error */
   error?: CombinedError
+  /** The rest of the page elements */
   children: React.ReactNode
+  /** Action to be take on closing the error */
   onClose?: () => void
+  /** Container style */
   style?: StyleProp<ViewStyle>
+  /** If false, the component will not be displayed */
   show?: boolean
 }
 
