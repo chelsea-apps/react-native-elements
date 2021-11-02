@@ -1,3 +1,5 @@
+@chelseaapps/react-native-elements / [Exports](modules.md)
+
 # react-native-elements
 
 A react native framework for building Chelsea Apps cross platform mobile applications.
@@ -36,6 +38,15 @@ const Input = ({ ...props }: InputElementProps) => <InputElement {...props} />;
 export default Input;
 ```
 
+## Advanced Usage
+
+Advanced usage refers to a case where you want a specific component to do a specific action. To see a full list of props for any `Element` visit
+the [docs]() and search for your component to see the functionality its capable of.
+
+The general rule of thumb is that `components/elements/` should be minimalistic files which contain only `styling props` if possible, while locally should sit all the other props that you might need.
+
+In the rare case where a component requires some additional functionality you will have to `Update the library` globally.
+
 ## Updating the library
 
 In order to update the library with some new functionality there is a checklist that needs to followed thoroughly:
@@ -43,7 +54,7 @@ In order to update the library with some new functionality there is a checklist 
 - `git clone` [react-native-elements](https://github.com/chelsea-apps/react-native-elements) project locally
 - Add the necessary changes (shouldn't be more than props at this stage)
 - Using [jsDocs](https://jsdoc.app/), document your new changes
-- Update the docs by running `npx typedoc --out docs src/index.tsx`
+- Update the docs by running `npx typedoc src/index.tsx`
 - Increase the version by one where `x` is in case: `1.x` if your change is an addition or `1.11.x` if your change is a bug fix.
 - Publish the new version of the package using `npm publish`
 - View your new version at [App Registry](http://registry.chelsea-apps.com:4873/-/web/detail/@chelsea-apps/react-native-elements)
@@ -57,30 +68,3 @@ Adding a new component should follow the same steps as updating the library but 
 - Should be created with global usage in mind
 - A lot of use cases should be taken into consideration and the functionality should be available through props
 - Customisability is a must have and the component should have props available for styling as much of it as possible
-
-## Advanced Usage
-
-Advanced usage refers to a case where you want a specific component to do a specific action. Here's a full list of props for any `Element`:
-
-- [Button Props](/docs/interfaces/ButtonProps.md)
-- [DefaultButton Props](/docs/interfaces/DefaultButtonProps.md)
-- [OutlineButton Props](/docs/interfaces/OutlineButtonProps.md)
-- [RoundedButton Props](/docs/interfaces/RoundedButtonProps.md)
-- [CheckboxSelectRow Props](/docs/interfaces/CheckboxSelectRowProps.md)
-- [DropdownLink Props](/docs/interfaces/DropdownLinkProps.md)
-- [Icon Props](/docs/interfaces/IconProps.md)
-- [Input Props](/docs/interfaces/InputProps.md)
-- [InputPressable Props](/docs/interfaces/InputPressableProps.md)
-- [RadioSelectRow Props](/docs/interfaces/RadioSelectRowProps.md)
-- [SwitchRow Props](/docs/interfaces/SwitchRowProps.md)
-- [Textarea Props](/docs/interfaces/TextareaProps.md)
-- [TextareaLink Props](/docs/interfaces/TextareaLinkProps.md)
-- [Txt Props](/docs/interfaces/TxtProps.md)
-- [Wrapper Props](/docs/interfaces/WrapperProps.md)
-- [OptionalWrapper Props](/docs/interfaces/OptionalWrapperProps.md)
-- [LoadingWrapper Props](/docs/interfaces/LoadingWrapperProps.md)
-- [ErrorWrapper Props](/docs/interfaces/ErrorWrapperProps.md)
-
-The general rule of thumb is that `components/elements/` should be minimalistic files which contain only `styling props` if possible, while locally should sit all the other props that you might need.
-
-In the rare case where a component requires some additional functionality you will have to `Update the library` globally.
