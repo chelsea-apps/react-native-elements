@@ -20,25 +20,41 @@ export type FieldType = {
   [x: string]: string | number | boolean | undefined
 }
 export interface InputProps extends TextInputProps {
-  // Functionality
+  /** React hook form name */
   name?: string
+  /** React hook form control */
   control?: Control<FieldType | any>
-  label?: string
+  /** React hook form validation */
   validation?: RegisterOptions
+  /** React hook form error */
   error?: FieldError
+  /** Small text above the value */
+  label?: string
+  /** Pre-defined value */
   defaultValue?: string
+  /** Small text between input container and input error */
   infoText?: string
+  /** Additional action to be performed on input submission */
   onSubmitEditing?: () => void
-  // Styling
+  /** View Container styles - including errors and info text */
   style?: StyleProp<ViewStyle>
+  /** Input value styles */
   textEntryStyle?: StyleProp<TextStyle>
+  /** Small Txt above value styles */
   labelStyle?: StyleProp<TextStyle>
+  /** Text entry background color */
   bgColor?: string
+  /** Text entry text color */
   textColor?: string
+  /** Text entry border color */
   borderColor?: string
+  /** Small text above value color */
   labelColor?: string
+  /** Text entry selection color */
   selectionColor?: string
+  /** Text between error and container color */
   infoTextColor?: string
+  /** Error text color */
   errorColor?: string
 }
 

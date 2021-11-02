@@ -147,6 +147,11 @@ export interface FieldsErrors extends FieldsErrorsType {}
 export interface FieldsType extends FieldTypeType {}
 export type InputValidations<T> = { [K in keyof T]: RegisterOptions }
 export interface InputProps extends InputElementProps {}
+/**
+ * Animated Input Component
+ * @param props
+ * @returns Ready to use Input with validation from react hook form
+ */
 export const Input = ({ ...props }: InputProps) => <InputElement {...props} />
 
 // InputPressable
