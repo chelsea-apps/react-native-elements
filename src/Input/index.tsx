@@ -42,6 +42,8 @@ export interface InputProps extends TextInputProps {
   style?: StyleProp<ViewStyle>
   /** Input value styles */
   textEntryStyle?: StyleProp<TextStyle>
+  /** Input container styles */
+  textEntryContainerStyle?: StyleProp<ViewStyle>
   /** Small Txt above value styles */
   labelStyle?: StyleProp<TextStyle>
   /** Text entry background color */
@@ -74,6 +76,7 @@ const Input = ({
   icon,
   style,
   textEntryStyle,
+  textEntryContainerStyle,
   labelStyle,
   bgColor,
   textColor,
@@ -96,6 +99,7 @@ const Input = ({
         icon={icon}
         // Styling
         textEntryStyle={textEntryStyle}
+        textEntryContainerStyle={textEntryContainerStyle}
         labelStyle={labelStyle}
         bgColor={bgColor ?? color.transparent}
         textColor={textColor ?? color.white}

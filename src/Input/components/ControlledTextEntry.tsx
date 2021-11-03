@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { Controller } from 'react-hook-form'
-import { Keyboard, StyleProp, TextInput, TextStyle, View } from 'react-native'
+import {
+  Keyboard,
+  StyleProp,
+  TextInput,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native'
 import { t } from 'react-native-tailwindcss'
 
 import OptionalWrapper from '../../Wrapper/OptionalWrapper'
@@ -8,11 +15,13 @@ import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  input: [t.border, t.p4, t.rounded, t.textBase],
+  inputContainer: [t.flexRow, t.itemsCenter, t.border, t.p4, t.rounded],
+  input: [t.textBase],
 }
 
 interface ControlledTextEntryProps extends InputProps {
   textEntryStyle?: StyleProp<TextStyle>
+  textEntryContainerStyle?: StyleProp<ViewStyle>
   labelStyle?: StyleProp<TextStyle>
   bgColor?: string
   borderColor?: string
@@ -34,6 +43,7 @@ const ControlledTextEntry = ({
   onSubmitEditing,
   // Styling
   textEntryStyle,
+  textEntryContainerStyle,
   labelStyle,
   bgColor,
   borderColor,
@@ -55,7 +65,6 @@ const ControlledTextEntry = ({
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
         <View style={t.relative}>
-          <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
           <OptionalWrapper data={label}>
             <InputLabel
               text={label}
@@ -66,36 +75,46 @@ const ControlledTextEntry = ({
               labelStyle={labelStyle}
             />
           </OptionalWrapper>
-          <TextInput
+          <View
             style={[
-              styles.input,
+              styles.inputContainer,
               label ? t.pT10 : t.pT4,
               {
-                color: textColor,
                 borderColor: isFocused ? focusedBorderColor : borderColor,
                 backgroundColor: bgColor,
               },
-              textEntryStyle,
+              textEntryContainerStyle,
             ]}
-            onFocus={() => {
-              setIsFocused(true)
-            }}
-            onBlur={() => {
-              onBlur()
-              setIsFocused(false)
-            }}
-            onChangeText={(inputValue) => {
-              setCurrentValue(inputValue)
-              onChange(inputValue)
-            }}
-            value={value}
-            onSubmitEditing={() =>
-              onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
-            }
-            selectionColor={selectionColor}
-            placeholder='' // Needed to not be passed accidentally
-            {...props}
-          />
+          >
+            <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
+            <TextInput
+              style={[
+                styles.input,
+                {
+                  color: textColor,
+                },
+                textEntryStyle,
+              ]}
+              onFocus={() => {
+                setIsFocused(true)
+              }}
+              onBlur={() => {
+                onBlur()
+                setIsFocused(false)
+              }}
+              onChangeText={(inputValue) => {
+                setCurrentValue(inputValue)
+                onChange(inputValue)
+              }}
+              value={value}
+              onSubmitEditing={() =>
+                onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
+              }
+              selectionColor={selectionColor}
+              placeholder='' // Needed to not be passed accidentally
+              {...props}
+            />
+          </View>
         </View>
       )}
     />
