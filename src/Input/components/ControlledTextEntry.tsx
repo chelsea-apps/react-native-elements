@@ -3,11 +3,12 @@ import { Controller } from 'react-hook-form'
 import { Keyboard, StyleProp, TextInput, TextStyle, View } from 'react-native'
 import { color, t } from 'react-native-tailwindcss'
 
+import OptionalWrapper from '../../Wrapper/OptionalWrapper'
 import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  input: [t.border, t.p4, t.pT10, t.rounded, t.textBase],
+  input: [t.border, t.p4, t.rounded, t.textBase],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -53,17 +54,20 @@ const ControlledTextEntry = ({
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
         <View style={t.relative}>
-          <InputLabel
-            text={label}
-            isFocused={isFocused}
-            value={currentValue}
-            defaultValue={defaultValue}
-            labelColor={labelColor}
-            labelStyle={labelStyle}
-          />
+          <OptionalWrapper data={label}>
+            <InputLabel
+              text={label}
+              isFocused={isFocused}
+              value={currentValue}
+              defaultValue={defaultValue}
+              labelColor={labelColor}
+              labelStyle={labelStyle}
+            />
+          </OptionalWrapper>
           <TextInput
             style={[
               styles.input,
+              label ? t.pT10 : t.pT4,
               {
                 color: textColor ?? color.white,
                 borderColor: isFocused
