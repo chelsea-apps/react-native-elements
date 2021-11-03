@@ -46,8 +46,10 @@
 - [error](InputProps.md#error)
 - [errorColor](InputProps.md#errorcolor)
 - [focusable](InputProps.md#focusable)
+- [focusedBorderColor](InputProps.md#focusedbordercolor)
 - [hasTVPreferredFocus](InputProps.md#hastvpreferredfocus)
 - [hitSlop](InputProps.md#hitslop)
+- [icon](InputProps.md#icon)
 - [importantForAccessibility](InputProps.md#importantforaccessibility)
 - [importantForAutofill](InputProps.md#importantforautofill)
 - [infoText](InputProps.md#infotext)
@@ -453,7 +455,7 @@ InputElementProps.bgColor
 
 #### Defined in
 
-[src/Input/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L46)
+[src/Input/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L48)
 
 ___
 
@@ -486,7 +488,7 @@ InputElementProps.borderColor
 
 #### Defined in
 
-[src/Input/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L50)
+[src/Input/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L52)
 
 ___
 
@@ -599,7 +601,7 @@ InputElementProps.control
 
 #### Defined in
 
-[src/Input/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L26)
+[src/Input/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L26)
 
 ___
 
@@ -644,7 +646,7 @@ InputElementProps.defaultValue
 
 #### Defined in
 
-[src/Input/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L34)
+[src/Input/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L34)
 
 ___
 
@@ -712,7 +714,7 @@ InputElementProps.error
 
 #### Defined in
 
-[src/Input/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L30)
+[src/Input/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L30)
 
 ___
 
@@ -728,7 +730,7 @@ InputElementProps.errorColor
 
 #### Defined in
 
-[src/Input/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L58)
+[src/Input/index.tsx:62](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L62)
 
 ___
 
@@ -745,6 +747,22 @@ InputElementProps.focusable
 #### Defined in
 
 node_modules/@types/react-native/index.d.ts:2243
+
+___
+
+### focusedBorderColor
+
+• `Optional` **focusedBorderColor**: `string`
+
+Text entry border color on focused
+
+#### Inherited from
+
+InputElementProps.focusedBorderColor
+
+#### Defined in
+
+[src/Input/index.tsx:54](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L54)
 
 ___
 
@@ -786,6 +804,22 @@ InputElementProps.hitSlop
 #### Defined in
 
 node_modules/@types/react-native/index.d.ts:2493
+
+___
+
+### icon
+
+• `Optional` **icon**: `ReactNode`
+
+Icon to show at the start of the input container
+
+#### Inherited from
+
+InputElementProps.icon
+
+#### Defined in
+
+[src/Input/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L38)
 
 ___
 
@@ -853,7 +887,7 @@ InputElementProps.infoText
 
 #### Defined in
 
-[src/Input/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L36)
+[src/Input/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L36)
 
 ___
 
@@ -869,7 +903,7 @@ InputElementProps.infoTextColor
 
 #### Defined in
 
-[src/Input/index.tsx:56](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L56)
+[src/Input/index.tsx:60](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L60)
 
 ___
 
@@ -991,7 +1025,7 @@ InputElementProps.label
 
 #### Defined in
 
-[src/Input/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L32)
+[src/Input/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L32)
 
 ___
 
@@ -1007,7 +1041,7 @@ InputElementProps.labelColor
 
 #### Defined in
 
-[src/Input/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L52)
+[src/Input/index.tsx:56](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L56)
 
 ___
 
@@ -1023,7 +1057,7 @@ InputElementProps.labelStyle
 
 #### Defined in
 
-[src/Input/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L44)
+[src/Input/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L46)
 
 ___
 
@@ -1091,7 +1125,7 @@ InputElementProps.name
 
 #### Defined in
 
-[src/Input/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L24)
+[src/Input/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L24)
 
 ___
 
@@ -2456,7 +2490,7 @@ InputElementProps.selectionColor
 
 #### Defined in
 
-[src/Input/index.tsx:54](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L54)
+[src/Input/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L58)
 
 ___
 
@@ -2543,7 +2577,7 @@ InputElementProps.style
 
 #### Defined in
 
-[src/Input/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L40)
+[src/Input/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L42)
 
 ___
 
@@ -2624,7 +2658,7 @@ InputElementProps.textColor
 
 #### Defined in
 
-[src/Input/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L48)
+[src/Input/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L50)
 
 ___
 
@@ -2697,7 +2731,7 @@ InputElementProps.textEntryStyle
 
 #### Defined in
 
-[src/Input/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L42)
+[src/Input/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L44)
 
 ___
 
@@ -2819,7 +2853,7 @@ InputElementProps.validation
 
 #### Defined in
 
-[src/Input/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L28)
+[src/Input/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L28)
 
 ___
 
@@ -2859,4 +2893,4 @@ InputElementProps.onSubmitEditing
 
 #### Defined in
 
-[src/Input/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/f1e51d9/src/Input/index.tsx#L38)
+[src/Input/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Input/index.tsx#L40)
