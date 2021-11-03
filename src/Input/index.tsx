@@ -34,6 +34,8 @@ export interface InputProps extends TextInputProps {
   defaultValue?: string
   /** Small text between input container and input error */
   infoText?: string
+  /** Icon to show at the start of the input container */
+  icon?: React.ReactNode
   /** Additional action to be performed on input submission */
   onSubmitEditing?: () => void
   /** View Container styles - including errors and info text */
@@ -48,6 +50,8 @@ export interface InputProps extends TextInputProps {
   textColor?: string
   /** Text entry border color */
   borderColor?: string
+  /** Text entry border color on focused */
+  focusedBorderColor?: string
   /** Small text above value color */
   labelColor?: string
   /** Text entry selection color */
@@ -67,9 +71,16 @@ const Input = ({
   onSubmitEditing,
   defaultValue,
   infoText,
+  icon,
   style,
   textEntryStyle,
   labelStyle,
+  bgColor,
+  textColor,
+  borderColor,
+  focusedBorderColor,
+  labelColor,
+  selectionColor,
   ...props
 }: InputProps) => {
   return (
@@ -82,14 +93,16 @@ const Input = ({
         defaultValue={defaultValue}
         label={label}
         onSubmitEditing={onSubmitEditing}
+        icon={icon}
         // Styling
         textEntryStyle={textEntryStyle}
         labelStyle={labelStyle}
-        bgColor={color.transparent}
-        textColor={color.white}
-        borderColor={color.yellow400}
-        selectionColor={color.white}
-        labelColor={color.gray400}
+        bgColor={bgColor ?? color.transparent}
+        textColor={textColor ?? color.white}
+        borderColor={borderColor ?? color.yellow400}
+        focusedBorderColor={focusedBorderColor ?? color.yellow400}
+        selectionColor={selectionColor ?? color.white}
+        labelColor={labelColor ?? color.gray400}
         {...props}
       />
       <InputInfoText

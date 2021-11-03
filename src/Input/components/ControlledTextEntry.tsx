@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Controller } from 'react-hook-form'
 import { Keyboard, StyleProp, TextInput, TextStyle, View } from 'react-native'
-import { color, t } from 'react-native-tailwindcss'
+import { t } from 'react-native-tailwindcss'
 
+import OptionalWrapper from '../../Wrapper/OptionalWrapper'
 import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  input: [t.border, t.p4, t.pT10, t.rounded, t.textBase],
+  input: [t.border, t.p4, t.rounded, t.textBase],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -15,6 +16,7 @@ interface ControlledTextEntryProps extends InputProps {
   labelStyle?: StyleProp<TextStyle>
   bgColor?: string
   borderColor?: string
+  focusedBorderColor?: string
   selectionColor?: string
   textColor?: string
   labelColor?: string
@@ -28,12 +30,14 @@ const ControlledTextEntry = ({
   validation,
   defaultValue,
   label,
+  icon,
   onSubmitEditing,
   // Styling
   textEntryStyle,
   labelStyle,
   bgColor,
   borderColor,
+  focusedBorderColor,
   selectionColor,
   textColor,
   labelColor,
@@ -51,21 +55,25 @@ const ControlledTextEntry = ({
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
         <View style={t.relative}>
-          <InputLabel
-            text={label}
-            isFocused={isFocused}
-            value={currentValue}
-            defaultValue={defaultValue}
-            labelColor={labelColor}
-            labelStyle={labelStyle}
-          />
+          <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
+          <OptionalWrapper data={label}>
+            <InputLabel
+              text={label}
+              isFocused={isFocused}
+              value={currentValue}
+              defaultValue={defaultValue}
+              labelColor={labelColor}
+              labelStyle={labelStyle}
+            />
+          </OptionalWrapper>
           <TextInput
             style={[
               styles.input,
+              label ? t.pT10 : t.pT4,
               {
-                color: textColor ?? color.white,
-                borderColor: borderColor ?? color.yellow400,
-                backgroundColor: bgColor ?? color.transparent,
+                color: textColor,
+                borderColor: isFocused ? focusedBorderColor : borderColor,
+                backgroundColor: bgColor,
               },
               textEntryStyle,
             ]}
@@ -84,7 +92,7 @@ const ControlledTextEntry = ({
             onSubmitEditing={() =>
               onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
             }
-            selectionColor={selectionColor ?? color.white}
+            selectionColor={selectionColor}
             placeholder='' // Needed to not be passed accidentally
             {...props}
           />
