@@ -277,7 +277,7 @@ DefaultButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Default.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Button/Default.tsx#L10)
+[src/Button/Default.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Default.tsx#L10)
 
 ___
 
@@ -341,7 +341,7 @@ DefaultButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/Default.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Button/Default.tsx#L16)
+[src/Button/Default.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Default.tsx#L16)
 
 ___
 
@@ -395,7 +395,7 @@ DefaultButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/index.tsx#L23)
 
 ___
 
@@ -864,7 +864,7 @@ DefaultButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Default.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Button/Default.tsx#L14)
+[src/Button/Default.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Default.tsx#L14)
 
 ___
 
@@ -896,7 +896,7 @@ DefaultButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Default.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Button/Default.tsx#L12)
+[src/Button/Default.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Default.tsx#L12)
 
 ___
 

@@ -36,7 +36,7 @@ OptionalWrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/OptionalWrapper.tsx:7](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Wrapper/OptionalWrapper.tsx#L7)
+[src/Wrapper/OptionalWrapper.tsx:7](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Wrapper/OptionalWrapper.tsx#L7)
 
 ___
 
@@ -52,7 +52,7 @@ OptionalWrapperElementProps.data
 
 #### Defined in
 
-[src/Wrapper/OptionalWrapper.tsx:5](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Wrapper/OptionalWrapper.tsx#L5)
+[src/Wrapper/OptionalWrapper.tsx:5](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Wrapper/OptionalWrapper.tsx#L5)
 
 ___
 
@@ -68,4 +68,4 @@ OptionalWrapperElementProps.elseComponent
 
 #### Defined in
 
-[src/Wrapper/OptionalWrapper.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/d97c664/src/Wrapper/OptionalWrapper.tsx#L9)
+[src/Wrapper/OptionalWrapper.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Wrapper/OptionalWrapper.tsx#L9)
