@@ -32,13 +32,13 @@ export type IconProps = {
   /** Determine weather the Icon will be from a Font or a custom SVG */
   type: 'font' | 'svg'
   /** Component to be passed if the type is SVG */
-  svgComponent?: never
+  svgComponent?: React.ReactNode
   /** Font name in case the type is font */
-  fontName: IconsPackage
+  fontName?: IconsPackage
   /** Style of the Font Icon component */
   style?: StyleProp<TextStyle>
   /** Name of the font icon (https://oblador.github.io/react-native-vector-icons/) */
-  name: string
+  name?: string
   /** Size of the font icon */
   size?: number
   /** Color of the font icon */
@@ -75,6 +75,18 @@ const Icon = ({ type, fontName, name, svgComponent, ...props }: IconProps) => {
       default:
         return <Feather name={name ?? ''} {...props} />
     }
+  }
+
+  if (type === 'font') {
+    if (!fontName || !name) {
+      console.warn(
+        "Icon with type of 'font' requires both 'name' and 'fontName' props!"
+      )
+    }
+  }
+
+  if (type === 'svg' && !svgComponent) {
+    console.warn("Icon with type of 'svg' requires 'svgComponent' prop!")
   }
 
   return (
