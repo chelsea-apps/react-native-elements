@@ -34,6 +34,7 @@ export interface InputProps extends TextInputProps {
   /** Small text between input container and input error */
   infoText?: string
   /** Additional action to be performed on input submission */
+  icon?: React.ReactNode
   onSubmitEditing?: () => void
   /** View Container styles - including errors and info text */
   style?: StyleProp<ViewStyle>
@@ -68,6 +69,7 @@ const Input = ({
   onSubmitEditing,
   defaultValue,
   infoText,
+  icon,
   style,
   textEntryStyle,
   labelStyle,
@@ -89,6 +91,7 @@ const Input = ({
         defaultValue={defaultValue}
         label={label}
         onSubmitEditing={onSubmitEditing}
+        icon={icon}
         // Styling
         textEntryStyle={textEntryStyle}
         labelStyle={labelStyle}

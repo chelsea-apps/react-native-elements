@@ -30,6 +30,7 @@ const ControlledTextEntry = ({
   validation,
   defaultValue,
   label,
+  icon,
   onSubmitEditing,
   // Styling
   textEntryStyle,
@@ -54,6 +55,7 @@ const ControlledTextEntry = ({
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
         <View style={t.relative}>
+          <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
           <OptionalWrapper data={label}>
             <InputLabel
               text={label}
