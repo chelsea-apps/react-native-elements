@@ -15,6 +15,7 @@ interface ControlledTextEntryProps extends InputProps {
   labelStyle?: StyleProp<TextStyle>
   bgColor?: string
   borderColor?: string
+  focusedBorderColor?: string
   selectionColor?: string
   textColor?: string
   labelColor?: string
@@ -34,6 +35,7 @@ const ControlledTextEntry = ({
   labelStyle,
   bgColor,
   borderColor,
+  focusedBorderColor,
   selectionColor,
   textColor,
   labelColor,
@@ -64,7 +66,9 @@ const ControlledTextEntry = ({
               styles.input,
               {
                 color: textColor ?? color.white,
-                borderColor: borderColor ?? color.yellow400,
+                borderColor: isFocused
+                  ? focusedBorderColor ?? color.yellow400
+                  : borderColor ?? color.yellow400,
                 backgroundColor: bgColor ?? color.transparent,
               },
               textEntryStyle,

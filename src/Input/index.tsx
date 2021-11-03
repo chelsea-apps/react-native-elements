@@ -25,8 +25,7 @@ export interface InputProps extends TextInputProps {
   /** React hook form control */
   control?: Control<FieldType | any>
   /** React hook form validation */
-  validation?: RegisterOptions
-  /** React hook form error */
+  validation?: RegisterOptions /** React hook form error */
   error?: FieldError
   /** Small text above the value */
   label?: string
@@ -48,6 +47,8 @@ export interface InputProps extends TextInputProps {
   textColor?: string
   /** Text entry border color */
   borderColor?: string
+  /** Text entry border color on focused */
+  focusedBorderColor?: string
   /** Small text above value color */
   labelColor?: string
   /** Text entry selection color */
@@ -70,6 +71,12 @@ const Input = ({
   style,
   textEntryStyle,
   labelStyle,
+  bgColor,
+  textColor,
+  borderColor,
+  focusedBorderColor,
+  labelColor,
+  selectionColor,
   ...props
 }: InputProps) => {
   return (
@@ -85,11 +92,12 @@ const Input = ({
         // Styling
         textEntryStyle={textEntryStyle}
         labelStyle={labelStyle}
-        bgColor={color.transparent}
-        textColor={color.white}
-        borderColor={color.yellow400}
-        selectionColor={color.white}
-        labelColor={color.gray400}
+        bgColor={bgColor}
+        textColor={textColor}
+        borderColor={borderColor}
+        focusedBorderColor={focusedBorderColor}
+        selectionColor={selectionColor}
+        labelColor={labelColor}
         {...props}
       />
       <InputInfoText
