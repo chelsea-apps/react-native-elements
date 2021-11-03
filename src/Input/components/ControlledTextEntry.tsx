@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Controller } from 'react-hook-form'
 import { Keyboard, StyleProp, TextInput, TextStyle, View } from 'react-native'
-import { color, t } from 'react-native-tailwindcss'
+import { t } from 'react-native-tailwindcss'
 
 import OptionalWrapper from '../../Wrapper/OptionalWrapper'
 import { InputProps } from '..'
@@ -71,11 +71,9 @@ const ControlledTextEntry = ({
               styles.input,
               label ? t.pT10 : t.pT4,
               {
-                color: textColor ?? color.white,
-                borderColor: isFocused
-                  ? focusedBorderColor ?? color.yellow400
-                  : borderColor ?? color.yellow400,
-                backgroundColor: bgColor ?? color.transparent,
+                color: textColor,
+                borderColor: isFocused ? focusedBorderColor : borderColor,
+                backgroundColor: bgColor,
               },
               textEntryStyle,
             ]}
@@ -94,7 +92,7 @@ const ControlledTextEntry = ({
             onSubmitEditing={() =>
               onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
             }
-            selectionColor={selectionColor ?? color.white}
+            selectionColor={selectionColor}
             placeholder='' // Needed to not be passed accidentally
             {...props}
           />

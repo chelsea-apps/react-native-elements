@@ -25,7 +25,8 @@ export interface InputProps extends TextInputProps {
   /** React hook form control */
   control?: Control<FieldType | any>
   /** React hook form validation */
-  validation?: RegisterOptions /** React hook form error */
+  validation?: RegisterOptions
+  /** React hook form error */
   error?: FieldError
   /** Small text above the value */
   label?: string
@@ -33,8 +34,9 @@ export interface InputProps extends TextInputProps {
   defaultValue?: string
   /** Small text between input container and input error */
   infoText?: string
-  /** Additional action to be performed on input submission */
+  /** Icon to show at the start of the input container */
   icon?: React.ReactNode
+  /** Additional action to be performed on input submission */
   onSubmitEditing?: () => void
   /** View Container styles - including errors and info text */
   style?: StyleProp<ViewStyle>
@@ -95,12 +97,12 @@ const Input = ({
         // Styling
         textEntryStyle={textEntryStyle}
         labelStyle={labelStyle}
-        bgColor={bgColor}
-        textColor={textColor}
-        borderColor={borderColor}
-        focusedBorderColor={focusedBorderColor}
-        selectionColor={selectionColor}
-        labelColor={labelColor}
+        bgColor={bgColor ?? color.transparent}
+        textColor={textColor ?? color.white}
+        borderColor={borderColor ?? color.yellow400}
+        focusedBorderColor={focusedBorderColor ?? color.yellow400}
+        selectionColor={selectionColor ?? color.white}
+        labelColor={labelColor ?? color.gray400}
         {...props}
       />
       <InputInfoText
