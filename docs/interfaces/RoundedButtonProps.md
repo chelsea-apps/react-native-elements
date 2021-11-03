@@ -275,7 +275,7 @@ RoundedButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Rounded.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Rounded.tsx#L9)
+[src/Button/Rounded.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L9)
 
 ___
 
@@ -339,7 +339,7 @@ RoundedButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/index.tsx#L21)
+[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L21)
 
 ___
 
@@ -393,7 +393,7 @@ RoundedButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L23)
 
 ___
 
@@ -860,7 +860,7 @@ RoundedButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Rounded.tsx:11](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Rounded.tsx#L11)
+[src/Button/Rounded.tsx:11](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L11)
 
 ___
 
@@ -890,7 +890,7 @@ RoundedButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/a2b68af/src/Button/Rounded.tsx#L10)
+[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L10)
 
 ___
 
