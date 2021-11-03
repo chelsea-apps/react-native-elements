@@ -15,7 +15,7 @@ import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  inputContainer: [t.flexRow, t.border, t.p4, t.rounded],
+  inputContainer: [t.flexRow, t.itemsCenter, t.border, t.p4, t.rounded],
   input: [t.textBase],
 }
 
