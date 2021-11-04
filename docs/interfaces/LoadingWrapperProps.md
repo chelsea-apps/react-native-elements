@@ -30,7 +30,7 @@ LoadingWrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/LoadingWrapper.tsx:7](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Wrapper/LoadingWrapper.tsx#L7)
+[src/Wrapper/LoadingWrapper.tsx:7](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Wrapper/LoadingWrapper.tsx#L7)
 
 ___
 
@@ -46,7 +46,7 @@ LoadingWrapperElementProps.indicator
 
 #### Defined in
 
-[src/Wrapper/LoadingWrapper.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Wrapper/LoadingWrapper.tsx#L9)
+[src/Wrapper/LoadingWrapper.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Wrapper/LoadingWrapper.tsx#L9)
 
 ___
 
@@ -62,4 +62,4 @@ LoadingWrapperElementProps.loading
 
 #### Defined in
 
-[src/Wrapper/LoadingWrapper.tsx:5](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Wrapper/LoadingWrapper.tsx#L5)
+[src/Wrapper/LoadingWrapper.tsx:5](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Wrapper/LoadingWrapper.tsx#L5)

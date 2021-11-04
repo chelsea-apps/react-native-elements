@@ -1,6 +1,6 @@
 {
   "name": "@chelseaapps/react-native-elements",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "React Native Frontend Library to be used inside Chelsea Apps Mobile applications.",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
   "main": "lib/index.js",
@@ -17,7 +17,8 @@
     "compile": "rm -rf lib && tsc -p .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "yarn compile",
-    "test": "jest"
+    "test": "jest",
+    "docs": "npx typedoc --out docs src/index.tsx"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -25,6 +26,8 @@
     "@react-native-community/eslint-config": "^3.0.1",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
+    "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/react-native": "^8.0.0",
     "@types/jest": "^27.0.2",
     "@types/react-native": "^0.66.0",
     "@types/react-native-vector-icons": "^6.4.9",
@@ -71,6 +74,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
     ]
   }
 }

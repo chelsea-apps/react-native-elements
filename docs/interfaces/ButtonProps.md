@@ -32,6 +32,7 @@
 - [hasTVPreferredFocus](ButtonProps.md#hastvpreferredfocus)
 - [hitSlop](ButtonProps.md#hitslop)
 - [icon](ButtonProps.md#icon)
+- [iconTextID](ButtonProps.md#icontextid)
 - [importantForAccessibility](ButtonProps.md#importantforaccessibility)
 - [nextFocusDown](ButtonProps.md#nextfocusdown)
 - [nextFocusForward](ButtonProps.md#nextfocusforward)
@@ -53,6 +54,7 @@
 - [style](ButtonProps.md#style)
 - [testID](ButtonProps.md#testid)
 - [textStyle](ButtonProps.md#textstyle)
+- [textTestID](ButtonProps.md#texttestid)
 - [touchSoundDisabled](ButtonProps.md#touchsounddisabled)
 - [tvParallaxProperties](ButtonProps.md#tvparallaxproperties)
 
@@ -277,7 +279,7 @@ ButtonElementProps.children
 
 #### Defined in
 
-[src/Button/index.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L15)
+[src/Button/index.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L15)
 
 ___
 
@@ -341,7 +343,7 @@ ButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L21)
+[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L21)
 
 ___
 
@@ -395,7 +397,23 @@ ButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L23)
+
+___
+
+### iconTextID
+
+• `Optional` **iconTextID**: `string`
+
+Icon container (Txt) Test ID
+
+#### Inherited from
+
+ButtonElementProps.iconTextID
+
+#### Defined in
+
+[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L29)
 
 ___
 
@@ -864,7 +882,7 @@ ButtonElementProps.style
 
 #### Defined in
 
-[src/Button/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L17)
+[src/Button/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L17)
 
 ___
 
@@ -872,7 +890,7 @@ ___
 
 • `Optional` **testID**: `string`
 
-Used to locate this view in end-to-end tests.
+Container Test ID
 
 #### Inherited from
 
@@ -880,7 +898,7 @@ ButtonElementProps.testID
 
 #### Defined in
 
-node_modules/@types/react-native/index.d.ts:5134
+[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L25)
 
 ___
 
@@ -896,7 +914,23 @@ ButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L19)
+[src/Button/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L19)
+
+___
+
+### textTestID
+
+• `Optional` **textTestID**: `string`
+
+Inside Txt Test ID
+
+#### Inherited from
+
+ButtonElementProps.textTestID
+
+#### Defined in
+
+[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L27)
 
 ___
 
