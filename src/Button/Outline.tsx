@@ -39,7 +39,7 @@ const OutlineButton = ({
 }: OutlineButtonProps) => {
   return (
     <Button
-      style={[styles.button, disabled && t.borderGray300, style]}
+      style={[styles.button, disabled && t.opacity25, style]}
       textStyle={[styles.text, disabled && t.opacity25, textStyle]}
       disabled={disabled}
       {...props}
