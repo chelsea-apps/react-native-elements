@@ -271,13 +271,15 @@ ___
 
 • **children**: `ReactNode`
 
+Text to show inside the button
+
 #### Inherited from
 
 RoundedButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Rounded.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L9)
+[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/Rounded.tsx#L10)
 
 ___
 
@@ -341,7 +343,7 @@ RoundedButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L21)
+[src/Button/Rounded.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/Rounded.tsx#L16)
 
 ___
 
@@ -395,7 +397,7 @@ RoundedButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/index.tsx#L23)
 
 ___
 
@@ -411,7 +413,7 @@ RoundedButtonElementProps.iconTextID
 
 #### Defined in
 
-[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L29)
+[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/index.tsx#L29)
 
 ___
 
@@ -872,13 +874,15 @@ ___
 
 • `Optional` **style**: `StyleProp`<`ViewStyle`\>
 
+Tailwind styling -> TouchableOpacity Container
+
 #### Inherited from
 
 RoundedButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Rounded.tsx:11](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L11)
+[src/Button/Rounded.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/Rounded.tsx#L14)
 
 ___
 
@@ -894,7 +898,7 @@ RoundedButtonElementProps.testID
 
 #### Defined in
 
-[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L25)
+[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/index.tsx#L25)
 
 ___
 
@@ -902,13 +906,15 @@ ___
 
 • `Optional` **textStyle**: `StyleProp`<`TextStyle`\>
 
+Tailwind Styling -> Txt Component
+
 #### Inherited from
 
 RoundedButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L10)
+[src/Button/Rounded.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/Rounded.tsx#L12)
 
 ___
 
@@ -924,7 +930,7 @@ RoundedButtonElementProps.textTestID
 
 #### Defined in
 
-[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L27)
+[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Button/index.tsx#L27)
 
 ___
 
