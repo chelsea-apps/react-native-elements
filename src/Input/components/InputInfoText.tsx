@@ -12,16 +12,27 @@ const styles = {
 }
 
 type InputInfoTextProps = {
+  /** Info text string */
   text?: string
+  /** Info text styling */
   infoStyle?: StyleProp<TextStyle>
+  /** Info text color */
   textColor?: string
+  /** Info text testID */
+  testID?: string
 }
 
-const InputInfoText = ({ text, infoStyle, textColor }: InputInfoTextProps) => (
+const InputInfoText = ({
+  text,
+  infoStyle,
+  textColor,
+  testID,
+}: InputInfoTextProps) => (
   <OptionalWrapper data={text}>
     <View style={styles.container}>
       <Txt
         style={[styles.info, { color: textColor ?? color.white }, infoStyle]}
+        testID={testID}
       >
         {text}
       </Txt>

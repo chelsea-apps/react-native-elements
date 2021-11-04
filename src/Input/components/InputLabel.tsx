@@ -26,6 +26,7 @@ type InputLabelProps = {
   text?: string
   labelStyle?: StyleProp<TextStyle>
   labelColor?: string
+  testID?: string
 }
 
 const InputLabel = ({
@@ -35,6 +36,7 @@ const InputLabel = ({
   defaultValue,
   labelStyle,
   labelColor,
+  testID,
 }: InputLabelProps) => {
   const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(
     value ?? '',
@@ -55,6 +57,7 @@ const InputLabel = ({
           { color: labelColor ?? color.gray400 },
           labelStyle,
         ]}
+        testID={testID}
       >
         {text}
       </Animated.Text>

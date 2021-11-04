@@ -11,15 +11,26 @@ const styles = {
 }
 
 type InputErrorProps = {
+  /** Field error */
   error?: FieldError
+  /** Error text style */
   errorStyle?: StyleProp<TextStyle>
+  /** Error text Color */
   textColor?: string
+  /** error testID */
+  testID?: string
 }
 
-const InputError = ({ error, errorStyle, textColor }: InputErrorProps) => (
+const InputError = ({
+  error,
+  errorStyle,
+  textColor,
+  testID,
+}: InputErrorProps) => (
   <OptionalWrapper data={error?.message}>
     <Txt
       style={[styles.error, { color: textColor ?? color.red400 }, errorStyle]}
+      testID={testID}
     >
       {error?.message}
     </Txt>

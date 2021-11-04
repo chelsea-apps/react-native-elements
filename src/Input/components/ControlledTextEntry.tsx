@@ -41,6 +41,8 @@ const ControlledTextEntry = ({
   label,
   icon,
   onSubmitEditing,
+  textEntryTestID,
+  labelTestID,
   // Styling
   textEntryStyle,
   textEntryContainerStyle,
@@ -73,6 +75,7 @@ const ControlledTextEntry = ({
               defaultValue={defaultValue}
               labelColor={labelColor}
               labelStyle={labelStyle}
+              testID={labelTestID}
             />
           </OptionalWrapper>
           <View
@@ -112,6 +115,7 @@ const ControlledTextEntry = ({
               }
               selectionColor={selectionColor}
               placeholder='' // Needed to not be passed accidentally
+              testID={textEntryTestID}
               {...props}
             />
           </View>

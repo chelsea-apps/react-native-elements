@@ -58,21 +58,41 @@ export interface InputProps extends TextInputProps {
   labelColor?: string
   /** Text entry selection color */
   selectionColor?: string
+  /** infoText Styling */
+  infoTextStyle?: StyleProp<TextStyle>
   /** Text between error and container color */
   infoTextColor?: string
   /** Error text color */
   errorColor?: string
+  /** Error text styling */
+  errorStyle?: StyleProp<TextStyle>
+  /** Container Test ID */
+  testID?: string
+  /** Text Entry Test ID */
+  textEntryTestID?: string
+  /** Label Test ID */
+  labelTestID?: string
+  /** Info text Test ID */
+  infoTextTestID?: string
+  /** Error Test ID */
+  errorTestID?: string
 }
 
 const Input = ({
   name,
   control,
   error,
+  errorTestID,
+  errorColor,
+  errorStyle,
   label,
   validation,
   onSubmitEditing,
   defaultValue,
   infoText,
+  infoTextStyle,
+  infoTextColor,
+  infoTextTestID,
   icon,
   style,
   textEntryStyle,
@@ -84,10 +104,13 @@ const Input = ({
   focusedBorderColor,
   labelColor,
   selectionColor,
+  testID,
+  textEntryTestID,
+  labelTestID,
   ...props
 }: InputProps) => {
   return (
-    <View style={[t.mB4, style]}>
+    <View style={[t.mB4, style]} testID={testID}>
       <ControlledTextEntry
         // Functionality
         name={name}
@@ -107,19 +130,25 @@ const Input = ({
         focusedBorderColor={focusedBorderColor ?? color.yellow400}
         selectionColor={selectionColor ?? color.white}
         labelColor={labelColor ?? color.gray400}
+        textEntryTestID={textEntryTestID}
+        labelTestID={labelTestID}
         {...props}
       />
       <InputInfoText
         // Functionality
         text={infoText}
+        testID={infoTextTestID}
         // Styling
-        textColor={color.white}
+        textColor={infoTextColor ?? color.white}
+        infoStyle={infoTextStyle}
       />
       <InputError
         // Functionality
         error={error}
+        testID={errorTestID}
         // Styling
-        textColor={color.red400}
+        textColor={errorColor ?? color.red400}
+        errorStyle={errorStyle}
       />
     </View>
   )
