@@ -21,6 +21,12 @@ export interface IButtonProps extends TouchableOpacityProps {
   disabled?: boolean
   /** Icon component, sits left to the text */
   icon?: React.ReactNode
+  /** Container Test ID */
+  testID?: string
+  /** Inside Txt Test ID */
+  textTestID?: string
+  /** Icon container (Txt) Test ID */
+  iconTextID?: string
 }
 
 const styles = {
@@ -34,6 +40,9 @@ const Button = ({
   textStyle,
   disabled,
   icon,
+  testID,
+  textTestID,
+  iconTextID,
   ...props
 }: IButtonProps) => {
   return (
@@ -41,11 +50,18 @@ const Button = ({
       <TouchableOpacity
         style={[styles.button, style]}
         disabled={disabled}
+        testID={testID}
         {...props}
       >
-        {icon && <Txt style={[t.mR2]}>{icon}</Txt>}
+        {icon && (
+          <Txt style={[t.mR2]} testID={iconTextID}>
+            {icon}
+          </Txt>
+        )}
         {typeof children === 'string' ? (
-          <Txt style={[styles.text, textStyle]}>{children}</Txt>
+          <Txt style={[styles.text, textStyle]} testID={textTestID}>
+            {children}
+          </Txt>
         ) : (
           [children]
         )}
