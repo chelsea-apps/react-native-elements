@@ -34,7 +34,7 @@ IconElementProps.color
 
 #### Defined in
 
-[src/Icon/index.tsx:45](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L45)
+[src/Icon/index.tsx:45](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L45)
 
 ___
 
@@ -50,7 +50,7 @@ IconElementProps.fontName
 
 #### Defined in
 
-[src/Icon/index.tsx:37](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L37)
+[src/Icon/index.tsx:37](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L37)
 
 ___
 
@@ -66,7 +66,7 @@ IconElementProps.name
 
 #### Defined in
 
-[src/Icon/index.tsx:41](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L41)
+[src/Icon/index.tsx:41](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L41)
 
 ___
 
@@ -82,7 +82,7 @@ IconElementProps.size
 
 #### Defined in
 
-[src/Icon/index.tsx:43](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L43)
+[src/Icon/index.tsx:43](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L43)
 
 ___
 
@@ -98,7 +98,7 @@ IconElementProps.style
 
 #### Defined in
 
-[src/Icon/index.tsx:39](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L39)
+[src/Icon/index.tsx:39](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L39)
 
 ___
 
@@ -114,7 +114,7 @@ IconElementProps.svgComponent
 
 #### Defined in
 
-[src/Icon/index.tsx:35](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L35)
+[src/Icon/index.tsx:35](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L35)
 
 ___
 
@@ -130,4 +130,4 @@ IconElementProps.type
 
 #### Defined in
 
-[src/Icon/index.tsx:33](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/Icon/index.tsx#L33)
+[src/Icon/index.tsx:33](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/Icon/index.tsx#L33)

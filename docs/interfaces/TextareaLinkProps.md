@@ -54,7 +54,7 @@ TextareaLinkElementProps.bgColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L46)
+[src/InputPressable/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L46)
 
 ___
 
@@ -70,7 +70,7 @@ TextareaLinkElementProps.borderColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L50)
+[src/InputPressable/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L50)
 
 ___
 
@@ -86,7 +86,7 @@ TextareaLinkElementProps.control
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L22)
+[src/TextareaLink/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L22)
 
 ___
 
@@ -102,7 +102,7 @@ TextareaLinkElementProps.defaultValue
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L28)
+[src/TextareaLink/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L28)
 
 ___
 
@@ -118,7 +118,7 @@ TextareaLinkElementProps.error
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L26)
+[src/TextareaLink/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L26)
 
 ___
 
@@ -134,7 +134,7 @@ TextareaLinkElementProps.errorStyle
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L32)
+[src/TextareaLink/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L32)
 
 ___
 
@@ -150,7 +150,7 @@ TextareaLinkElementProps.icon
 
 #### Defined in
 
-[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L17)
+[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L17)
 
 ___
 
@@ -166,7 +166,7 @@ TextareaLinkElementProps.iconColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L19)
+[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L19)
 
 ___
 
@@ -182,7 +182,7 @@ TextareaLinkElementProps.iconName
 
 #### Defined in
 
-[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L25)
+[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L25)
 
 ___
 
@@ -198,7 +198,7 @@ TextareaLinkElementProps.iconSize
 
 #### Defined in
 
-[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L21)
+[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L21)
 
 ___
 
@@ -214,7 +214,7 @@ TextareaLinkElementProps.iconStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L23)
+[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L23)
 
 ___
 
@@ -230,7 +230,7 @@ TextareaLinkElementProps.label
 
 #### Defined in
 
-[src/InputPressable/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L30)
+[src/InputPressable/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L30)
 
 ___
 
@@ -246,7 +246,7 @@ TextareaLinkElementProps.labelColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L52)
+[src/InputPressable/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L52)
 
 ___
 
@@ -262,7 +262,7 @@ TextareaLinkElementProps.labelStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L42)
+[src/InputPressable/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L42)
 
 ___
 
@@ -278,7 +278,7 @@ TextareaLinkElementProps.name
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L20)
+[src/TextareaLink/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L20)
 
 ___
 
@@ -294,7 +294,7 @@ TextareaLinkElementProps.noIcon
 
 #### Defined in
 
-[src/InputPressable/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L36)
+[src/InputPressable/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L36)
 
 ___
 
@@ -310,7 +310,7 @@ TextareaLinkElementProps.placeholderStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L44)
+[src/InputPressable/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L44)
 
 ___
 
@@ -326,7 +326,7 @@ TextareaLinkElementProps.setValue
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L30)
+[src/TextareaLink/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L30)
 
 ___
 
@@ -342,7 +342,7 @@ TextareaLinkElementProps.style
 
 #### Defined in
 
-[src/InputPressable/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L38)
+[src/InputPressable/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L38)
 
 ___
 
@@ -358,7 +358,7 @@ TextareaLinkElementProps.textColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L48)
+[src/InputPressable/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L48)
 
 ___
 
@@ -374,7 +374,7 @@ TextareaLinkElementProps.textStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L40)
+[src/InputPressable/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L40)
 
 ___
 
@@ -390,7 +390,7 @@ TextareaLinkElementProps.validation
 
 #### Defined in
 
-[src/TextareaLink/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/TextareaLink/index.tsx#L24)
+[src/TextareaLink/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/TextareaLink/index.tsx#L24)
 
 ___
 
@@ -406,7 +406,7 @@ TextareaLinkElementProps.value
 
 #### Defined in
 
-[src/InputPressable/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L32)
+[src/InputPressable/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L32)
 
 ## Methods
 
@@ -426,4 +426,4 @@ TextareaLinkElementProps.onPress
 
 #### Defined in
 
-[src/InputPressable/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L34)
+[src/InputPressable/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L34)

@@ -47,7 +47,7 @@ InputPressableElementProps.bgColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L46)
+[src/InputPressable/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L46)
 
 ___
 
@@ -63,7 +63,7 @@ InputPressableElementProps.borderColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L50)
+[src/InputPressable/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L50)
 
 ___
 
@@ -79,7 +79,7 @@ InputPressableElementProps.icon
 
 #### Defined in
 
-[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L17)
+[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L17)
 
 ___
 
@@ -95,7 +95,7 @@ InputPressableElementProps.iconColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L19)
+[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L19)
 
 ___
 
@@ -111,7 +111,7 @@ InputPressableElementProps.iconName
 
 #### Defined in
 
-[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L25)
+[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L25)
 
 ___
 
@@ -127,7 +127,7 @@ InputPressableElementProps.iconSize
 
 #### Defined in
 
-[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L21)
+[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L21)
 
 ___
 
@@ -143,7 +143,7 @@ InputPressableElementProps.iconStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L23)
+[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L23)
 
 ___
 
@@ -159,7 +159,7 @@ InputPressableElementProps.label
 
 #### Defined in
 
-[src/InputPressable/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L30)
+[src/InputPressable/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L30)
 
 ___
 
@@ -175,7 +175,7 @@ InputPressableElementProps.labelColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L52)
+[src/InputPressable/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L52)
 
 ___
 
@@ -191,7 +191,7 @@ InputPressableElementProps.labelStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L42)
+[src/InputPressable/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L42)
 
 ___
 
@@ -207,7 +207,7 @@ InputPressableElementProps.noIcon
 
 #### Defined in
 
-[src/InputPressable/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L36)
+[src/InputPressable/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L36)
 
 ___
 
@@ -223,7 +223,7 @@ InputPressableElementProps.placeholderStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L44)
+[src/InputPressable/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L44)
 
 ___
 
@@ -239,7 +239,7 @@ InputPressableElementProps.style
 
 #### Defined in
 
-[src/InputPressable/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L38)
+[src/InputPressable/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L38)
 
 ___
 
@@ -255,7 +255,7 @@ InputPressableElementProps.textColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L48)
+[src/InputPressable/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L48)
 
 ___
 
@@ -271,7 +271,7 @@ InputPressableElementProps.textStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L40)
+[src/InputPressable/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L40)
 
 ___
 
@@ -287,7 +287,7 @@ InputPressableElementProps.value
 
 #### Defined in
 
-[src/InputPressable/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L32)
+[src/InputPressable/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L32)
 
 ## Methods
 
@@ -307,4 +307,4 @@ InputPressableElementProps.onPress
 
 #### Defined in
 
-[src/InputPressable/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/02a576e/src/InputPressable/index.tsx#L34)
+[src/InputPressable/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/63fde29/src/InputPressable/index.tsx#L34)

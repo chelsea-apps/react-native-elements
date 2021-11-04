@@ -32,6 +32,7 @@ const RoundedButton = ({
     <Button
       style={[styles.button, disabled && t.opacity25, style]}
       textStyle={[styles.text, disabled && t.opacity25, textStyle]}
+      disabled={disabled}
       {...props}
     >
       {children}
