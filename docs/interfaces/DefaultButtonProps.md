@@ -32,6 +32,7 @@
 - [hasTVPreferredFocus](DefaultButtonProps.md#hastvpreferredfocus)
 - [hitSlop](DefaultButtonProps.md#hitslop)
 - [icon](DefaultButtonProps.md#icon)
+- [iconTextID](DefaultButtonProps.md#icontextid)
 - [importantForAccessibility](DefaultButtonProps.md#importantforaccessibility)
 - [nextFocusDown](DefaultButtonProps.md#nextfocusdown)
 - [nextFocusForward](DefaultButtonProps.md#nextfocusforward)
@@ -53,6 +54,7 @@
 - [style](DefaultButtonProps.md#style)
 - [testID](DefaultButtonProps.md#testid)
 - [textStyle](DefaultButtonProps.md#textstyle)
+- [textTestID](DefaultButtonProps.md#texttestid)
 - [touchSoundDisabled](DefaultButtonProps.md#touchsounddisabled)
 - [tvParallaxProperties](DefaultButtonProps.md#tvparallaxproperties)
 
@@ -277,7 +279,7 @@ DefaultButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Default.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Default.tsx#L10)
+[src/Button/Default.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Default.tsx#L10)
 
 ___
 
@@ -341,7 +343,7 @@ DefaultButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/Default.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Default.tsx#L16)
+[src/Button/Default.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Default.tsx#L16)
 
 ___
 
@@ -395,7 +397,23 @@ DefaultButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L23)
+
+___
+
+### iconTextID
+
+• `Optional` **iconTextID**: `string`
+
+Icon container (Txt) Test ID
+
+#### Inherited from
+
+DefaultButtonElementProps.iconTextID
+
+#### Defined in
+
+[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L29)
 
 ___
 
@@ -864,7 +882,7 @@ DefaultButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Default.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Default.tsx#L14)
+[src/Button/Default.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Default.tsx#L14)
 
 ___
 
@@ -872,7 +890,7 @@ ___
 
 • `Optional` **testID**: `string`
 
-Used to locate this view in end-to-end tests.
+Container Test ID
 
 #### Inherited from
 
@@ -880,7 +898,7 @@ DefaultButtonElementProps.testID
 
 #### Defined in
 
-node_modules/@types/react-native/index.d.ts:5134
+[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L25)
 
 ___
 
@@ -896,7 +914,23 @@ DefaultButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Default.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Default.tsx#L12)
+[src/Button/Default.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Default.tsx#L12)
+
+___
+
+### textTestID
+
+• `Optional` **textTestID**: `string`
+
+Inside Txt Test ID
+
+#### Inherited from
+
+DefaultButtonElementProps.textTestID
+
+#### Defined in
+
+[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L27)
 
 ___
 

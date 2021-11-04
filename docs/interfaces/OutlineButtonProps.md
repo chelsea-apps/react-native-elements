@@ -32,6 +32,7 @@
 - [hasTVPreferredFocus](OutlineButtonProps.md#hastvpreferredfocus)
 - [hitSlop](OutlineButtonProps.md#hitslop)
 - [icon](OutlineButtonProps.md#icon)
+- [iconTextID](OutlineButtonProps.md#icontextid)
 - [importantForAccessibility](OutlineButtonProps.md#importantforaccessibility)
 - [nextFocusDown](OutlineButtonProps.md#nextfocusdown)
 - [nextFocusForward](OutlineButtonProps.md#nextfocusforward)
@@ -53,6 +54,7 @@
 - [style](OutlineButtonProps.md#style)
 - [testID](OutlineButtonProps.md#testid)
 - [textStyle](OutlineButtonProps.md#textstyle)
+- [textTestID](OutlineButtonProps.md#texttestid)
 - [touchSoundDisabled](OutlineButtonProps.md#touchsounddisabled)
 - [tvParallaxProperties](OutlineButtonProps.md#tvparallaxproperties)
 
@@ -277,7 +279,7 @@ OutlineButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Outline.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Outline.tsx#L10)
+[src/Button/Outline.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Outline.tsx#L10)
 
 ___
 
@@ -341,7 +343,7 @@ OutlineButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/Outline.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Outline.tsx#L16)
+[src/Button/Outline.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Outline.tsx#L16)
 
 ___
 
@@ -395,7 +397,23 @@ OutlineButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L23)
+
+___
+
+### iconTextID
+
+• `Optional` **iconTextID**: `string`
+
+Icon container (Txt) Test ID
+
+#### Inherited from
+
+OutlineButtonElementProps.iconTextID
+
+#### Defined in
+
+[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L29)
 
 ___
 
@@ -864,7 +882,7 @@ OutlineButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Outline.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Outline.tsx#L14)
+[src/Button/Outline.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Outline.tsx#L14)
 
 ___
 
@@ -872,7 +890,7 @@ ___
 
 • `Optional` **testID**: `string`
 
-Used to locate this view in end-to-end tests.
+Container Test ID
 
 #### Inherited from
 
@@ -880,7 +898,7 @@ OutlineButtonElementProps.testID
 
 #### Defined in
 
-node_modules/@types/react-native/index.d.ts:5134
+[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L25)
 
 ___
 
@@ -896,7 +914,23 @@ OutlineButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Outline.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Outline.tsx#L12)
+[src/Button/Outline.tsx:12](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Outline.tsx#L12)
+
+___
+
+### textTestID
+
+• `Optional` **textTestID**: `string`
+
+Inside Txt Test ID
+
+#### Inherited from
+
+OutlineButtonElementProps.textTestID
+
+#### Defined in
+
+[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L27)
 
 ___
 

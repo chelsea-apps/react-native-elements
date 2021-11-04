@@ -32,6 +32,7 @@
 - [hasTVPreferredFocus](RoundedButtonProps.md#hastvpreferredfocus)
 - [hitSlop](RoundedButtonProps.md#hitslop)
 - [icon](RoundedButtonProps.md#icon)
+- [iconTextID](RoundedButtonProps.md#icontextid)
 - [importantForAccessibility](RoundedButtonProps.md#importantforaccessibility)
 - [nextFocusDown](RoundedButtonProps.md#nextfocusdown)
 - [nextFocusForward](RoundedButtonProps.md#nextfocusforward)
@@ -53,6 +54,7 @@
 - [style](RoundedButtonProps.md#style)
 - [testID](RoundedButtonProps.md#testid)
 - [textStyle](RoundedButtonProps.md#textstyle)
+- [textTestID](RoundedButtonProps.md#texttestid)
 - [touchSoundDisabled](RoundedButtonProps.md#touchsounddisabled)
 - [tvParallaxProperties](RoundedButtonProps.md#tvparallaxproperties)
 
@@ -275,7 +277,7 @@ RoundedButtonElementProps.children
 
 #### Defined in
 
-[src/Button/Rounded.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L9)
+[src/Button/Rounded.tsx:9](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L9)
 
 ___
 
@@ -339,7 +341,7 @@ RoundedButtonElementProps.disabled
 
 #### Defined in
 
-[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L21)
+[src/Button/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L21)
 
 ___
 
@@ -393,7 +395,23 @@ RoundedButtonElementProps.icon
 
 #### Defined in
 
-[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/index.tsx#L23)
+[src/Button/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L23)
+
+___
+
+### iconTextID
+
+• `Optional` **iconTextID**: `string`
+
+Icon container (Txt) Test ID
+
+#### Inherited from
+
+RoundedButtonElementProps.iconTextID
+
+#### Defined in
+
+[src/Button/index.tsx:29](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L29)
 
 ___
 
@@ -860,7 +878,7 @@ RoundedButtonElementProps.style
 
 #### Defined in
 
-[src/Button/Rounded.tsx:11](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L11)
+[src/Button/Rounded.tsx:11](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L11)
 
 ___
 
@@ -868,7 +886,7 @@ ___
 
 • `Optional` **testID**: `string`
 
-Used to locate this view in end-to-end tests.
+Container Test ID
 
 #### Inherited from
 
@@ -876,7 +894,7 @@ RoundedButtonElementProps.testID
 
 #### Defined in
 
-node_modules/@types/react-native/index.d.ts:5134
+[src/Button/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L25)
 
 ___
 
@@ -890,7 +908,23 @@ RoundedButtonElementProps.textStyle
 
 #### Defined in
 
-[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/e4c93f8/src/Button/Rounded.tsx#L10)
+[src/Button/Rounded.tsx:10](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/Rounded.tsx#L10)
+
+___
+
+### textTestID
+
+• `Optional` **textTestID**: `string`
+
+Inside Txt Test ID
+
+#### Inherited from
+
+RoundedButtonElementProps.textTestID
+
+#### Defined in
+
+[src/Button/index.tsx:27](https://github.com/chelsea-apps/react-native-elements/blob/9555864/src/Button/index.tsx#L27)
 
 ___
 
