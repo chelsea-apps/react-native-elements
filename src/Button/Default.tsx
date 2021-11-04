@@ -39,7 +39,7 @@ const DefaultButton = ({
   return (
     <Button
       icon={icon}
-      style={[styles.button, disabled && t.bgGray300, style]}
+      style={[styles.button, disabled && t.opacity25, style]}
       textStyle={[styles.text, disabled && t.opacity25, textStyle]}
       disabled={disabled}
       {...props}
