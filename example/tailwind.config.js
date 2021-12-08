@@ -198,13 +198,8 @@ module.exports = {
 		},
 		fontFamily: {
 			// Sans
-			// sansThin: 'NunitoSans-ExtraLight',
-			// sansLight: 'NunitoSans-Light',
-			// sans: 'NunitoSans-Regular',
-			// sansSemiBold: 'NunitoSans-SemiBold',
-			// sansBold: 'NunitoSans-Bold',
-			// sansExtraBold: 'NunitoSans-ExtraBold',
-			// sansBlack: 'NunitoSans-Black',
+			sans: 'TwCenMTStd',
+			sansBold: 'TwCenMTStd-Bold',
 			// Serif
 			serif: 'Georgia',
 			// Mono
