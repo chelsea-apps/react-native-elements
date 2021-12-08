@@ -1,0 +1,1 @@
+export type HomeNavigator = undefined;

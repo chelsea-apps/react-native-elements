@@ -1,0 +1,1 @@
+export type ElementsNavigator = undefined;
