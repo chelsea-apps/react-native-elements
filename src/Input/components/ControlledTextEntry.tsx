@@ -16,7 +16,7 @@ import InputLabel from './InputLabel'
 
 const styles = {
   inputContainer: [t.flexRow, t.itemsCenter, t.border, t.p4, t.rounded],
-  input: [t.textBase, t.wFull],
+  input: [t.wFull, t.fontSans],
 }
 
 interface ControlledTextEntryProps extends InputProps {
