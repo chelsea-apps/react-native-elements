@@ -14,7 +14,7 @@
     "registry": "http://registry.chelsea-apps.com:4873"
   },
   "scripts": {
-    "compile": "rm -rf lib && tsc -p .",
+    "compile": "rm -rf lib && tsc -p . && rm -rf /example/lib && cp -a lib/ example/lib/",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "yarn compile",
     "test": "jest",

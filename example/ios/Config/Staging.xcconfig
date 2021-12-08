@@ -1,0 +1,6 @@
+#include "Pods/Target Support Files/Pods-ChelseaAppsStarter/Pods-ChelseaAppsStarter.debug (staging).xcconfig"
+#include "Pods/Target Support Files/Pods-ChelseaAppsStarter/Pods-ChelseaAppsStarter.release (staging).xcconfig"
+
+// App Settings
+APP_NAME = Starter (Beta)
+APP_BUNDLE_ID = com.starter.app.staging

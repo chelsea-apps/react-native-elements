@@ -1,0 +1,6 @@
+#include "Pods/Target Support Files/Pods-ChelseaAppsStarter/Pods-ChelseaAppsStarter.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-ChelseaAppsStarter/Pods-ChelseaAppsStarter.release (development).xcconfig"
+
+// App Settings
+APP_NAME = Starter (Dev)
+APP_BUNDLE_ID = com.starter.app.dev
