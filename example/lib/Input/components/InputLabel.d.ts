@@ -6,7 +6,8 @@ declare type InputLabelProps = {
     text?: string;
     labelStyle?: StyleProp<TextStyle>;
     labelColor?: string;
+    focusedLabelColor?: string;
     testID?: string;
 };
-declare const InputLabel: ({ text, isFocused, value, defaultValue, labelStyle, labelColor, testID, }: InputLabelProps) => JSX.Element;
+declare const InputLabel: ({ text, isFocused, value, defaultValue, labelStyle, labelColor, focusedLabelColor, testID, }: InputLabelProps) => JSX.Element;
 export default InputLabel;

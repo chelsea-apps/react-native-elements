@@ -10,7 +10,8 @@ interface ControlledTextEntryProps extends InputProps {
     selectionColor?: string;
     textColor?: string;
     labelColor?: string;
+    focusedLabelColor?: string;
     onSubmitEditing?: () => void;
 }
-declare const ControlledTextEntry: ({ name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, textEntryStyle, textEntryContainerStyle, labelStyle, bgColor, borderColor, focusedBorderColor, selectionColor, textColor, labelColor, ...props }: ControlledTextEntryProps) => JSX.Element;
+declare const ControlledTextEntry: ({ name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, textEntryStyle, textEntryContainerStyle, labelStyle, bgColor, borderColor, focusedBorderColor, selectionColor, textColor, labelColor, focusedLabelColor, ...props }: ControlledTextEntryProps) => JSX.Element;
 export default ControlledTextEntry;

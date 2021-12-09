@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Animated } from 'react-native';
-import { color, t } from 'react-native-tailwindcss';
+import { t } from 'react-native-tailwindcss';
 import OptionalWrapper from '../../Wrapper/OptionalWrapper';
 import useInputAnimations from '../hooks/useInputAnimations';
 const styles = {
@@ -14,16 +14,17 @@ const styles = {
         t.mL4,
         t.mT4,
         t.textBase,
+        { zIndex: 1 },
     ],
 };
-const InputLabel = ({ text, isFocused, value, defaultValue, labelStyle, labelColor, testID, }) => {
+const InputLabel = ({ text, isFocused, value, defaultValue, labelStyle, labelColor, focusedLabelColor, testID, }) => {
     const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(value !== null && value !== void 0 ? value : '', defaultValue);
     useEffect(() => (isFocused || value || defaultValue ? fadeIn() : fadeOut()), [isFocused, fadeIn, value, defaultValue, fadeOut]);
     return (React.createElement(OptionalWrapper, { data: text },
         React.createElement(Animated.Text, { style: [
                 styles.label,
                 { ...animatedLabel },
-                { color: labelColor !== null && labelColor !== void 0 ? labelColor : color.gray400 },
+                { color: isFocused ? focusedLabelColor : labelColor },
                 labelStyle,
             ], testID: testID }, text)));
 };

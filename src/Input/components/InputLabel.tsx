@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Animated, StyleProp, TextStyle } from 'react-native'
-import { color, t } from 'react-native-tailwindcss'
+import { t } from 'react-native-tailwindcss'
 
 import OptionalWrapper from '../../Wrapper/OptionalWrapper'
 import useInputAnimations from '../hooks/useInputAnimations'
@@ -16,6 +16,7 @@ const styles = {
     t.mL4,
     t.mT4,
     t.textBase,
+    { zIndex: 1 },
   ],
 }
 
@@ -26,6 +27,7 @@ type InputLabelProps = {
   text?: string
   labelStyle?: StyleProp<TextStyle>
   labelColor?: string
+  focusedLabelColor?: string
   testID?: string
 }
 
@@ -36,6 +38,7 @@ const InputLabel = ({
   defaultValue,
   labelStyle,
   labelColor,
+  focusedLabelColor,
   testID,
 }: InputLabelProps) => {
   const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(
@@ -54,7 +57,7 @@ const InputLabel = ({
         style={[
           styles.label,
           { ...animatedLabel },
-          { color: labelColor ?? color.gray400 },
+          { color: isFocused ? focusedLabelColor : labelColor },
           labelStyle,
         ]}
         testID={testID}

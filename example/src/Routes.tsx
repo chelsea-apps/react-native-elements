@@ -14,7 +14,7 @@ const Routes = ({ isLoggedIn }: RoutesProps) => {
 		<View style={[t.flex1, t.bgGray900]}>
 			<NavigationContainer
 				// @ts-expect-error-next-line
-				theme={{ colors: { background: color.gray900 } }}
+				theme={{ colors: { background: color.gray100 } }}
 			>
 				{isLoggedIn ? <GeneralStack /> : <AuthStack />}
 			</NavigationContainer>

@@ -6,14 +6,21 @@ module.exports = {
 			black: '#000',
 			white: '#fff',
 			gray: {
-				400: '#A0A4AB',
-				900: '#1E1E1E',
+				100: '#F2F2F2',
+				200: '#dedede',
+				300: '#C0C5CA',
+				400: '#A0A3AA',
+				700: '#5C5C5C',
+				900: '#26282C',
 			},
 			yellow: {
-				400: '#FFE315',
+				400: '#FCC544',
 			},
 			red: {
 				400: '#FC605D',
+			},
+			blue: {
+				400: '#0f172a',
 			},
 		},
 		spacing: {
