@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { LegacyRef, useEffect, useRef, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
   Keyboard,
   StyleProp,
   TextInput,
   TextStyle,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native'
@@ -15,7 +16,15 @@ import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  inputContainer: [t.flexRow, t.itemsCenter, t.border, t.p4, t.rounded],
+  inputContainer: [
+    t.flexRow,
+    t.itemsCenter,
+    t.border,
+    t.pX4,
+    t.pT3,
+    t.pB2,
+    t.rounded,
+  ],
   input: [t.wFull, t.fontSans],
 }
 
@@ -23,12 +32,16 @@ interface ControlledTextEntryProps extends InputProps {
   textEntryStyle?: StyleProp<TextStyle>
   textEntryContainerStyle?: StyleProp<ViewStyle>
   labelStyle?: StyleProp<TextStyle>
+  labelTopPosition?: number
+  labelBigFontSize?: number
+  labelSmallFontSize?: number
   bgColor?: string
   borderColor?: string
   focusedBorderColor?: string
   selectionColor?: string
   textColor?: string
   labelColor?: string
+  focusedLabelColor?: string
   onSubmitEditing?: () => void
 }
 
@@ -47,18 +60,37 @@ const ControlledTextEntry = ({
   textEntryStyle,
   textEntryContainerStyle,
   labelStyle,
+  labelTopPosition,
+  labelBigFontSize,
+  labelSmallFontSize,
   bgColor,
   borderColor,
   focusedBorderColor,
   selectionColor,
   textColor,
   labelColor,
+  focusedLabelColor,
   ...props
 }: ControlledTextEntryProps) => {
   const [isFocused, setIsFocused] = useState<boolean>(false)
   const [currentValue, setCurrentValue] = useState<string | undefined>(
     undefined
   )
+  const inputRef = useRef<LegacyRef<TextInput> | undefined>()
+
+  useEffect(() => {
+    if (inputRef.current) {
+      // @ts-expect-error-next-line
+      if (isFocused) inputRef.current.focus()
+      // @ts-expect-error-next-line
+      else inputRef.current.blur()
+    }
+  }, [isFocused, inputRef])
+
+  useEffect(() => {
+    if (defaultValue) setCurrentValue(defaultValue)
+  }, [defaultValue])
+
   return (
     <Controller
       name={name ?? ''}
@@ -66,60 +98,70 @@ const ControlledTextEntry = ({
       defaultValue={defaultValue}
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
-        <View style={t.relative}>
-          <OptionalWrapper data={label}>
-            <InputLabel
-              text={label}
-              isFocused={isFocused}
-              value={currentValue}
-              defaultValue={defaultValue}
-              labelColor={labelColor}
-              labelStyle={labelStyle}
-              testID={labelTestID}
-            />
-          </OptionalWrapper>
-          <View
-            style={[
-              styles.inputContainer,
-              label ? t.pT10 : t.pT4,
-              {
-                borderColor: isFocused ? focusedBorderColor : borderColor,
-                backgroundColor: bgColor,
-              },
-              textEntryContainerStyle,
-            ]}
-          >
-            <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
-            <TextInput
+        <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
+          <View style={t.relative}>
+            <OptionalWrapper data={label}>
+              <InputLabel
+                text={label}
+                isFocused={isFocused}
+                value={currentValue}
+                defaultValue={defaultValue}
+                currentValue={currentValue}
+                labelColor={labelColor}
+                focusedLabelColor={focusedLabelColor}
+                labelStyle={labelStyle}
+                labelTopPosition={labelTopPosition}
+                labelBigFontSize={labelBigFontSize}
+                labelSmallFontSize={labelSmallFontSize}
+                testID={labelTestID}
+              />
+            </OptionalWrapper>
+            <View
               style={[
-                styles.input,
+                styles.inputContainer,
+                label ? t.pT9 : t.pT4,
                 {
-                  color: textColor,
+                  borderColor: isFocused ? focusedBorderColor : borderColor,
+                  backgroundColor: bgColor,
                 },
-                textEntryStyle,
+                textEntryContainerStyle,
               ]}
-              onFocus={() => {
-                setIsFocused(true)
-              }}
-              onBlur={() => {
-                onBlur()
-                setIsFocused(false)
-              }}
-              onChangeText={(inputValue) => {
-                setCurrentValue(inputValue)
-                onChange(inputValue)
-              }}
-              value={value}
-              onSubmitEditing={() =>
-                onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
-              }
-              selectionColor={selectionColor}
-              placeholder='' // Needed to not be passed accidentally
-              testID={textEntryTestID}
-              {...props}
-            />
+            >
+              <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
+              <TextInput
+                // @ts-expect-error-next-line
+                ref={inputRef}
+                style={[
+                  styles.input,
+                  {
+                    color: textColor,
+                  },
+                  textEntryStyle,
+                ]}
+                onFocus={() => {
+                  setIsFocused(true)
+                }}
+                onBlur={() => {
+                  onBlur()
+                  setIsFocused(false)
+                }}
+                onChangeText={(inputValue) => {
+                  setCurrentValue(inputValue)
+                  onChange(inputValue)
+                }}
+                value={value}
+                onSubmitEditing={() =>
+                  onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
+                }
+                selectionColor={selectionColor}
+                placeholder='' // Needed to not be passed accidentally
+                testID={textEntryTestID}
+                defaultValue={defaultValue}
+                {...props}
+              />
+            </View>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
       )}
     />
   )

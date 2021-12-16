@@ -44,6 +44,14 @@ export interface InputProps extends TextInputProps {
     focusedBorderColor?: string;
     /** Small text above value color */
     labelColor?: string;
+    /** Top value of label when opened */
+    labelTopPosition?: number;
+    /** Label font size when out of focus */
+    labelBigFontSize?: number;
+    /** Label font size when in focus */
+    labelSmallFontSize?: number;
+    /** Focused small text above value color */
+    focusedLabelColor?: string;
     /** Text entry selection color */
     selectionColor?: string;
     /** infoText Styling */
@@ -65,5 +73,5 @@ export interface InputProps extends TextInputProps {
     /** Error Test ID */
     errorTestID?: string;
 }
-declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, bgColor, textColor, borderColor, focusedBorderColor, labelColor, selectionColor, testID, textEntryTestID, labelTestID, ...props }: InputProps) => JSX.Element;
+declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelSmallFontSize, labelBigFontSize, bgColor, textColor, borderColor, focusedBorderColor, labelColor, focusedLabelColor, selectionColor, testID, textEntryTestID, labelTestID, ...props }: InputProps) => JSX.Element;
 export default Input;
