@@ -24,12 +24,20 @@ export interface InputProps extends TextInputProps {
     infoText?: string;
     /** Icon to show at the start of the input container */
     icon?: React.ReactNode;
+    /** Characters to show before the user input text */
+    prefix?: string;
+    /** Characters to show after the user input text */
+    postfix?: string;
     /** Additional action to be performed on input submission */
     onSubmitEditing?: () => void;
     /** View Container styles - including errors and info text */
     style?: StyleProp<ViewStyle>;
     /** Input value styles */
     textEntryStyle?: StyleProp<TextStyle>;
+    /** Prefix Txt Element Styling */
+    prefixStyle?: StyleProp<TextStyle>;
+    /** Postfix Txt Element Styling */
+    postfixStyle?: StyleProp<TextStyle>;
     /** Input container styles */
     textEntryContainerStyle?: StyleProp<ViewStyle>;
     /** Small Txt above value styles */
@@ -73,5 +81,5 @@ export interface InputProps extends TextInputProps {
     /** Error Test ID */
     errorTestID?: string;
 }
-declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelSmallFontSize, labelBigFontSize, bgColor, textColor, borderColor, focusedBorderColor, labelColor, focusedLabelColor, selectionColor, testID, textEntryTestID, labelTestID, ...props }: InputProps) => JSX.Element;
+declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, prefix, prefixStyle, postfix, postfixStyle, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelSmallFontSize, labelBigFontSize, bgColor, textColor, borderColor, focusedBorderColor, labelColor, focusedLabelColor, selectionColor, testID, textEntryTestID, labelTestID, ...props }: InputProps) => JSX.Element;
 export default Input;

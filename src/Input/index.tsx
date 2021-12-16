@@ -36,12 +36,20 @@ export interface InputProps extends TextInputProps {
   infoText?: string
   /** Icon to show at the start of the input container */
   icon?: React.ReactNode
+  /** Characters to show before the user input text */
+  prefix?: string
+  /** Characters to show after the user input text */
+  postfix?: string
   /** Additional action to be performed on input submission */
   onSubmitEditing?: () => void
   /** View Container styles - including errors and info text */
   style?: StyleProp<ViewStyle>
   /** Input value styles */
   textEntryStyle?: StyleProp<TextStyle>
+  /** Prefix Txt Element Styling */
+  prefixStyle?: StyleProp<TextStyle>
+  /** Postfix Txt Element Styling */
+  postfixStyle?: StyleProp<TextStyle>
   /** Input container styles */
   textEntryContainerStyle?: StyleProp<ViewStyle>
   /** Small Txt above value styles */
@@ -101,6 +109,10 @@ const Input = ({
   infoTextStyle,
   infoTextColor,
   infoTextTestID,
+  prefix,
+  prefixStyle,
+  postfix,
+  postfixStyle,
   icon,
   style,
   textEntryStyle,
@@ -132,6 +144,8 @@ const Input = ({
         label={label}
         onSubmitEditing={onSubmitEditing}
         icon={icon}
+        prefix={prefix}
+        postfix={postfix}
         // Styling
         textEntryStyle={textEntryStyle}
         textEntryContainerStyle={textEntryContainerStyle}
@@ -146,6 +160,8 @@ const Input = ({
         labelBigFontSize={labelBigFontSize ?? 16}
         labelSmallFontSize={labelSmallFontSize ?? 13}
         focusedLabelColor={focusedLabelColor ?? color.gray700}
+        prefixStyle={prefixStyle}
+        postfixStyle={postfixStyle}
         textEntryTestID={textEntryTestID}
         labelTestID={labelTestID}
         {...props}

@@ -11,6 +11,7 @@ import {
 } from 'react-native'
 import { t } from 'react-native-tailwindcss'
 
+import { Txt } from '../..'
 import OptionalWrapper from '../../Wrapper/OptionalWrapper'
 import { InputProps } from '..'
 import InputLabel from './InputLabel'
@@ -26,6 +27,8 @@ const styles = {
     t.rounded,
   ],
   input: [t.wFull, t.fontSans],
+  prefix: [t.fontSans, t.textGray900, t.mR1],
+  postfix: [t.fontSans, t.textGray900, t.mL2],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -56,6 +59,8 @@ const ControlledTextEntry = ({
   onSubmitEditing,
   textEntryTestID,
   labelTestID,
+  prefix,
+  postfix,
   // Styling
   textEntryStyle,
   textEntryContainerStyle,
@@ -67,6 +72,8 @@ const ControlledTextEntry = ({
   borderColor,
   focusedBorderColor,
   selectionColor,
+  prefixStyle,
+  postfixStyle,
   textColor,
   labelColor,
   focusedLabelColor,
@@ -86,6 +93,10 @@ const ControlledTextEntry = ({
       else inputRef.current.blur()
     }
   }, [isFocused, inputRef])
+
+  useEffect(() => {
+    if (prefix || postfix) setIsFocused(true)
+  }, [prefix, postfix])
 
   useEffect(() => {
     if (defaultValue) setCurrentValue(defaultValue)
@@ -120,6 +131,7 @@ const ControlledTextEntry = ({
               style={[
                 styles.inputContainer,
                 label ? t.pT9 : t.pT4,
+                postfix && t.pR10,
                 {
                   borderColor: isFocused ? focusedBorderColor : borderColor,
                   backgroundColor: bgColor,
@@ -128,6 +140,9 @@ const ControlledTextEntry = ({
               ]}
             >
               <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
+              <OptionalWrapper data={prefix}>
+                <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
+              </OptionalWrapper>
               <TextInput
                 // @ts-expect-error-next-line
                 ref={inputRef}
@@ -159,6 +174,9 @@ const ControlledTextEntry = ({
                 defaultValue={defaultValue}
                 {...props}
               />
+              <OptionalWrapper data={postfix}>
+                <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
+              </OptionalWrapper>
             </View>
           </View>
         </TouchableWithoutFeedback>
