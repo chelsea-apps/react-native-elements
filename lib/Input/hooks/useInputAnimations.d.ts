@@ -1,4 +1,4 @@
-declare const useInputAnimations: (value: string, defaultValue?: string | undefined) => {
+declare const useInputAnimations: (value: string, defaultValue?: string | undefined, labelTopPosition?: number | undefined, labelBigFontSize?: number | undefined, labelSmallFontSize?: number | undefined) => {
     fadeIn: () => void;
     fadeOut: () => void;
     animatedLabel: {

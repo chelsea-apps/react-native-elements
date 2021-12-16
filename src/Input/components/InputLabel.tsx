@@ -24,10 +24,14 @@ type InputLabelProps = {
   isFocused: boolean
   value: string | undefined
   defaultValue: string | undefined
+  currentValue: string | undefined
   text?: string
   labelStyle?: StyleProp<TextStyle>
   labelColor?: string
   focusedLabelColor?: string
+  labelTopPosition?: number
+  labelBigFontSize?: number
+  labelSmallFontSize?: number
   testID?: string
 }
 
@@ -36,14 +40,21 @@ const InputLabel = ({
   isFocused,
   value,
   defaultValue,
+  currentValue,
   labelStyle,
+  labelTopPosition,
+  labelBigFontSize,
+  labelSmallFontSize,
   labelColor,
   focusedLabelColor,
   testID,
 }: InputLabelProps) => {
   const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(
     value ?? '',
-    defaultValue
+    defaultValue,
+    labelTopPosition,
+    labelBigFontSize,
+    labelSmallFontSize
   )
 
   useEffect(
@@ -57,7 +68,12 @@ const InputLabel = ({
         style={[
           styles.label,
           { ...animatedLabel },
-          { color: isFocused ? focusedLabelColor : labelColor },
+          {
+            color:
+              currentValue || defaultValue || value || isFocused
+                ? focusedLabelColor
+                : labelColor,
+          },
           labelStyle,
         ]}
         testID={testID}

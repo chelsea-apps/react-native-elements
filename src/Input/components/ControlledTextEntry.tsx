@@ -16,7 +16,15 @@ import { InputProps } from '..'
 import InputLabel from './InputLabel'
 
 const styles = {
-  inputContainer: [t.flexRow, t.itemsCenter, t.border, t.p4, t.rounded],
+  inputContainer: [
+    t.flexRow,
+    t.itemsCenter,
+    t.border,
+    t.pX4,
+    t.pT3,
+    t.pB2,
+    t.rounded,
+  ],
   input: [t.wFull, t.fontSans],
 }
 
@@ -24,6 +32,9 @@ interface ControlledTextEntryProps extends InputProps {
   textEntryStyle?: StyleProp<TextStyle>
   textEntryContainerStyle?: StyleProp<ViewStyle>
   labelStyle?: StyleProp<TextStyle>
+  labelTopPosition?: number
+  labelBigFontSize?: number
+  labelSmallFontSize?: number
   bgColor?: string
   borderColor?: string
   focusedBorderColor?: string
@@ -49,6 +60,9 @@ const ControlledTextEntry = ({
   textEntryStyle,
   textEntryContainerStyle,
   labelStyle,
+  labelTopPosition,
+  labelBigFontSize,
+  labelSmallFontSize,
   bgColor,
   borderColor,
   focusedBorderColor,
@@ -73,6 +87,10 @@ const ControlledTextEntry = ({
     }
   }, [isFocused, inputRef])
 
+  useEffect(() => {
+    if (defaultValue) setCurrentValue(defaultValue)
+  }, [defaultValue])
+
   return (
     <Controller
       name={name ?? ''}
@@ -88,16 +106,20 @@ const ControlledTextEntry = ({
                 isFocused={isFocused}
                 value={currentValue}
                 defaultValue={defaultValue}
+                currentValue={currentValue}
                 labelColor={labelColor}
                 focusedLabelColor={focusedLabelColor}
                 labelStyle={labelStyle}
+                labelTopPosition={labelTopPosition}
+                labelBigFontSize={labelBigFontSize}
+                labelSmallFontSize={labelSmallFontSize}
                 testID={labelTestID}
               />
             </OptionalWrapper>
             <View
               style={[
                 styles.inputContainer,
-                label ? t.pT10 : t.pT4,
+                label ? t.pT9 : t.pT4,
                 {
                   borderColor: isFocused ? focusedBorderColor : borderColor,
                   backgroundColor: bgColor,
@@ -134,6 +156,7 @@ const ControlledTextEntry = ({
                 selectionColor={selectionColor}
                 placeholder='' // Needed to not be passed accidentally
                 testID={textEntryTestID}
+                defaultValue={defaultValue}
                 {...props}
               />
             </View>

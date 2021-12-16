@@ -56,6 +56,12 @@ export interface InputProps extends TextInputProps {
   focusedBorderColor?: string
   /** Small text above value color */
   labelColor?: string
+  /** Top value of label when opened */
+  labelTopPosition?: number
+  /** Label font size when out of focus */
+  labelBigFontSize?: number
+  /** Label font size when in focus */
+  labelSmallFontSize?: number
   /** Focused small text above value color */
   focusedLabelColor?: string
   /** Text entry selection color */
@@ -100,6 +106,9 @@ const Input = ({
   textEntryStyle,
   textEntryContainerStyle,
   labelStyle,
+  labelTopPosition,
+  labelSmallFontSize,
+  labelBigFontSize,
   bgColor,
   textColor,
   borderColor,
@@ -133,6 +142,9 @@ const Input = ({
         focusedBorderColor={focusedBorderColor ?? color.yellow400}
         selectionColor={selectionColor ?? color.white}
         labelColor={labelColor ?? color.gray900}
+        labelTopPosition={labelTopPosition ?? 12}
+        labelBigFontSize={labelBigFontSize ?? 16}
+        labelSmallFontSize={labelSmallFontSize ?? 13}
         focusedLabelColor={focusedLabelColor ?? color.gray700}
         textEntryTestID={textEntryTestID}
         labelTestID={labelTestID}
