@@ -52,13 +52,13 @@ const ControlledDropdownPressable = ({
   const navigation = useNavigation<StackNavigationProp<any>>()
 
   /**
-   *  Final selected labels string
+   *  Final selected values string
    */
   const [valuesText, setValuesText] = useState<string>('')
   useEffect(() => {
     const allValues = dropdown?.currentValues
       ? dropdown?.currentValues
-          .map((selection) => `${selection.label}`)
+          .map((selection) => `${selection.value}`)
           .join(' ')
       : ''
     setValuesText(allValues)
