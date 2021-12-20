@@ -52,15 +52,23 @@ const ControlledDropdownPressable = ({
   const navigation = useNavigation<StackNavigationProp<any>>()
 
   /**
-   *  Final selected values string
+   *  Final selected value string
    */
+  const [labelsText, setLabelsText] = useState<string>('')
   const [valuesText, setValuesText] = useState<string>('')
+
   useEffect(() => {
+    const allLabels = dropdown?.currentValues
+      ? dropdown?.currentValues
+          .map((selection) => `${selection.label}`)
+          .join(' ')
+      : ''
     const allValues = dropdown?.currentValues
       ? dropdown?.currentValues
           .map((selection) => `${selection.value}`)
           .join(' ')
       : ''
+    setLabelsText(allLabels)
     setValuesText(allValues)
   }, [dropdown])
 
@@ -116,16 +124,16 @@ const ControlledDropdownPressable = ({
         >
           <View style={t.pR8}>
             {/* Placeholder */}
-            <OptionalWrapper data={!valuesText}>
+            <OptionalWrapper data={!labelsText}>
               <Txt style={[styles.placeholder, placeholderStyle]}>
                 {dropdown?.label}
               </Txt>
             </OptionalWrapper>
             {/* Label + Value */}
-            <OptionalWrapper data={valuesText}>
+            <OptionalWrapper data={labelsText}>
               <Txt style={[styles.label, labelStyle]}>{dropdown?.label}</Txt>
               <Txt style={[styles.value, disabled && t.opacity50, textStyle]}>
-                {valuesText}
+                {labelsText}
               </Txt>
             </OptionalWrapper>
           </View>
