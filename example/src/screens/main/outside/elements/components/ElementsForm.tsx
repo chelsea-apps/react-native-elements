@@ -1,3 +1,4 @@
+import { CombinedError } from '@urql/core';
 import React, { useContext } from 'react';
 import { Control, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-form';
 import { View } from 'react-native';
@@ -12,6 +13,7 @@ import SwitchRow from '../../../../../common/components/elements/SwitchRow';
 import Textarea from '../../../../../common/components/elements/Textarea';
 import TextareaLink from '../../../../../common/components/elements/TextareaLink';
 import Txt from '../../../../../common/components/elements/Txt';
+import ErrorWrapper from '../../../../../common/components/elements/Wrapper/ErrorWrapper';
 import useDropdown from '../../../../../common/hooks/useDropdown';
 import useSwitch from '../../../../../common/hooks/useSwitch';
 import { MainContext } from '../../../main.provider';
@@ -179,6 +181,17 @@ const ElementsForm = ({
 				setActive={setNotificationsActive}
 				label="Notifications enabled"
 			/>
+			<ErrorWrapper
+				title="Something went wrong!"
+				error={
+					new CombinedError({
+						graphQLErrors: [{ message: 'Something went wrong!' }],
+					})
+				}
+				show
+			>
+				<Txt>You wont see this</Txt>
+			</ErrorWrapper>
 			<OutlineButton onPress={handleOpenModal} style={[t.mB8]}>
 				Open Modal
 			</OutlineButton>

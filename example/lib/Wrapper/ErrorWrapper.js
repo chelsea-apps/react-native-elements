@@ -13,16 +13,16 @@ const styles = {
             t.itemsCenter,
             t.itemsCenter,
             t.justifyStart,
-            t.mB4,
+            t.mB2,
         ],
-        text: [t.mL1, t.mY4, t.textXl, t.fontSans, t.textGreen700, t.selfStart],
+        text: [t.mL2, t.mY4, t.textXl, t.fontSans, t.textBlack, t.selfStart],
     },
     messages: {
         container: [t.mB2],
-        text: [t.textGreen700, t.selfStart],
+        text: [t.textBlack, t.selfStart],
     },
 };
-const ErrorWrapper = ({ title, error, children, onClose, style = [t.p4], show, }) => {
+const ErrorWrapper = ({ title, error, children, onClose, style = [t.p4], textStyle, show, }) => {
     const [messages, setMessages] = useState([]);
     const [showError, setShowError] = useState(false);
     useEffect(() => {
@@ -59,8 +59,8 @@ const ErrorWrapper = ({ title, error, children, onClose, style = [t.p4], show, }
     return (React.createElement(View, { style: style },
         React.createElement(View, { style: styles.title.container },
             React.createElement(Icon, { type: 'font', fontName: 'Ionicons', name: 'warning-outline', color: color.red500, size: 35 }),
-            React.createElement(Txt, { style: styles.title.text }, title)),
-        React.createElement(View, { style: styles.messages.container }, messages.map((message) => (React.createElement(Txt, { key: message, style: styles.messages.text }, message)))),
+            React.createElement(Txt, { style: [styles.title.text, textStyle] }, title)),
+        React.createElement(View, { style: styles.messages.container }, messages.map((message) => (React.createElement(Txt, { key: message, style: [styles.messages.text, textStyle] }, message)))),
         React.createElement(OptionalWrapper, { data: onClose },
             React.createElement(RoundedButton, { onPress: onClose, style: [t.mT4] }, "Close"))));
 };

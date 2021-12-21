@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 import { CombinedError } from 'urql';
 export declare type ErrorWrapperProps = {
     /** Error name */
@@ -12,8 +12,10 @@ export declare type ErrorWrapperProps = {
     onClose?: () => void;
     /** Container style */
     style?: StyleProp<ViewStyle>;
+    /** Text style */
+    textStyle?: StyleProp<TextStyle>;
     /** If false, the component will not be displayed */
     show?: boolean;
 };
-declare const ErrorWrapper: ({ title, error, children, onClose, style, show, }: ErrorWrapperProps) => JSX.Element;
+declare const ErrorWrapper: ({ title, error, children, onClose, style, textStyle, show, }: ErrorWrapperProps) => JSX.Element;
 export default ErrorWrapper;
