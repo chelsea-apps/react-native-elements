@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleProp, View, ViewStyle } from 'react-native'
+import { StyleProp, View, ViewStyle, TextStyle } from 'react-native'
 import { color, t } from 'react-native-tailwindcss'
 import { CombinedError } from 'urql'
 
@@ -19,6 +19,8 @@ export type ErrorWrapperProps = {
   onClose?: () => void
   /** Container style */
   style?: StyleProp<ViewStyle>
+  /** Text style */
+  textStyle?: StyleProp<TextStyle>
   /** If false, the component will not be displayed */
   show?: boolean
 }
@@ -31,13 +33,13 @@ const styles = {
       t.itemsCenter,
       t.itemsCenter,
       t.justifyStart,
-      t.mB4,
+      t.mB2,
     ],
-    text: [t.mL1, t.mY4, t.textXl, t.fontSans, t.textGreen700, t.selfStart],
+    text: [t.mL2, t.mY4, t.textXl, t.fontSans, t.textBlack, t.selfStart],
   },
   messages: {
     container: [t.mB2],
-    text: [t.textGreen700, t.selfStart],
+    text: [t.textBlack, t.selfStart],
   },
 }
 
@@ -47,6 +49,7 @@ const ErrorWrapper = ({
   children,
   onClose,
   style = [t.p4],
+  textStyle,
   show,
 }: ErrorWrapperProps) => {
   const [messages, setMessages] = useState<string[]>([])
@@ -95,11 +98,11 @@ const ErrorWrapper = ({
           size={35}
         />
 
-        <Txt style={styles.title.text}>{title}</Txt>
+        <Txt style={[styles.title.text, textStyle]}>{title}</Txt>
       </View>
       <View style={styles.messages.container}>
         {messages.map((message) => (
-          <Txt key={message} style={styles.messages.text}>
+          <Txt key={message} style={[styles.messages.text, textStyle]}>
             {message}
           </Txt>
         ))}
