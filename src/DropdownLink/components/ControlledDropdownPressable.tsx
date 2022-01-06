@@ -35,6 +35,8 @@ const ControlledDropdownPressable = ({
   validation,
   setValue,
   disabled,
+  hideLabel,
+  delimiter,
   navigateTo,
   onPress,
   // Styling
@@ -61,16 +63,16 @@ const ControlledDropdownPressable = ({
     const allLabels = dropdown?.currentValues
       ? dropdown?.currentValues
           .map((selection) => `${selection.label}`)
-          .join(' ')
+          .join(delimiter ?? ' ')
       : ''
     const allValues = dropdown?.currentValues
       ? dropdown?.currentValues
           .map((selection) => `${selection.value}`)
-          .join(' ')
+          .join(delimiter ?? ' ')
       : ''
     setLabelsText(allLabels)
     setValuesText(allValues)
-  }, [dropdown])
+  }, [dropdown, delimiter])
 
   /**
    * On press action
@@ -131,7 +133,9 @@ const ControlledDropdownPressable = ({
             </OptionalWrapper>
             {/* Label + Value */}
             <OptionalWrapper data={labelsText}>
-              <Txt style={[styles.label, labelStyle]}>{dropdown?.label}</Txt>
+              <OptionalWrapper data={!hideLabel}>
+                <Txt style={[styles.label, labelStyle]}>{dropdown?.label}</Txt>
+              </OptionalWrapper>
               <Txt style={[styles.value, disabled && t.opacity50, textStyle]}>
                 {labelsText}
               </Txt>
