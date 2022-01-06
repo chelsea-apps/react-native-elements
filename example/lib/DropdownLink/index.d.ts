@@ -21,7 +21,7 @@ export interface DropdownLinkProps extends IconStylingProps {
     /** If true, the dropdown is untappable */
     disabled?: boolean;
     /** If true, the label hide if the value is not null */
-    hideLabelSelected?: boolean;
+    hideLabel?: boolean;
     /** Use for multiple selection dropdowns, join labels with delimiter */
     delimiter?: string;
     /** Additional action that should happen on press if needed */
@@ -59,5 +59,5 @@ export declare type DropdownState = {
     /** Array of current selections */
     currentValues: DropdownItem[] | undefined;
 };
-declare const DropdownLink: ({ dropdown, setDropdown, control, validation, error, setValue, navigateTo, disabled, hideLabelSelected, delimiter, onPress, style, errorTextStyle, ...props }: DropdownLinkProps) => JSX.Element;
+declare const DropdownLink: ({ dropdown, setDropdown, control, validation, error, setValue, navigateTo, disabled, hideLabel, delimiter, onPress, style, errorTextStyle, ...props }: DropdownLinkProps) => JSX.Element;
 export default DropdownLink;

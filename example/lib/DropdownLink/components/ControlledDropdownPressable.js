@@ -24,7 +24,7 @@ const styles = {
 };
 const ControlledDropdownPressable = ({ 
 // Functionality
-dropdown, setDropdown, control, validation, setValue, disabled, hideLabelSelected, delimiter, navigateTo, onPress, 
+dropdown, setDropdown, control, validation, setValue, disabled, hideLabel, delimiter, navigateTo, onPress, 
 // Styling
 placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, iconSize, iconStyle, iconName, }) => {
     var _a;
@@ -88,7 +88,7 @@ placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, 
                 React.createElement(OptionalWrapper, { data: !labelsText },
                     React.createElement(Txt, { style: [styles.placeholder, placeholderStyle] }, dropdown === null || dropdown === void 0 ? void 0 : dropdown.label)),
                 React.createElement(OptionalWrapper, { data: labelsText },
-                    React.createElement(OptionalWrapper, { data: !hideLabelSelected },
+                    React.createElement(OptionalWrapper, { data: !hideLabel },
                         React.createElement(Txt, { style: [styles.label, labelStyle] }, dropdown === null || dropdown === void 0 ? void 0 : dropdown.label)),
                     React.createElement(Txt, { style: [styles.value, disabled && t.opacity50, textStyle] }, labelsText))),
             icon,
