@@ -31,7 +31,7 @@ export interface DropdownLinkProps extends IconStylingProps {
   /** If true, the dropdown is untappable */
   disabled?: boolean
   /** If true, the label hide if the value is not null */
-  hideLabelSelected?: boolean
+  hideLabel?: boolean
   /** Use for multiple selection dropdowns, join labels with delimiter */
   delimiter?: string
   /** Additional action that should happen on press if needed */
@@ -83,7 +83,7 @@ const DropdownLink = ({
   setValue,
   navigateTo,
   disabled,
-  hideLabelSelected,
+  hideLabel,
   delimiter,
   onPress,
   // Styling
@@ -103,7 +103,7 @@ const DropdownLink = ({
         navigateTo={navigateTo}
         disabled={disabled}
         onPress={onPress}
-        hideLabelSelected={hideLabelSelected}
+        hideLabel={hideLabel}
         delimiter={delimiter}
         {...props}
       />

@@ -35,7 +35,7 @@ const ControlledDropdownPressable = ({
   validation,
   setValue,
   disabled,
-  hideLabelSelected,
+  hideLabel,
   delimiter,
   navigateTo,
   onPress,
@@ -133,7 +133,7 @@ const ControlledDropdownPressable = ({
             </OptionalWrapper>
             {/* Label + Value */}
             <OptionalWrapper data={labelsText}>
-              <OptionalWrapper data={!hideLabelSelected}>
+              <OptionalWrapper data={!hideLabel}>
                 <Txt style={[styles.label, labelStyle]}>{dropdown?.label}</Txt>
               </OptionalWrapper>
               <Txt style={[styles.value, disabled && t.opacity50, textStyle]}>
