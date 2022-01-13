@@ -60,7 +60,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         textEntryContainerStyle,
                     ] },
                     React.createElement(OptionalWrapper, { data: icon }, icon),
-                    React.createElement(OptionalWrapper, { data: prefix },
+                    React.createElement(OptionalWrapper, { data: prefix && (isFocused || currentValue) },
                         React.createElement(Txt, { style: [styles.prefix, prefixStyle] }, prefix)),
                     React.createElement(TextInput
                     // @ts-expect-error-next-line
@@ -83,7 +83,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                             onChange(inputValue);
                         }, value: value, onSubmitEditing: () => onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss(), selectionColor: selectionColor, placeholder: '' // Needed to not be passed accidentally
                         , testID: textEntryTestID, defaultValue: defaultValue, ...props }),
-                    React.createElement(OptionalWrapper, { data: postfix },
+                    React.createElement(OptionalWrapper, { data: postfix && (isFocused || currentValue) },
                         React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix)))))) }));
 };
 export default ControlledTextEntry;
