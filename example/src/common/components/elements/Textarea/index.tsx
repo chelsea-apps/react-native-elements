@@ -6,7 +6,7 @@ import TextareaElement, {
 
 const Textarea = ({ ...props }: TextareaElementProps) => (
 	<TextareaElement
-		textEntryStyle={[t.textGray900, t._mT1, { fontSize: 16 }]}
+		textEntryStyle={[t.textGray900, { fontSize: 16 }]}
 		selectionColor={color.gray900}
 		borderColor={color.gray300}
 		focusedBorderColor={color.yellow400}

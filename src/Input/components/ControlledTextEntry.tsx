@@ -2,6 +2,7 @@ import React, { LegacyRef, useEffect, useRef, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
   Keyboard,
+  Platform,
   StyleProp,
   TextInput,
   TextStyle,
@@ -148,6 +149,7 @@ const ControlledTextEntry = ({
                 ref={inputRef}
                 style={[
                   styles.input,
+                  Platform.OS === 'android' && [t._mY4, t._mL1],
                   {
                     color: textColor,
                   },
