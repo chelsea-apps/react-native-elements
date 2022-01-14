@@ -1,6 +1,6 @@
 {
   "name": "@chelseaapps/react-native-elements",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "React Native Frontend Library to be used inside Chelsea Apps Mobile applications.",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
   "main": "lib/index.js",
