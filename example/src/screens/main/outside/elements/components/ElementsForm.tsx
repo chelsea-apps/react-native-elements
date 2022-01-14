@@ -20,6 +20,7 @@ import { MainContext } from '../../../main.provider';
 
 export type ElementsFormData = {
 	email: string;
+	price: string;
 	description: string;
 	bio: string;
 	country: string;
@@ -97,6 +98,12 @@ const ElementsForm = ({
 				message: 'You must use a valid email address.',
 			},
 		},
+		price: {
+			required: {
+				value: true,
+				message: 'Price is required.',
+			},
+		},
 		description: {
 			required: {
 				value: true,
@@ -139,6 +146,14 @@ const ElementsForm = ({
 				control={control}
 				error={errors.email}
 				validation={validation.email}
+			/>
+			<Input
+				name="price"
+				label="Input with prefix"
+				control={control}
+				error={errors.price}
+				validation={validation.price}
+				prefix="$"
 			/>
 			<InputPressable
 				label="Pressable Input"

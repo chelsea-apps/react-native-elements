@@ -2,6 +2,7 @@ import React, { LegacyRef, useEffect, useRef, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
   Keyboard,
+  Platform,
   StyleProp,
   TextInput,
   TextStyle,
@@ -140,7 +141,7 @@ const ControlledTextEntry = ({
               ]}
             >
               <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
-              <OptionalWrapper data={prefix}>
+              <OptionalWrapper data={prefix && (isFocused || currentValue)}>
                 <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
               </OptionalWrapper>
               <TextInput
@@ -148,6 +149,7 @@ const ControlledTextEntry = ({
                 ref={inputRef}
                 style={[
                   styles.input,
+                  Platform.OS === 'android' && [t._mY4, t._mL1],
                   {
                     color: textColor,
                   },
@@ -174,7 +176,7 @@ const ControlledTextEntry = ({
                 defaultValue={defaultValue}
                 {...props}
               />
-              <OptionalWrapper data={postfix}>
+              <OptionalWrapper data={postfix && (isFocused || currentValue)}>
                 <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
               </OptionalWrapper>
             </View>
