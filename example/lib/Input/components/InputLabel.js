@@ -17,15 +17,15 @@ const styles = {
         { zIndex: 1 },
     ],
 };
-const InputLabel = ({ text, isFocused, value, defaultValue, currentValue, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, labelColor, focusedLabelColor, testID, }) => {
-    const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(value !== null && value !== void 0 ? value : '', defaultValue, labelTopPosition, labelBigFontSize, labelSmallFontSize);
-    useEffect(() => (isFocused || value || defaultValue ? fadeIn() : fadeOut()), [isFocused, fadeIn, value, defaultValue, fadeOut]);
+const InputLabel = ({ text, isFocused, value, currentValue, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, labelColor, focusedLabelColor, testID, }) => {
+    const { animatedLabel, fadeIn, fadeOut } = useInputAnimations(value !== null && value !== void 0 ? value : '', labelTopPosition, labelBigFontSize, labelSmallFontSize);
+    useEffect(() => (isFocused || value ? fadeIn() : fadeOut()), [isFocused, fadeIn, value, fadeOut]);
     return (React.createElement(OptionalWrapper, { data: text },
         React.createElement(Animated.Text, { style: [
                 styles.label,
                 { ...animatedLabel },
                 {
-                    color: currentValue || defaultValue || value || isFocused
+                    color: currentValue || value || isFocused
                         ? focusedLabelColor
                         : labelColor,
                 },

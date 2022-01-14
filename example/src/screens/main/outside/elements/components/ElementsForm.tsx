@@ -153,6 +153,7 @@ const ElementsForm = ({
 				control={control}
 				error={errors.price}
 				validation={validation.price}
+				defaultValue="100"
 				prefix="$"
 			/>
 			<InputPressable

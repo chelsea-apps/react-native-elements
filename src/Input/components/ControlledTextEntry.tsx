@@ -117,7 +117,6 @@ const ControlledTextEntry = ({
                 text={label}
                 isFocused={isFocused}
                 value={currentValue}
-                defaultValue={defaultValue}
                 currentValue={currentValue}
                 labelColor={labelColor}
                 focusedLabelColor={focusedLabelColor}
