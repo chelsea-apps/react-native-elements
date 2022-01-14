@@ -4,7 +4,6 @@ import { useAnimationBuilder } from './useAnimationBuilder'
 
 const useInputAnimations = (
   value: string,
-  defaultValue?: string,
   labelTopPosition?: number,
   labelBigFontSize?: number,
   labelSmallFontSize?: number
@@ -34,14 +33,9 @@ const useInputAnimations = (
   const animatedLabel = {
     fontSize,
     transform: [
-      { translateY: !value && !defaultValue ? labelYPosition : -1 },
+      { translateY: !value ? labelYPosition : -1 },
       {
-        translateX:
-          !value && !defaultValue
-            ? labelXPosition
-            : Platform.OS === 'ios'
-            ? 0
-            : 0,
+        translateX: !value ? labelXPosition : Platform.OS === 'ios' ? 0 : 0,
       },
     ],
   }

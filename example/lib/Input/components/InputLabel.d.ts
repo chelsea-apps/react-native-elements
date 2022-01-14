@@ -2,7 +2,6 @@ import { StyleProp, TextStyle } from 'react-native';
 declare type InputLabelProps = {
     isFocused: boolean;
     value: string | undefined;
-    defaultValue: string | undefined;
     currentValue: string | undefined;
     text?: string;
     labelStyle?: StyleProp<TextStyle>;
@@ -13,5 +12,5 @@ declare type InputLabelProps = {
     labelSmallFontSize?: number;
     testID?: string;
 };
-declare const InputLabel: ({ text, isFocused, value, defaultValue, currentValue, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, labelColor, focusedLabelColor, testID, }: InputLabelProps) => JSX.Element;
+declare const InputLabel: ({ text, isFocused, value, currentValue, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, labelColor, focusedLabelColor, testID, }: InputLabelProps) => JSX.Element;
 export default InputLabel;
