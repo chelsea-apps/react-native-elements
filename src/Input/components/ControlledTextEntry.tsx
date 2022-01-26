@@ -96,10 +96,6 @@ const ControlledTextEntry = ({
   }, [isFocused, inputRef])
 
   useEffect(() => {
-    if (prefix || postfix) setIsFocused(true)
-  }, [prefix, postfix])
-
-  useEffect(() => {
     if (defaultValue) setCurrentValue(defaultValue)
   }, [defaultValue])
 
