@@ -150,6 +150,12 @@ const ControlledTextEntry = ({
                   },
                   textEntryStyle,
                 ]}
+                hitSlop={{
+                  top: 40,
+                  left: 24,
+                  right: prefix ? 5 : 24,
+                  bottom: 24,
+                }}
                 onFocus={() => {
                   setIsFocused(true)
                 }}
