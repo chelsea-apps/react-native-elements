@@ -26,7 +26,7 @@ name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntry
 textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
-    let inputRef = useRef();
+    const inputRef = useRef();
     useEffect(() => {
         if (inputRef.current) {
             // @ts-expect-error-next-line
@@ -41,12 +41,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
         if (defaultValue)
             setCurrentValue(defaultValue);
     }, [defaultValue]);
-    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => {
-                var _a;
-                setIsFocused(true);
-                // @ts-expect-error-next-line
-                (_a = inputRef === null || inputRef === void 0 ? void 0 : inputRef.current) === null || _a === void 0 ? void 0 : _a.focus();
-            } },
+    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => setIsFocused(true) },
             React.createElement(View, { style: t.relative },
                 React.createElement(OptionalWrapper, { data: label },
                     React.createElement(InputLabel, { text: label, isFocused: isFocused, value: currentValue, currentValue: currentValue, labelColor: labelColor, focusedLabelColor: focusedLabelColor, labelStyle: labelStyle, labelTopPosition: labelTopPosition, labelBigFontSize: labelBigFontSize, labelSmallFontSize: labelSmallFontSize, testID: labelTestID })),
@@ -74,7 +69,6 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                                 color: textColor,
                             },
                             textEntryStyle,
-                            t.bgYellow400,
                         ], hitSlop: {
                             top: 40,
                             left: 24,
