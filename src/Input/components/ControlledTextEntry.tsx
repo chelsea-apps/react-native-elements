@@ -84,7 +84,7 @@ const ControlledTextEntry = ({
   const [currentValue, setCurrentValue] = useState<string | undefined>(
     undefined
   )
-  let inputRef = useRef<LegacyRef<TextInput> | undefined>()
+  const inputRef = useRef<LegacyRef<TextInput> | undefined>()
 
   useEffect(() => {
     if (inputRef.current) {
@@ -106,13 +106,7 @@ const ControlledTextEntry = ({
       defaultValue={defaultValue}
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
-        <TouchableWithoutFeedback
-          onPress={() => {
-            setIsFocused(true)
-            // @ts-expect-error-next-line
-            inputRef?.current?.focus()
-          }}
-        >
+        <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
           <View style={t.relative}>
             <OptionalWrapper data={label}>
               <InputLabel
@@ -155,7 +149,6 @@ const ControlledTextEntry = ({
                     color: textColor,
                   },
                   textEntryStyle,
-                  t.bgYellow400,
                 ]}
                 hitSlop={{
                   top: 40,
