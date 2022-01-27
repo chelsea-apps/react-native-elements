@@ -26,7 +26,7 @@ name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntry
 textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
-    const inputRef = useRef();
+    let inputRef = useRef();
     useEffect(() => {
         if (inputRef.current) {
             // @ts-expect-error-next-line
@@ -41,7 +41,12 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
         if (defaultValue)
             setCurrentValue(defaultValue);
     }, [defaultValue]);
-    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => setIsFocused(true) },
+    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => {
+                var _a;
+                setIsFocused(true);
+                // @ts-expect-error-next-line
+                (_a = inputRef === null || inputRef === void 0 ? void 0 : inputRef.current) === null || _a === void 0 ? void 0 : _a.focus();
+            } },
             React.createElement(View, { style: t.relative },
                 React.createElement(OptionalWrapper, { data: label },
                     React.createElement(InputLabel, { text: label, isFocused: isFocused, value: currentValue, currentValue: currentValue, labelColor: labelColor, focusedLabelColor: focusedLabelColor, labelStyle: labelStyle, labelTopPosition: labelTopPosition, labelBigFontSize: labelBigFontSize, labelSmallFontSize: labelSmallFontSize, testID: labelTestID })),
@@ -69,7 +74,13 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                                 color: textColor,
                             },
                             textEntryStyle,
-                        ], onFocus: () => {
+                            t.bgYellow400,
+                        ], hitSlop: {
+                            top: 40,
+                            left: 24,
+                            right: prefix ? 5 : 24,
+                            bottom: 24,
+                        }, onFocus: () => {
                             setIsFocused(true);
                         }, onBlur: () => {
                             onBlur();

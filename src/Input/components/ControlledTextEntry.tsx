@@ -158,10 +158,10 @@ const ControlledTextEntry = ({
                   t.bgYellow400,
                 ]}
                 hitSlop={{
-                  top: 64,
+                  top: 40,
                   left: 24,
-                  right: 300,
-                  bottom: 10,
+                  right: prefix ? 5 : 24,
+                  bottom: 24,
                 }}
                 onFocus={() => {
                   setIsFocused(true)
