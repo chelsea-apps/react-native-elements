@@ -30,8 +30,10 @@ export type SwitchRowProps = {
   trackActiveColor?: string
   /** Color of the track text when the switch is not active */
   trackDefaultColor?: string
-  /** Color of the thumb */
+  /** Color of the thumb text when the switch is not active */
   thumbColor?: string
+  /** Color of the thumb text when the switch is active */
+  thumbActiveColor?: string
 }
 
 const styles = {
@@ -61,6 +63,7 @@ const SwitchRow = ({
   trackActiveColor,
   trackDefaultColor,
   thumbColor,
+  thumbActiveColor,
 }: SwitchRowProps) => {
   return (
     <TouchableOpacity
@@ -89,7 +92,9 @@ const SwitchRow = ({
           true: trackActiveColor ?? color.yellow400,
         }}
         ios_backgroundColor={trackDefaultColor ?? color.black}
-        thumbColor={thumbColor ?? '#f4f3f4'}
+        thumbColor={
+          !active ? thumbColor ?? '#F4F3F4' : thumbActiveColor ?? '#F4F3F4'
+        }
         onValueChange={(value) => setActive(value)}
         value={active}
       />
