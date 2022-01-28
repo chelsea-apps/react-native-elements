@@ -7,8 +7,8 @@ const Wrapper = ({ children, style, contentContainerStyle, type, fixed, keyboard
         defaultContent: [t.pX4, t.pT4, t.pB8],
         fullScreenView: [t.flex1],
     };
-    return !type || type === 'scrollView' ? (React.createElement(ScrollView, { style: [styles.defaultContainer, style], contentContainerStyle: [styles.defaultContent, contentContainerStyle], showsVerticalScrollIndicator: false, ...props }, children)) : type === 'list' ? (React.createElement(View, { style: [styles.defaultContainer, t.flex1, style], ...props },
-        React.createElement(View, { style: [t.pX4] }, children))) : type === 'fullScreenView' ? (React.createElement(KeyboardAvoidingView, { behavior: Platform.OS === 'ios' ? 'padding' : 'height', style: [styles.fullScreenView, style], keyboardVerticalOffset: keyboardVerticalOffset !== null && keyboardVerticalOffset !== void 0 ? keyboardVerticalOffset : 0, ...props }, children)) : (React.createElement(React.Fragment, null));
+    return !type || type === 'scrollView' ? (React.createElement(ScrollView, { style: [styles.defaultContainer, style], contentContainerStyle: [styles.defaultContent, contentContainerStyle], showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: 'handled', ...props }, children)) : type === 'list' ? (React.createElement(View, { style: [styles.defaultContainer, t.flex1, style], keyboardShouldPersistTaps: 'handled', ...props },
+        React.createElement(View, { style: [t.pX4] }, children))) : type === 'fullScreenView' ? (React.createElement(KeyboardAvoidingView, { behavior: Platform.OS === 'ios' ? 'padding' : 'height', style: [styles.fullScreenView, style], keyboardVerticalOffset: keyboardVerticalOffset !== null && keyboardVerticalOffset !== void 0 ? keyboardVerticalOffset : 0, keyboardShouldPersistTaps: 'handled', ...props }, children)) : (React.createElement(React.Fragment, null));
 };
 export default Wrapper;
 //# sourceMappingURL=index.js.map

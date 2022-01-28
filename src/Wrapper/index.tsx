@@ -39,12 +39,17 @@ const Wrapper = ({
       style={[styles.defaultContainer, style]}
       contentContainerStyle={[styles.defaultContent, contentContainerStyle]}
       showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps='handled'
       {...props}
     >
       {children}
     </ScrollView>
   ) : type === 'list' ? (
-    <View style={[styles.defaultContainer, t.flex1, style]} {...props}>
+    <View
+      style={[styles.defaultContainer, t.flex1, style]}
+      keyboardShouldPersistTaps='handled'
+      {...props}
+    >
       <View style={[t.pX4]}>{children}</View>
     </View>
   ) : type === 'fullScreenView' ? (
@@ -52,6 +57,7 @@ const Wrapper = ({
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={[styles.fullScreenView, style]}
       keyboardVerticalOffset={keyboardVerticalOffset ?? 0}
+      keyboardShouldPersistTaps='handled'
       {...props}
     >
       {children}
