@@ -19,8 +19,10 @@ export declare type SwitchRowProps = {
     trackActiveColor?: string;
     /** Color of the track text when the switch is not active */
     trackDefaultColor?: string;
-    /** Color of the thumb */
+    /** Color of the thumb text when the switch is not active */
     thumbColor?: string;
+    /** Color of the thumb text when the switch is active */
+    thumbActiveColor?: string;
 };
-declare const SwitchRow: ({ active, setActive, label, style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, }: SwitchRowProps) => JSX.Element;
+declare const SwitchRow: ({ active, setActive, label, style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, thumbActiveColor, }: SwitchRowProps) => JSX.Element;
 export default SwitchRow;
