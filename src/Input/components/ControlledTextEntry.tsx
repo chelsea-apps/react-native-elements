@@ -96,10 +96,6 @@ const ControlledTextEntry = ({
   }, [isFocused, inputRef])
 
   useEffect(() => {
-    if (prefix || postfix) setIsFocused(true)
-  }, [prefix, postfix])
-
-  useEffect(() => {
     if (defaultValue) setCurrentValue(defaultValue)
   }, [defaultValue])
 
@@ -154,6 +150,12 @@ const ControlledTextEntry = ({
                   },
                   textEntryStyle,
                 ]}
+                hitSlop={{
+                  top: 40,
+                  left: 24,
+                  right: prefix ? 5 : 24,
+                  bottom: 24,
+                }}
                 onFocus={() => {
                   setIsFocused(true)
                 }}

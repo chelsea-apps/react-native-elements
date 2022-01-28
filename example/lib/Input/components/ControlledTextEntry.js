@@ -38,10 +38,6 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
         }
     }, [isFocused, inputRef]);
     useEffect(() => {
-        if (prefix || postfix)
-            setIsFocused(true);
-    }, [prefix, postfix]);
-    useEffect(() => {
         if (defaultValue)
             setCurrentValue(defaultValue);
     }, [defaultValue]);
@@ -73,7 +69,12 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                                 color: textColor,
                             },
                             textEntryStyle,
-                        ], onFocus: () => {
+                        ], hitSlop: {
+                            top: 40,
+                            left: 24,
+                            right: prefix ? 5 : 24,
+                            bottom: 24,
+                        }, onFocus: () => {
                             setIsFocused(true);
                         }, onBlur: () => {
                             onBlur();
