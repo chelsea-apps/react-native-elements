@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[src/index.tsx:148](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L148)
+[src/index.tsx:148](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L148)
 
 ## Functions
 
@@ -92,7 +92,7 @@ A pressable text.
 
 #### Defined in
 
-[src/index.tsx:81](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L81)
+[src/index.tsx:81](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L81)
 
 ___
 
@@ -116,7 +116,7 @@ A pressable row that changes dropdown state.
 
 #### Defined in
 
-[src/index.tsx:119](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L119)
+[src/index.tsx:119](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L119)
 
 ___
 
@@ -140,7 +140,7 @@ A pressable button.
 
 #### Defined in
 
-[src/index.tsx:90](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L90)
+[src/index.tsx:90](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L90)
 
 ___
 
@@ -164,7 +164,7 @@ A pressable container that links to the selection page.
 
 #### Defined in
 
-[src/index.tsx:132](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L132)
+[src/index.tsx:132](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L132)
 
 ___
 
@@ -188,7 +188,7 @@ A Wrapper component that will check if there were any issues with the API Querie
 
 #### Defined in
 
-[src/index.tsx:256](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L256)
+[src/index.tsx:256](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L256)
 
 ___
 
@@ -212,7 +212,7 @@ Highly customizable Icon component that can output a Font icon (https://oblador.
 
 #### Defined in
 
-[src/index.tsx:143](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L143)
+[src/index.tsx:143](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L143)
 
 ___
 
@@ -236,7 +236,7 @@ Ready to use Input with validation from react hook form
 
 #### Defined in
 
-[src/index.tsx:155](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L155)
+[src/index.tsx:155](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L155)
 
 ___
 
@@ -260,7 +260,7 @@ Input component that can be pressed
 
 #### Defined in
 
-[src/index.tsx:164](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L164)
+[src/index.tsx:164](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L164)
 
 ___
 
@@ -284,7 +284,7 @@ Container to be used as the loading indicator on all pages.
 
 #### Defined in
 
-[src/index.tsx:237](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L237)
+[src/index.tsx:237](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L237)
 
 ___
 
@@ -314,7 +314,7 @@ A container view.
 
 #### Defined in
 
-[src/index.tsx:247](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L247)
+[src/index.tsx:247](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L247)
 
 ___
 
@@ -338,7 +338,7 @@ A pressable button.
 
 #### Defined in
 
-[src/index.tsx:99](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L99)
+[src/index.tsx:99](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L99)
 
 ___
 
@@ -362,7 +362,7 @@ A pressable row that changes dropdown state.
 
 #### Defined in
 
-[src/index.tsx:175](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L175)
+[src/index.tsx:175](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L175)
 
 ___
 
@@ -386,7 +386,7 @@ A pressable button.
 
 #### Defined in
 
-[src/index.tsx:108](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L108)
+[src/index.tsx:108](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L108)
 
 ___
 
@@ -410,7 +410,7 @@ A component that can change a boolean state with a switch. It's not part of the 
 
 #### Defined in
 
-[src/index.tsx:186](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L186)
+[src/index.tsx:186](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L186)
 
 ___
 
@@ -434,7 +434,7 @@ A textarea that can change its height based on the value inside. Validation base
 
 #### Defined in
 
-[src/index.tsx:197](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L197)
+[src/index.tsx:197](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L197)
 
 ___
 
@@ -458,7 +458,7 @@ A textarea that changes the current page to enter the value. Dependent on textar
 
 #### Defined in
 
-[src/index.tsx:208](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L208)
+[src/index.tsx:208](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L208)
 
 ___
 
@@ -482,7 +482,7 @@ A text component that has the specific project fonts and sizing. To be used ever
 
 #### Defined in
 
-[src/index.tsx:219](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L219)
+[src/index.tsx:219](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L219)
 
 ___
 
@@ -506,4 +506,4 @@ Component to be used as the main container on all pages.
 
 #### Defined in
 
-[src/index.tsx:228](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/index.tsx#L228)
+[src/index.tsx:228](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/index.tsx#L228)

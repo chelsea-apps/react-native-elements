@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"android": "react-native run-android",
-		"ios": "react-native run-ios --scheme 'Starter (Development)' --configuration 'Debug (Development)'",
+		"ios": "react-native run-ios --scheme 'Starter (Development)' --configuration 'Debug (Development)' --simulator 'iPad Pro (11-inch) (3rd generation)'",
 		"ios:staging": "react-native run-ios --scheme 'Starter (Staging)' --configuration 'Debug (Staging)'",
 		"ios:prod": "react-native run-ios --scheme 'Starter (Production)' --configuration 'Debug (Production)'",
 		"build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
@@ -44,6 +44,7 @@
 		"react-native-tailwindcss": "^1.1.11",
 		"react-native-unimodules": "^0.14.5",
 		"react-native-vector-icons": "^8.1.0",
+		"react-native-device-info": "^8.4.8",
 		"subscriptions-transport-ws": "^0.9.18",
 		"urql": "^2.0.2"
 	},

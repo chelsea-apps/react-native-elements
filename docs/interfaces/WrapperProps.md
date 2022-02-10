@@ -474,7 +474,7 @@ WrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/index.tsx:13](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/index.tsx#L13)
+[src/Wrapper/index.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L14)
 
 ___
 
@@ -709,7 +709,7 @@ WrapperElementProps.fixed
 
 #### Defined in
 
-[src/Wrapper/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/index.tsx#L17)
+[src/Wrapper/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L18)
 
 ___
 
@@ -922,7 +922,7 @@ WrapperElementProps.keyboardVerticalOffset
 
 #### Defined in
 
-[src/Wrapper/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/index.tsx#L19)
+[src/Wrapper/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L20)
 
 ___
 
@@ -2535,7 +2535,7 @@ ___
 
 ### type
 
-• `Optional` **type**: ``"scrollView"`` \| ``"list"`` \| ``"fullScreenView"``
+• `Optional` **type**: ``"scrollView"`` \| ``"list"`` \| ``"fullScreenView"`` \| ``"tablet"``
 
 Container type. 'scrollview' - Allows the content to be scrollable. 'list' - When the page contains only a flatlist. 'fixed' - content is not scrollable.
 
@@ -2545,7 +2545,7 @@ WrapperElementProps.type
 
 #### Defined in
 
-[src/Wrapper/index.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/index.tsx#L15)
+[src/Wrapper/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L16)
 
 ___
 

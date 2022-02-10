@@ -6,13 +6,14 @@ import {
   ScrollViewProps,
   View,
 } from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 import { t } from 'react-native-tailwindcss'
 
 export interface WrapperProps extends ScrollViewProps {
   /** Pages elements */
   children: React.ReactNode
   /** Container type. 'scrollview' - Allows the content to be scrollable. 'list' - When the page contains only a flatlist. 'fixed' - content is not scrollable.  */
-  type?: 'scrollView' | 'list' | 'fullScreenView'
+  type?: 'scrollView' | 'list' | 'fullScreenView' | 'tablet'
   /** Quick way to make the content not scrollable */
   fixed?: boolean
   /** Space to be shown at the bottom when the keyboard is up. Default - 0 */
@@ -28,10 +29,13 @@ const Wrapper = ({
   keyboardVerticalOffset,
   ...props
 }: WrapperProps) => {
+  const isTablet = DeviceInfo.isTablet()
+
   const styles = {
     defaultContainer: [fixed && t.flex1],
     defaultContent: [t.pX4, t.pT4, t.pB8],
     fullScreenView: [t.flex1],
+    tabletContainer: [{ maxWidth: isTablet ? 500 : '100%' }, t.selfCenter],
   }
 
   return !type || type === 'scrollView' ? (
@@ -62,6 +66,14 @@ const Wrapper = ({
     >
       {children}
     </KeyboardAvoidingView>
+  ) : type === 'tablet' ? (
+    <View
+      style={[styles.tabletContainer, style]}
+      keyboardShouldPersistTaps='handled'
+      {...props}
+    >
+      {children}
+    </View>
   ) : (
     <></>
   )

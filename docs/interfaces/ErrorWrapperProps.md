@@ -16,6 +16,7 @@
 - [error](ErrorWrapperProps.md#error)
 - [show](ErrorWrapperProps.md#show)
 - [style](ErrorWrapperProps.md#style)
+- [textStyle](ErrorWrapperProps.md#textstyle)
 - [title](ErrorWrapperProps.md#title)
 
 ### Methods
@@ -36,7 +37,7 @@ ErrorWrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L17)
+[src/Wrapper/ErrorWrapper.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L17)
 
 ___
 
@@ -52,7 +53,7 @@ ErrorWrapperElementProps.error
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L15)
+[src/Wrapper/ErrorWrapper.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L15)
 
 ___
 
@@ -68,7 +69,7 @@ ErrorWrapperElementProps.show
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L23)
+[src/Wrapper/ErrorWrapper.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L25)
 
 ___
 
@@ -84,7 +85,23 @@ ErrorWrapperElementProps.style
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L21)
+[src/Wrapper/ErrorWrapper.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L21)
+
+___
+
+### textStyle
+
+• `Optional` **textStyle**: `StyleProp`<`TextStyle`\>
+
+Text style
+
+#### Inherited from
+
+ErrorWrapperElementProps.textStyle
+
+#### Defined in
+
+[src/Wrapper/ErrorWrapper.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L23)
 
 ___
 
@@ -100,7 +117,7 @@ ErrorWrapperElementProps.title
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:13](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L13)
+[src/Wrapper/ErrorWrapper.tsx:13](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L13)
 
 ## Methods
 
@@ -120,4 +137,4 @@ ErrorWrapperElementProps.onClose
 
 #### Defined in
 
-[src/Wrapper/ErrorWrapper.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/Wrapper/ErrorWrapper.tsx#L19)
+[src/Wrapper/ErrorWrapper.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/ErrorWrapper.tsx#L19)

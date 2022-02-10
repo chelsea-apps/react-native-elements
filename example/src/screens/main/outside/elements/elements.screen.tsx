@@ -22,14 +22,16 @@ const ElementsScreen = () => {
 	return (
 		<Wrapper type="fullScreenView">
 			<SecondaryHeader navigation={navigation} smallTitle="Elements" />
-			<Wrapper type="scrollView" contentContainerStyle={t.pT8}>
-				<ElementsForm
-					handleSubmit={handleSubmit}
-					control={control}
-					errors={errors}
-					setValue={setValue}
-					handleSaveData={handleSaveData}
-				/>
+			<Wrapper type="tablet">
+				<Wrapper type="scrollView" contentContainerStyle={t.pT8}>
+					<ElementsForm
+						handleSubmit={handleSubmit}
+						control={control}
+						errors={errors}
+						setValue={setValue}
+						handleSaveData={handleSaveData}
+					/>
+				</Wrapper>
 			</Wrapper>
 		</Wrapper>
 	);

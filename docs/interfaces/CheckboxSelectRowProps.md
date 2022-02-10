@@ -35,7 +35,7 @@ CheckboxSelectRowElementProps.borderColor
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L28)
+[src/CheckboxSelectRow/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L28)
 
 ___
 
@@ -51,7 +51,7 @@ CheckboxSelectRowElementProps.label
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L18)
+[src/CheckboxSelectRow/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L18)
 
 ___
 
@@ -67,7 +67,7 @@ CheckboxSelectRowElementProps.selected
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L20)
+[src/CheckboxSelectRow/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L20)
 
 ___
 
@@ -83,7 +83,7 @@ CheckboxSelectRowElementProps.selectionActiveColor
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L32)
+[src/CheckboxSelectRow/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L32)
 
 ___
 
@@ -99,7 +99,7 @@ CheckboxSelectRowElementProps.selectionDefaultColor
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L30)
+[src/CheckboxSelectRow/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L30)
 
 ___
 
@@ -115,7 +115,7 @@ CheckboxSelectRowElementProps.setSelected
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L22)
+[src/CheckboxSelectRow/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L22)
 
 ___
 
@@ -131,7 +131,7 @@ CheckboxSelectRowElementProps.style
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L24)
+[src/CheckboxSelectRow/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L24)
 
 ___
 
@@ -147,4 +147,4 @@ CheckboxSelectRowElementProps.textStyle
 
 #### Defined in
 
-[src/CheckboxSelectRow/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/CheckboxSelectRow/index.tsx#L26)
+[src/CheckboxSelectRow/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/CheckboxSelectRow/index.tsx#L26)
