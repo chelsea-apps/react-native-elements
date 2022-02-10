@@ -9,6 +9,8 @@ export interface WrapperProps extends ScrollViewProps {
     fixed?: boolean;
     /** Space to be shown at the bottom when the keyboard is up. Default - 0 */
     keyboardVerticalOffset?: number;
+    /** Max width to be passed to the tablet wrapper */
+    maxWidth?: number;
 }
-declare const Wrapper: ({ children, style, contentContainerStyle, type, fixed, keyboardVerticalOffset, ...props }: WrapperProps) => JSX.Element;
+declare const Wrapper: ({ children, style, contentContainerStyle, type, fixed, keyboardVerticalOffset, maxWidth, ...props }: WrapperProps) => JSX.Element;
 export default Wrapper;

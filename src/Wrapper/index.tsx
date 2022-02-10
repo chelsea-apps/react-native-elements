@@ -18,6 +18,8 @@ export interface WrapperProps extends ScrollViewProps {
   fixed?: boolean
   /** Space to be shown at the bottom when the keyboard is up. Default - 0 */
   keyboardVerticalOffset?: number
+  /** Max width to be passed to the tablet wrapper */
+  maxWidth?: number
 }
 
 const Wrapper = ({
@@ -27,6 +29,7 @@ const Wrapper = ({
   type,
   fixed,
   keyboardVerticalOffset,
+  maxWidth,
   ...props
 }: WrapperProps) => {
   const isTablet = DeviceInfo.isTablet()
@@ -35,7 +38,7 @@ const Wrapper = ({
     defaultContainer: [fixed && t.flex1],
     defaultContent: [t.pX4, t.pT4, t.pB8],
     fullScreenView: [t.flex1],
-    tabletContainer: [{ maxWidth: isTablet ? 500 : '100%' }, t.selfCenter],
+    tabletContainer: [t.selfCenter],
   }
 
   return !type || type === 'scrollView' ? (
@@ -68,7 +71,18 @@ const Wrapper = ({
     </KeyboardAvoidingView>
   ) : type === 'tablet' ? (
     <View
-      style={[styles.tabletContainer, style]}
+      style={[
+        styles.tabletContainer,
+        {
+          maxWidth:
+            isTablet && maxWidth
+              ? maxWidth
+              : isTablet && !maxWidth
+              ? 500
+              : '100%',
+        },
+        style,
+      ]}
       keyboardShouldPersistTaps='handled'
       {...props}
     >
