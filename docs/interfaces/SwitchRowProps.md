@@ -19,6 +19,7 @@
 - [labelStyle](SwitchRowProps.md#labelstyle)
 - [setActive](SwitchRowProps.md#setactive)
 - [style](SwitchRowProps.md#style)
+- [thumbActiveColor](SwitchRowProps.md#thumbactivecolor)
 - [thumbColor](SwitchRowProps.md#thumbcolor)
 - [trackActiveColor](SwitchRowProps.md#trackactivecolor)
 - [trackDefaultColor](SwitchRowProps.md#trackdefaultcolor)
@@ -37,7 +38,7 @@ SwitchRowElementProps.active
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L16)
+[src/SwitchRow/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L16)
 
 ___
 
@@ -53,7 +54,7 @@ SwitchRowElementProps.label
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L20)
+[src/SwitchRow/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L20)
 
 ___
 
@@ -69,7 +70,7 @@ SwitchRowElementProps.labelActiveColor
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L26)
+[src/SwitchRow/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L26)
 
 ___
 
@@ -85,7 +86,7 @@ SwitchRowElementProps.labelDefaultColor
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L28)
+[src/SwitchRow/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L28)
 
 ___
 
@@ -101,7 +102,7 @@ SwitchRowElementProps.labelStyle
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L24)
+[src/SwitchRow/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L24)
 
 ___
 
@@ -117,7 +118,7 @@ SwitchRowElementProps.setActive
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L18)
+[src/SwitchRow/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L18)
 
 ___
 
@@ -133,7 +134,23 @@ SwitchRowElementProps.style
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L22)
+[src/SwitchRow/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L22)
+
+___
+
+### thumbActiveColor
+
+• `Optional` **thumbActiveColor**: `string`
+
+Color of the thumb text when the switch is active
+
+#### Inherited from
+
+SwitchRowElementProps.thumbActiveColor
+
+#### Defined in
+
+[src/SwitchRow/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L36)
 
 ___
 
@@ -141,7 +158,7 @@ ___
 
 • `Optional` **thumbColor**: `string`
 
-Color of the thumb
+Color of the thumb text when the switch is not active
 
 #### Inherited from
 
@@ -149,7 +166,7 @@ SwitchRowElementProps.thumbColor
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L34)
+[src/SwitchRow/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L34)
 
 ___
 
@@ -165,7 +182,7 @@ SwitchRowElementProps.trackActiveColor
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L30)
+[src/SwitchRow/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L30)
 
 ___
 
@@ -181,4 +198,4 @@ SwitchRowElementProps.trackDefaultColor
 
 #### Defined in
 
-[src/SwitchRow/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/SwitchRow/index.tsx#L32)
+[src/SwitchRow/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/SwitchRow/index.tsx#L32)

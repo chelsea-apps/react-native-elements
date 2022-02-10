@@ -32,7 +32,7 @@ DropdownStateType.currentValues
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:69](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/DropdownLink/index.tsx#L69)
+[src/DropdownLink/index.tsx:73](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L73)
 
 ___
 
@@ -48,7 +48,7 @@ DropdownStateType.items
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:67](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/DropdownLink/index.tsx#L67)
+[src/DropdownLink/index.tsx:71](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L71)
 
 ___
 
@@ -64,7 +64,7 @@ DropdownStateType.label
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:63](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/DropdownLink/index.tsx#L63)
+[src/DropdownLink/index.tsx:67](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L67)
 
 ___
 
@@ -80,7 +80,7 @@ DropdownStateType.name
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:65](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/DropdownLink/index.tsx#L65)
+[src/DropdownLink/index.tsx:69](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L69)
 
 ___
 
@@ -96,4 +96,4 @@ DropdownStateType.type
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:61](https://github.com/chelsea-apps/react-native-elements/blob/1bfa9f0/src/DropdownLink/index.tsx#L61)
+[src/DropdownLink/index.tsx:65](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L65)
