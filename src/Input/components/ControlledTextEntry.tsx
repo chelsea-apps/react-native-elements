@@ -62,6 +62,7 @@ const ControlledTextEntry = ({
   labelTestID,
   prefix,
   postfix,
+  forceLabel,
   // Styling
   textEntryStyle,
   textEntryContainerStyle,
@@ -111,7 +112,7 @@ const ControlledTextEntry = ({
             <OptionalWrapper data={label}>
               <InputLabel
                 text={label}
-                isFocused={isFocused}
+                isFocused={forceLabel || isFocused}
                 value={currentValue}
                 currentValue={currentValue}
                 labelColor={labelColor}
