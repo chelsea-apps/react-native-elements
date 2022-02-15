@@ -137,7 +137,9 @@ const ControlledTextEntry = ({
               ]}
             >
               <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
-              <OptionalWrapper data={prefix && (isFocused || currentValue)}>
+              <OptionalWrapper
+                data={prefix && (forceLabel || isFocused || currentValue)}
+              >
                 <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
               </OptionalWrapper>
               <TextInput
@@ -178,7 +180,9 @@ const ControlledTextEntry = ({
                 defaultValue={defaultValue}
                 {...props}
               />
-              <OptionalWrapper data={postfix && (isFocused || currentValue)}>
+              <OptionalWrapper
+                data={postfix && (forceLabel || isFocused || currentValue)}
+              >
                 <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
               </OptionalWrapper>
             </View>

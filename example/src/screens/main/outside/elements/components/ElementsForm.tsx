@@ -146,7 +146,6 @@ const ElementsForm = ({
 				control={control}
 				error={errors.email}
 				validation={validation.email}
-				forceLabel
 			/>
 			<Input
 				name="price"
@@ -154,8 +153,8 @@ const ElementsForm = ({
 				control={control}
 				error={errors.price}
 				validation={validation.price}
-				defaultValue="100"
 				prefix="$"
+				forceLabel
 			/>
 			<InputPressable
 				label="Pressable Input"
