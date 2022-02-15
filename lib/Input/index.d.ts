@@ -28,6 +28,8 @@ export interface InputProps extends TextInputProps {
     prefix?: string;
     /** Characters to show after the user input text */
     postfix?: string;
+    /** Forces the label to a focused state */
+    forceLabel?: boolean;
     /** Additional action to be performed on input submission */
     onSubmitEditing?: () => void;
     /** View Container styles - including errors and info text */

@@ -146,6 +146,7 @@ const ElementsForm = ({
 				control={control}
 				error={errors.email}
 				validation={validation.email}
+				forceLabel
 			/>
 			<Input
 				name="price"
