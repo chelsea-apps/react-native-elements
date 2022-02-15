@@ -21,7 +21,7 @@ const styles = {
 };
 const ControlledTextEntry = ({ 
 // Functionality
-name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
+name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, focusable = true, 
 // Styling
 textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
@@ -41,7 +41,10 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
         if (defaultValue)
             setCurrentValue(defaultValue);
     }, [defaultValue]);
-    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => setIsFocused(true) },
+    return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => {
+                if (focusable)
+                    setIsFocused(true);
+            } },
             React.createElement(View, { style: t.relative },
                 React.createElement(OptionalWrapper, { data: label },
                     React.createElement(InputLabel, { text: label, isFocused: forceLabel || isFocused, value: currentValue, currentValue: currentValue, labelColor: labelColor, focusedLabelColor: focusedLabelColor, labelStyle: labelStyle, labelTopPosition: labelTopPosition, labelBigFontSize: labelBigFontSize, labelSmallFontSize: labelSmallFontSize, testID: labelTestID })),
@@ -75,10 +78,12 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                             right: prefix ? 5 : 24,
                             bottom: 24,
                         }, onFocus: () => {
-                            setIsFocused(true);
+                            if (focusable)
+                                setIsFocused(true);
                         }, onBlur: () => {
                             onBlur();
-                            setIsFocused(false);
+                            if (focusable)
+                                setIsFocused(false);
                         }, onChangeText: (inputValue) => {
                             setCurrentValue(inputValue);
                             onChange(inputValue);

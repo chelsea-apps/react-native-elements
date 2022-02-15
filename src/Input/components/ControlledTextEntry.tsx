@@ -63,6 +63,7 @@ const ControlledTextEntry = ({
   prefix,
   postfix,
   forceLabel,
+  focusable = true,
   // Styling
   textEntryStyle,
   textEntryContainerStyle,
@@ -107,7 +108,11 @@ const ControlledTextEntry = ({
       defaultValue={defaultValue}
       rules={validation}
       render={({ field: { onChange, onBlur, value } }) => (
-        <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            if (focusable) setIsFocused(true)
+          }}
+        >
           <View style={t.relative}>
             <OptionalWrapper data={label}>
               <InputLabel
@@ -158,11 +163,11 @@ const ControlledTextEntry = ({
                   bottom: 24,
                 }}
                 onFocus={() => {
-                  setIsFocused(true)
+                  if (focusable) setIsFocused(true)
                 }}
                 onBlur={() => {
                   onBlur()
-                  setIsFocused(false)
+                  if (focusable) setIsFocused(false)
                 }}
                 onChangeText={(inputValue) => {
                   setCurrentValue(inputValue)
