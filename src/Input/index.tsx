@@ -95,7 +95,7 @@ export interface InputProps extends TextInputProps {
   /** Error Test ID */
   errorTestID?: string
   /** Input Ref */
-  ref: any
+  ref?: any
 }
 
 const Input = ({
