@@ -94,6 +94,8 @@ export interface InputProps extends TextInputProps {
   infoTextTestID?: string
   /** Error Test ID */
   errorTestID?: string
+  /** Input Ref */
+  ref: any
 }
 
 const Input = ({
@@ -133,6 +135,7 @@ const Input = ({
   testID,
   textEntryTestID,
   labelTestID,
+  ref,
   ...props
 }: InputProps) => {
   return (
@@ -148,6 +151,7 @@ const Input = ({
         icon={icon}
         prefix={prefix}
         postfix={postfix}
+        ref={ref}
         // Styling
         textEntryStyle={textEntryStyle}
         textEntryContainerStyle={textEntryContainerStyle}
