@@ -47,6 +47,7 @@ interface ControlledTextEntryProps extends InputProps {
   labelColor?: string
   focusedLabelColor?: string
   onSubmitEditing?: () => void
+  ref?: any
 }
 
 const ControlledTextEntry = ({
@@ -63,6 +64,7 @@ const ControlledTextEntry = ({
   prefix,
   postfix,
   forceLabel,
+  ref,
   // Styling
   textEntryStyle,
   textEntryContainerStyle,
@@ -85,16 +87,16 @@ const ControlledTextEntry = ({
   const [currentValue, setCurrentValue] = useState<string | undefined>(
     undefined
   )
-  const inputRef = useRef<LegacyRef<TextInput> | undefined>()
+  //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
 
-  useEffect(() => {
-    if (inputRef.current) {
-      // @ts-expect-error-next-line
-      if (isFocused) inputRef.current.focus()
-      // @ts-expect-error-next-line
-      else inputRef.current.blur()
-    }
-  }, [isFocused, inputRef])
+  //   useEffect(() => {
+  //     if (inputRef.current) {
+  //       // @ts-expect-error-next-line
+  //       if (isFocused) inputRef.current.focus()
+  //       // @ts-expect-error-next-line
+  //       else inputRef.current.blur()
+  //     }
+  //   }, [isFocused, inputRef])
 
   useEffect(() => {
     if (defaultValue) setCurrentValue(defaultValue)
@@ -141,8 +143,7 @@ const ControlledTextEntry = ({
                 <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
               </OptionalWrapper>
               <TextInput
-                // @ts-expect-error-next-line
-                ref={inputRef}
+                ref={ref}
                 style={[
                   styles.input,
                   Platform.OS === 'android' && [t._mY4, t._mL1],
