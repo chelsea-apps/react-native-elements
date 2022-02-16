@@ -4,8 +4,9 @@ import InputElement, {
 	InputProps as InputElementProps,
 } from '../../../../../lib/Input';
 
-const Input = ({ ...props }: InputElementProps) => (
+const Input = React.forwardRef(({ ...props }: InputElementProps, ref) => (
 	<InputElement
+		ref={ref}
 		textEntryStyle={[t.textGray900, { fontSize: 16 }]}
 		selectionColor={color.gray900}
 		borderColor={color.gray300}
@@ -16,6 +17,6 @@ const Input = ({ ...props }: InputElementProps) => (
 		labelStyle={t.mT3}
 		{...props}
 	/>
-);
+));
 
 export default Input;

@@ -19,11 +19,11 @@ const styles = {
     prefix: [t.fontSans, t.textGray900, t.mR1],
     postfix: [t.fontSans, t.textGray900, t.mL2],
 };
-const ControlledTextEntry = ({ 
+const ControlledTextEntry = React.forwardRef(({ 
 // Functionality
-name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, ref, 
+name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
-textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }) => {
+textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
     //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
@@ -56,7 +56,11 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                     React.createElement(OptionalWrapper, { data: icon }, icon),
                     React.createElement(OptionalWrapper, { data: prefix && (forceLabel || isFocused || currentValue) },
                         React.createElement(Txt, { style: [styles.prefix, prefixStyle] }, prefix)),
-                    React.createElement(TextInput, { ref: ref, style: [
+                    React.createElement(TextInput
+                    // @ts-expect-error
+                    , { 
+                        // @ts-expect-error
+                        ref: ref, style: [
                             styles.input,
                             Platform.OS === 'android' && [t._mY4, t._mL1],
                             {
@@ -80,6 +84,6 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         , testID: textEntryTestID, defaultValue: defaultValue, ...props }),
                     React.createElement(OptionalWrapper, { data: postfix && (forceLabel || isFocused || currentValue) },
                         React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix)))))) }));
-};
+});
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map
