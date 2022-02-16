@@ -82,6 +82,8 @@ export interface InputProps extends TextInputProps {
     infoTextTestID?: string;
     /** Error Test ID */
     errorTestID?: string;
+    /** Input Ref */
+    ref: any;
 }
-declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, prefix, prefixStyle, postfix, postfixStyle, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelSmallFontSize, labelBigFontSize, bgColor, textColor, borderColor, focusedBorderColor, labelColor, focusedLabelColor, selectionColor, testID, textEntryTestID, labelTestID, ...props }: InputProps) => JSX.Element;
+declare const Input: ({ name, control, error, errorTestID, errorColor, errorStyle, label, validation, onSubmitEditing, defaultValue, infoText, infoTextStyle, infoTextColor, infoTextTestID, prefix, prefixStyle, postfix, postfixStyle, icon, style, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelSmallFontSize, labelBigFontSize, bgColor, textColor, borderColor, focusedBorderColor, labelColor, focusedLabelColor, selectionColor, testID, textEntryTestID, labelTestID, ref, ...props }: InputProps) => JSX.Element;
 export default Input;
