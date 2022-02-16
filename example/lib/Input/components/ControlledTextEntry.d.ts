@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { InputProps } from '..';
 interface ControlledTextEntryProps extends InputProps {
@@ -15,7 +16,6 @@ interface ControlledTextEntryProps extends InputProps {
     labelColor?: string;
     focusedLabelColor?: string;
     onSubmitEditing?: () => void;
-    ref: any;
 }
-declare const ControlledTextEntry: ({ name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, ref, textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }: ControlledTextEntryProps) => JSX.Element;
+declare const ControlledTextEntry: React.ForwardRefExoticComponent<ControlledTextEntryProps & React.RefAttributes<unknown>>;
 export default ControlledTextEntry;

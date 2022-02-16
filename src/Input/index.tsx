@@ -94,102 +94,104 @@ export interface InputProps extends TextInputProps {
   infoTextTestID?: string
   /** Error Test ID */
   errorTestID?: string
-  /** Input Ref */
-  ref?: any
 }
 
-const Input = ({
-  name,
-  control,
-  error,
-  errorTestID,
-  errorColor,
-  errorStyle,
-  label,
-  validation,
-  onSubmitEditing,
-  defaultValue,
-  infoText,
-  infoTextStyle,
-  infoTextColor,
-  infoTextTestID,
-  prefix,
-  prefixStyle,
-  postfix,
-  postfixStyle,
-  icon,
-  style,
-  textEntryStyle,
-  textEntryContainerStyle,
-  labelStyle,
-  labelTopPosition,
-  labelSmallFontSize,
-  labelBigFontSize,
-  bgColor,
-  textColor,
-  borderColor,
-  focusedBorderColor,
-  labelColor,
-  focusedLabelColor,
-  selectionColor,
-  testID,
-  textEntryTestID,
-  labelTestID,
-  ref,
-  ...props
-}: InputProps) => {
-  return (
-    <View style={[t.mB4, style]} testID={testID}>
-      <ControlledTextEntry
-        // Functionality
-        name={name}
-        control={control}
-        validation={validation}
-        defaultValue={defaultValue}
-        label={label}
-        onSubmitEditing={onSubmitEditing}
-        icon={icon}
-        prefix={prefix}
-        postfix={postfix}
-        ref={ref}
-        // Styling
-        textEntryStyle={textEntryStyle}
-        textEntryContainerStyle={textEntryContainerStyle}
-        labelStyle={labelStyle}
-        bgColor={bgColor ?? color.transparent}
-        textColor={textColor ?? color.white}
-        borderColor={borderColor ?? color.gray400}
-        focusedBorderColor={focusedBorderColor ?? color.yellow400}
-        selectionColor={selectionColor ?? color.white}
-        labelColor={labelColor ?? color.gray900}
-        labelTopPosition={labelTopPosition ?? 12}
-        labelBigFontSize={labelBigFontSize ?? 16}
-        labelSmallFontSize={labelSmallFontSize ?? 13}
-        focusedLabelColor={focusedLabelColor ?? color.gray700}
-        prefixStyle={prefixStyle}
-        postfixStyle={postfixStyle}
-        textEntryTestID={textEntryTestID}
-        labelTestID={labelTestID}
-        {...props}
-      />
-      <InputInfoText
-        // Functionality
-        text={infoText}
-        testID={infoTextTestID}
-        // Styling
-        textColor={infoTextColor ?? color.white}
-        infoStyle={infoTextStyle}
-      />
-      <InputError
-        // Functionality
-        error={error}
-        testID={errorTestID}
-        // Styling
-        textColor={errorColor ?? color.red400}
-        errorStyle={errorStyle}
-      />
-    </View>
-  )
-}
+const Input = React.forwardRef(
+  (
+    {
+      name,
+      control,
+      error,
+      errorTestID,
+      errorColor,
+      errorStyle,
+      label,
+      validation,
+      onSubmitEditing,
+      defaultValue,
+      infoText,
+      infoTextStyle,
+      infoTextColor,
+      infoTextTestID,
+      prefix,
+      prefixStyle,
+      postfix,
+      postfixStyle,
+      icon,
+      style,
+      textEntryStyle,
+      textEntryContainerStyle,
+      labelStyle,
+      labelTopPosition,
+      labelSmallFontSize,
+      labelBigFontSize,
+      bgColor,
+      textColor,
+      borderColor,
+      focusedBorderColor,
+      labelColor,
+      focusedLabelColor,
+      selectionColor,
+      testID,
+      textEntryTestID,
+      labelTestID,
+      ...props
+    }: InputProps,
+    ref
+  ) => {
+    return (
+      <View style={[t.mB4, style]} testID={testID}>
+        <ControlledTextEntry
+          // Functionality
+          ref={ref}
+          name={name}
+          control={control}
+          validation={validation}
+          defaultValue={defaultValue}
+          label={label}
+          onSubmitEditing={onSubmitEditing}
+          icon={icon}
+          prefix={prefix}
+          postfix={postfix}
+          // Styling
+          textEntryStyle={textEntryStyle}
+          textEntryContainerStyle={textEntryContainerStyle}
+          labelStyle={labelStyle}
+          bgColor={bgColor ?? color.transparent}
+          textColor={textColor ?? color.white}
+          borderColor={borderColor ?? color.gray400}
+          focusedBorderColor={focusedBorderColor ?? color.yellow400}
+          selectionColor={selectionColor ?? color.white}
+          labelColor={labelColor ?? color.gray900}
+          labelTopPosition={labelTopPosition ?? 12}
+          labelBigFontSize={labelBigFontSize ?? 16}
+          labelSmallFontSize={labelSmallFontSize ?? 13}
+          focusedLabelColor={focusedLabelColor ?? color.gray700}
+          prefixStyle={prefixStyle}
+          postfixStyle={postfixStyle}
+          textEntryTestID={textEntryTestID}
+          labelTestID={labelTestID}
+          {...props}
+        />
+        <InputInfoText
+          // Functionality
+          text={infoText}
+          testID={infoTextTestID}
+          // Styling
+          textColor={infoTextColor ?? color.white}
+          infoStyle={infoTextStyle}
+        />
+        <InputError
+          // Functionality
+          error={error}
+          testID={errorTestID}
+          // Styling
+          textColor={errorColor ?? color.red400}
+          errorStyle={errorStyle}
+        />
+      </View>
+    )
+  }
+)
 
 export default Input

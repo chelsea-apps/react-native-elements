@@ -47,151 +47,155 @@ interface ControlledTextEntryProps extends InputProps {
   labelColor?: string
   focusedLabelColor?: string
   onSubmitEditing?: () => void
-  ref: any
 }
 
-const ControlledTextEntry = ({
-  // Functionality
-  name,
-  control,
-  validation,
-  defaultValue,
-  label,
-  icon,
-  onSubmitEditing,
-  textEntryTestID,
-  labelTestID,
-  prefix,
-  postfix,
-  forceLabel,
-  ref,
-  // Styling
-  textEntryStyle,
-  textEntryContainerStyle,
-  labelStyle,
-  labelTopPosition,
-  labelBigFontSize,
-  labelSmallFontSize,
-  bgColor,
-  borderColor,
-  focusedBorderColor,
-  selectionColor,
-  prefixStyle,
-  postfixStyle,
-  textColor,
-  labelColor,
-  focusedLabelColor,
-  ...props
-}: ControlledTextEntryProps) => {
-  const [isFocused, setIsFocused] = useState<boolean>(false)
-  const [currentValue, setCurrentValue] = useState<string | undefined>(
-    undefined
-  )
-  //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
+const ControlledTextEntry = React.forwardRef(
+  (
+    {
+      // Functionality
+      name,
+      control,
+      validation,
+      defaultValue,
+      label,
+      icon,
+      onSubmitEditing,
+      textEntryTestID,
+      labelTestID,
+      prefix,
+      postfix,
+      forceLabel,
+      // Styling
+      textEntryStyle,
+      textEntryContainerStyle,
+      labelStyle,
+      labelTopPosition,
+      labelBigFontSize,
+      labelSmallFontSize,
+      bgColor,
+      borderColor,
+      focusedBorderColor,
+      selectionColor,
+      prefixStyle,
+      postfixStyle,
+      textColor,
+      labelColor,
+      focusedLabelColor,
+      ...props
+    }: ControlledTextEntryProps,
+    ref
+  ) => {
+    const [isFocused, setIsFocused] = useState<boolean>(false)
+    const [currentValue, setCurrentValue] = useState<string | undefined>(
+      undefined
+    )
+    //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
 
-  //   useEffect(() => {
-  //     if (inputRef.current) {
-  //       // @ts-expect-error-next-line
-  //       if (isFocused) inputRef.current.focus()
-  //       // @ts-expect-error-next-line
-  //       else inputRef.current.blur()
-  //     }
-  //   }, [isFocused, inputRef])
+    //   useEffect(() => {
+    //     if (inputRef.current) {
+    //       // @ts-expect-error-next-line
+    //       if (isFocused) inputRef.current.focus()
+    //       // @ts-expect-error-next-line
+    //       else inputRef.current.blur()
+    //     }
+    //   }, [isFocused, inputRef])
 
-  useEffect(() => {
-    if (defaultValue) setCurrentValue(defaultValue)
-  }, [defaultValue])
+    useEffect(() => {
+      if (defaultValue) setCurrentValue(defaultValue)
+    }, [defaultValue])
 
-  return (
-    <Controller
-      name={name ?? ''}
-      control={control}
-      defaultValue={defaultValue}
-      rules={validation}
-      render={({ field: { onChange, onBlur, value } }) => (
-        <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
-          <View style={t.relative}>
-            <OptionalWrapper data={label}>
-              <InputLabel
-                text={label}
-                isFocused={forceLabel || isFocused}
-                value={currentValue}
-                currentValue={currentValue}
-                labelColor={labelColor}
-                focusedLabelColor={focusedLabelColor}
-                labelStyle={labelStyle}
-                labelTopPosition={labelTopPosition}
-                labelBigFontSize={labelBigFontSize}
-                labelSmallFontSize={labelSmallFontSize}
-                testID={labelTestID}
-              />
-            </OptionalWrapper>
-            <View
-              style={[
-                styles.inputContainer,
-                label ? t.pT9 : t.pT4,
-                postfix && t.pR10,
-                {
-                  borderColor: isFocused ? focusedBorderColor : borderColor,
-                  backgroundColor: bgColor,
-                },
-                textEntryContainerStyle,
-              ]}
-            >
-              <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
-              <OptionalWrapper
-                data={prefix && (forceLabel || isFocused || currentValue)}
-              >
-                <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
+    return (
+      <Controller
+        name={name ?? ''}
+        control={control}
+        defaultValue={defaultValue}
+        rules={validation}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
+            <View style={t.relative}>
+              <OptionalWrapper data={label}>
+                <InputLabel
+                  text={label}
+                  isFocused={forceLabel || isFocused}
+                  value={currentValue}
+                  currentValue={currentValue}
+                  labelColor={labelColor}
+                  focusedLabelColor={focusedLabelColor}
+                  labelStyle={labelStyle}
+                  labelTopPosition={labelTopPosition}
+                  labelBigFontSize={labelBigFontSize}
+                  labelSmallFontSize={labelSmallFontSize}
+                  testID={labelTestID}
+                />
               </OptionalWrapper>
-              <TextInput
-                ref={ref}
+              <View
                 style={[
-                  styles.input,
-                  Platform.OS === 'android' && [t._mY4, t._mL1],
+                  styles.inputContainer,
+                  label ? t.pT9 : t.pT4,
+                  postfix && t.pR10,
                   {
-                    color: textColor,
+                    borderColor: isFocused ? focusedBorderColor : borderColor,
+                    backgroundColor: bgColor,
                   },
-                  textEntryStyle,
+                  textEntryContainerStyle,
                 ]}
-                hitSlop={{
-                  top: 40,
-                  left: 24,
-                  right: prefix ? 5 : 24,
-                  bottom: 24,
-                }}
-                onFocus={() => {
-                  setIsFocused(true)
-                }}
-                onBlur={() => {
-                  onBlur()
-                  setIsFocused(false)
-                }}
-                onChangeText={(inputValue) => {
-                  setCurrentValue(inputValue)
-                  onChange(inputValue)
-                }}
-                value={value}
-                onSubmitEditing={() =>
-                  onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
-                }
-                selectionColor={selectionColor}
-                placeholder='' // Needed to not be passed accidentally
-                testID={textEntryTestID}
-                defaultValue={defaultValue}
-                {...props}
-              />
-              <OptionalWrapper
-                data={postfix && (forceLabel || isFocused || currentValue)}
               >
-                <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
-              </OptionalWrapper>
+                <OptionalWrapper data={icon}>{icon}</OptionalWrapper>
+                <OptionalWrapper
+                  data={prefix && (forceLabel || isFocused || currentValue)}
+                >
+                  <Txt style={[styles.prefix, prefixStyle]}>{prefix}</Txt>
+                </OptionalWrapper>
+                <TextInput
+                  // @ts-expect-error
+                  ref={ref}
+                  style={[
+                    styles.input,
+                    Platform.OS === 'android' && [t._mY4, t._mL1],
+                    {
+                      color: textColor,
+                    },
+                    textEntryStyle,
+                  ]}
+                  hitSlop={{
+                    top: 40,
+                    left: 24,
+                    right: prefix ? 5 : 24,
+                    bottom: 24,
+                  }}
+                  onFocus={() => {
+                    setIsFocused(true)
+                  }}
+                  onBlur={() => {
+                    onBlur()
+                    setIsFocused(false)
+                  }}
+                  onChangeText={(inputValue) => {
+                    setCurrentValue(inputValue)
+                    onChange(inputValue)
+                  }}
+                  value={value}
+                  onSubmitEditing={() =>
+                    onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss()
+                  }
+                  selectionColor={selectionColor}
+                  placeholder='' // Needed to not be passed accidentally
+                  testID={textEntryTestID}
+                  defaultValue={defaultValue}
+                  {...props}
+                />
+                <OptionalWrapper
+                  data={postfix && (forceLabel || isFocused || currentValue)}
+                >
+                  <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
+                </OptionalWrapper>
+              </View>
             </View>
-          </View>
-        </TouchableWithoutFeedback>
-      )}
-    />
-  )
-}
+          </TouchableWithoutFeedback>
+        )}
+      />
+    )
+  }
+)
 
 export default ControlledTextEntry

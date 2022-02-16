@@ -1,7 +1,7 @@
 import { CombinedError } from '@urql/core';
-import React, { useContext } from 'react';
+import React, { LegacyRef, useContext } from 'react';
 import { Control, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-form';
-import { View } from 'react-native';
+import { TextInput, View } from 'react-native';
 import { t } from 'react-native-tailwindcss';
 import { FieldsErrors, InputValidations } from '../../../../../../lib';
 import DefaultButton from '../../../../../common/components/elements/Button/Default';
@@ -138,6 +138,8 @@ const ElementsForm = ({
 		},
 	};
 
+	const Ref = React.createRef<LegacyRef<TextInput>>();
+
 	return (
 		<View style={[t.wFull]}>
 			<Input
@@ -146,6 +148,7 @@ const ElementsForm = ({
 				control={control}
 				error={errors.email}
 				validation={validation.email}
+				ref={Ref}
 			/>
 			<Input
 				name="price"
