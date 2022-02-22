@@ -21,6 +21,7 @@ import { MainContext } from '../../../main.provider';
 export type ElementsFormData = {
 	email: string;
 	price: string;
+	days: string;
 	description: string;
 	bio: string;
 	country: string;
@@ -104,6 +105,12 @@ const ElementsForm = ({
 				message: 'Price is required.',
 			},
 		},
+		days: {
+			required: {
+				value: true,
+				message: 'You need to include the number of days.',
+			},
+		},
 		description: {
 			required: {
 				value: true,
@@ -157,6 +164,15 @@ const ElementsForm = ({
 				error={errors.price}
 				validation={validation.price}
 				prefix="$"
+				forceLabel
+			/>
+			<Input
+				name="days"
+				label="Input with postfix"
+				control={control}
+				error={errors.days}
+				validation={validation.days}
+				postfix="days"
 				forceLabel
 			/>
 			<InputPressable

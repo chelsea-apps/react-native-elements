@@ -29,7 +29,7 @@ const styles = {
   ],
   input: [t.wFull, t.fontSans],
   prefix: [t.fontSans, t.textGray900, t.mR1],
-  postfix: [t.fontSans, t.textGray900, t.mL2],
+  postfix: [t.fontSans, t.textGray900, t.mL1],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -104,6 +104,8 @@ const ControlledTextEntry = React.forwardRef(
       if (defaultValue) setCurrentValue(defaultValue)
     }, [defaultValue])
 
+    const inputRef = React.createRef<LegacyRef<TextInput>>();
+
     return (
       <Controller
         name={name ?? ''}
@@ -111,7 +113,13 @@ const ControlledTextEntry = React.forwardRef(
         defaultValue={defaultValue}
         rules={validation}
         render={({ field: { onChange, onBlur, value } }) => (
-          <TouchableWithoutFeedback onPress={() => setIsFocused(true)}>
+          <TouchableWithoutFeedback onPress={() => {
+            setIsFocused(true)
+            // @ts-expect-error
+            if (ref?.current?.focus()) return ref.current.focus()
+            // @ts-expect-error
+            if (inputRef?.current?.focus()) inputRef?.current?.focus()
+          }}>
             <View style={t.relative}>
               <OptionalWrapper data={label}>
                 <InputLabel
@@ -148,7 +156,7 @@ const ControlledTextEntry = React.forwardRef(
                 </OptionalWrapper>
                 <TextInput
                   // @ts-expect-error
-                  ref={ref}
+                  ref={ref ?? inputRef}
                   style={[
                     styles.input,
                     Platform.OS === 'android' && [t._mY4, t._mL1],
@@ -156,6 +164,7 @@ const ControlledTextEntry = React.forwardRef(
                       color: textColor,
                     },
                     textEntryStyle,
+                    postfix && t.wAuto
                   ]}
                   hitSlop={{
                     top: 40,
