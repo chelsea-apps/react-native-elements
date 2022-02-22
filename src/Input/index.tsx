@@ -1,6 +1,8 @@
 import React from 'react'
 import { Control, FieldError, RegisterOptions } from 'react-hook-form'
 import {
+  KeyboardTypeOptions,
+  Platform,
   StyleProp,
   TextInputProps,
   TextStyle,
@@ -135,10 +137,21 @@ const Input = React.forwardRef(
       testID,
       textEntryTestID,
       labelTestID,
+      keyboardType,
       ...props
     }: InputProps,
     ref
   ) => {
+    /**
+     * Checks the type of the keyboard.
+     * If it has either numeric or number-pad, it will check the OS before assigning the correct type.
+     */
+    const getKeyboardType = (): KeyboardTypeOptions | undefined => {
+      if (['numeric', 'number-pad'].includes(keyboardType ?? ''))
+        return Platform.OS === 'android' ? 'numeric' : 'number-pad'
+      return keyboardType
+    }
+
     return (
       <View style={[t.mB4, style]} testID={testID}>
         <ControlledTextEntry
@@ -171,6 +184,7 @@ const Input = React.forwardRef(
           postfixStyle={postfixStyle}
           textEntryTestID={textEntryTestID}
           labelTestID={labelTestID}
+          keyboardType={getKeyboardType()}
           {...props}
         />
         <InputInfoText

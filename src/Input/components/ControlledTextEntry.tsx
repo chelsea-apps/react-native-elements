@@ -1,4 +1,4 @@
-import React, { LegacyRef, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
   Keyboard,
@@ -171,6 +171,7 @@ const ControlledTextEntry = React.forwardRef(
                     setIsFocused(false)
                   }}
                   onChangeText={(inputValue) => {
+                    console.log(props.keyboardType)
                     setCurrentValue(inputValue)
                     onChange(inputValue)
                   }}

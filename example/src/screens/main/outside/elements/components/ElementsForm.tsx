@@ -157,6 +157,7 @@ const ElementsForm = ({
 				error={errors.price}
 				validation={validation.price}
 				prefix="$"
+				keyboardType="numeric"
 				forceLabel
 			/>
 			<InputPressable
