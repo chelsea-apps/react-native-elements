@@ -171,7 +171,6 @@ const ControlledTextEntry = React.forwardRef(
                     setIsFocused(false)
                   }}
                   onChangeText={(inputValue) => {
-                    console.log(props.keyboardType)
                     setCurrentValue(inputValue)
                     onChange(inputValue)
                   }}
