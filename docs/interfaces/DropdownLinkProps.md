@@ -53,7 +53,7 @@ DropdownLinkElementProps.bgColor
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L48)
+[src/DropdownLink/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L48)
 
 ___
 
@@ -69,7 +69,7 @@ DropdownLinkElementProps.borderColor
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L50)
+[src/DropdownLink/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L50)
 
 ___
 
@@ -85,7 +85,7 @@ DropdownLinkElementProps.control
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L22)
+[src/DropdownLink/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L22)
 
 ___
 
@@ -101,7 +101,7 @@ DropdownLinkElementProps.delimiter
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L36)
+[src/DropdownLink/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L36)
 
 ___
 
@@ -117,7 +117,7 @@ DropdownLinkElementProps.disabled
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L32)
+[src/DropdownLink/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L32)
 
 ___
 
@@ -133,7 +133,7 @@ DropdownLinkElementProps.dropdown
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L18)
+[src/DropdownLink/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L18)
 
 ___
 
@@ -149,7 +149,7 @@ DropdownLinkElementProps.error
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L28)
+[src/DropdownLink/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L28)
 
 ___
 
@@ -165,7 +165,7 @@ DropdownLinkElementProps.errorTextStyle
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L52)
+[src/DropdownLink/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L52)
 
 ___
 
@@ -181,7 +181,7 @@ DropdownLinkElementProps.hideLabel
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L34)
+[src/DropdownLink/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L34)
 
 ___
 
@@ -197,7 +197,7 @@ DropdownLinkElementProps.icon
 
 #### Defined in
 
-[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/InputPressable/index.tsx#L17)
+[src/InputPressable/index.tsx:17](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/InputPressable/index.tsx#L17)
 
 ___
 
@@ -213,7 +213,7 @@ DropdownLinkElementProps.iconColor
 
 #### Defined in
 
-[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/InputPressable/index.tsx#L19)
+[src/InputPressable/index.tsx:19](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/InputPressable/index.tsx#L19)
 
 ___
 
@@ -229,7 +229,7 @@ DropdownLinkElementProps.iconName
 
 #### Defined in
 
-[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/InputPressable/index.tsx#L25)
+[src/InputPressable/index.tsx:25](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/InputPressable/index.tsx#L25)
 
 ___
 
@@ -245,7 +245,7 @@ DropdownLinkElementProps.iconSize
 
 #### Defined in
 
-[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/InputPressable/index.tsx#L21)
+[src/InputPressable/index.tsx:21](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/InputPressable/index.tsx#L21)
 
 ___
 
@@ -261,7 +261,7 @@ DropdownLinkElementProps.iconStyle
 
 #### Defined in
 
-[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/InputPressable/index.tsx#L23)
+[src/InputPressable/index.tsx:23](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/InputPressable/index.tsx#L23)
 
 ___
 
@@ -277,7 +277,7 @@ DropdownLinkElementProps.labelStyle
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L44)
+[src/DropdownLink/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L44)
 
 ___
 
@@ -293,7 +293,7 @@ DropdownLinkElementProps.navigateTo
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L30)
+[src/DropdownLink/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L30)
 
 ___
 
@@ -309,7 +309,7 @@ DropdownLinkElementProps.placeholderStyle
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L42)
+[src/DropdownLink/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L42)
 
 ___
 
@@ -325,7 +325,7 @@ DropdownLinkElementProps.setDropdown
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L20)
+[src/DropdownLink/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L20)
 
 ___
 
@@ -341,7 +341,7 @@ DropdownLinkElementProps.setValue
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L26)
+[src/DropdownLink/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L26)
 
 ___
 
@@ -357,7 +357,7 @@ DropdownLinkElementProps.style
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L40)
+[src/DropdownLink/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L40)
 
 ___
 
@@ -373,7 +373,7 @@ DropdownLinkElementProps.textStyle
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L46)
+[src/DropdownLink/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L46)
 
 ___
 
@@ -389,7 +389,7 @@ DropdownLinkElementProps.validation
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L24)
+[src/DropdownLink/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L24)
 
 ## Methods
 
@@ -409,4 +409,4 @@ DropdownLinkElementProps.onPress
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/DropdownLink/index.tsx#L38)
+[src/DropdownLink/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L38)

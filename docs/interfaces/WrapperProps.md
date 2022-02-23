@@ -56,6 +56,7 @@
 - [keyboardShouldPersistTaps](WrapperProps.md#keyboardshouldpersisttaps)
 - [keyboardVerticalOffset](WrapperProps.md#keyboardverticaloffset)
 - [maintainVisibleContentPosition](WrapperProps.md#maintainvisiblecontentposition)
+- [maxWidth](WrapperProps.md#maxwidth)
 - [maximumZoomScale](WrapperProps.md#maximumzoomscale)
 - [minimumZoomScale](WrapperProps.md#minimumzoomscale)
 - [nativeID](WrapperProps.md#nativeid)
@@ -474,7 +475,7 @@ WrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/index.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L14)
+[src/Wrapper/index.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L14)
 
 ___
 
@@ -709,7 +710,7 @@ WrapperElementProps.fixed
 
 #### Defined in
 
-[src/Wrapper/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L18)
+[src/Wrapper/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L18)
 
 ___
 
@@ -922,7 +923,7 @@ WrapperElementProps.keyboardVerticalOffset
 
 #### Defined in
 
-[src/Wrapper/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L20)
+[src/Wrapper/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L20)
 
 ___
 
@@ -958,6 +959,22 @@ WrapperElementProps.maintainVisibleContentPosition
 #### Defined in
 
 node_modules/@types/react-native/index.d.ts:6518
+
+___
+
+### maxWidth
+
+• `Optional` **maxWidth**: `number`
+
+Max width to be passed to the tablet wrapper
+
+#### Inherited from
+
+WrapperElementProps.maxWidth
+
+#### Defined in
+
+[src/Wrapper/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L22)
 
 ___
 
@@ -2545,7 +2562,7 @@ WrapperElementProps.type
 
 #### Defined in
 
-[src/Wrapper/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Wrapper/index.tsx#L16)
+[src/Wrapper/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L16)
 
 ___
 

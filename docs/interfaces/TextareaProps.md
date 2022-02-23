@@ -50,6 +50,7 @@
 - [focusable](TextareaProps.md#focusable)
 - [focusedBorderColor](TextareaProps.md#focusedbordercolor)
 - [focusedLabelColor](TextareaProps.md#focusedlabelcolor)
+- [forceLabel](TextareaProps.md#forcelabel)
 - [hasTVPreferredFocus](TextareaProps.md#hastvpreferredfocus)
 - [hitSlop](TextareaProps.md#hitslop)
 - [icon](TextareaProps.md#icon)
@@ -470,7 +471,7 @@ TextareaElementProps.bgColor
 
 #### Defined in
 
-[src/Input/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L58)
+[src/Input/index.tsx:60](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L60)
 
 ___
 
@@ -503,7 +504,7 @@ TextareaElementProps.borderColor
 
 #### Defined in
 
-[src/Input/index.tsx:62](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L62)
+[src/Input/index.tsx:64](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L64)
 
 ___
 
@@ -616,7 +617,7 @@ TextareaElementProps.control
 
 #### Defined in
 
-[src/Input/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L26)
+[src/Input/index.tsx:26](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L26)
 
 ___
 
@@ -661,7 +662,7 @@ TextareaElementProps.defaultValue
 
 #### Defined in
 
-[src/Input/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L34)
+[src/Input/index.tsx:34](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L34)
 
 ___
 
@@ -729,7 +730,7 @@ TextareaElementProps.error
 
 #### Defined in
 
-[src/Input/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L30)
+[src/Input/index.tsx:30](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L30)
 
 ___
 
@@ -745,7 +746,7 @@ TextareaElementProps.errorColor
 
 #### Defined in
 
-[src/Input/index.tsx:82](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L82)
+[src/Input/index.tsx:84](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L84)
 
 ___
 
@@ -761,7 +762,7 @@ TextareaElementProps.errorStyle
 
 #### Defined in
 
-[src/Input/index.tsx:84](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L84)
+[src/Input/index.tsx:86](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L86)
 
 ___
 
@@ -777,7 +778,7 @@ TextareaElementProps.errorTestID
 
 #### Defined in
 
-[src/Input/index.tsx:94](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L94)
+[src/Input/index.tsx:96](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L96)
 
 ___
 
@@ -809,7 +810,7 @@ TextareaElementProps.focusedBorderColor
 
 #### Defined in
 
-[src/Input/index.tsx:64](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L64)
+[src/Input/index.tsx:66](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L66)
 
 ___
 
@@ -825,7 +826,23 @@ TextareaElementProps.focusedLabelColor
 
 #### Defined in
 
-[src/Input/index.tsx:74](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L74)
+[src/Input/index.tsx:76](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L76)
+
+___
+
+### forceLabel
+
+• `Optional` **forceLabel**: `boolean`
+
+Forces the label to a focused state
+
+#### Inherited from
+
+TextareaElementProps.forceLabel
+
+#### Defined in
+
+[src/Input/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L44)
 
 ___
 
@@ -882,7 +899,7 @@ TextareaElementProps.icon
 
 #### Defined in
 
-[src/Input/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L38)
+[src/Input/index.tsx:38](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L38)
 
 ___
 
@@ -950,7 +967,7 @@ TextareaElementProps.infoText
 
 #### Defined in
 
-[src/Input/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L36)
+[src/Input/index.tsx:36](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L36)
 
 ___
 
@@ -966,7 +983,7 @@ TextareaElementProps.infoTextColor
 
 #### Defined in
 
-[src/Input/index.tsx:80](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L80)
+[src/Input/index.tsx:82](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L82)
 
 ___
 
@@ -982,7 +999,7 @@ TextareaElementProps.infoTextStyle
 
 #### Defined in
 
-[src/Input/index.tsx:78](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L78)
+[src/Input/index.tsx:80](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L80)
 
 ___
 
@@ -998,7 +1015,7 @@ TextareaElementProps.infoTextTestID
 
 #### Defined in
 
-[src/Input/index.tsx:92](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L92)
+[src/Input/index.tsx:94](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L94)
 
 ___
 
@@ -1120,7 +1137,7 @@ TextareaElementProps.label
 
 #### Defined in
 
-[src/Input/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L32)
+[src/Input/index.tsx:32](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L32)
 
 ___
 
@@ -1136,7 +1153,7 @@ TextareaElementProps.labelBigFontSize
 
 #### Defined in
 
-[src/Input/index.tsx:70](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L70)
+[src/Input/index.tsx:72](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L72)
 
 ___
 
@@ -1152,7 +1169,7 @@ TextareaElementProps.labelColor
 
 #### Defined in
 
-[src/Input/index.tsx:66](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L66)
+[src/Input/index.tsx:68](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L68)
 
 ___
 
@@ -1168,7 +1185,7 @@ TextareaElementProps.labelSmallFontSize
 
 #### Defined in
 
-[src/Input/index.tsx:72](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L72)
+[src/Input/index.tsx:74](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L74)
 
 ___
 
@@ -1184,7 +1201,7 @@ TextareaElementProps.labelStyle
 
 #### Defined in
 
-[src/Input/index.tsx:56](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L56)
+[src/Input/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L58)
 
 ___
 
@@ -1200,7 +1217,7 @@ TextareaElementProps.labelTestID
 
 #### Defined in
 
-[src/Input/index.tsx:90](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L90)
+[src/Input/index.tsx:92](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L92)
 
 ___
 
@@ -1216,7 +1233,7 @@ TextareaElementProps.labelTopPosition
 
 #### Defined in
 
-[src/Input/index.tsx:68](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L68)
+[src/Input/index.tsx:70](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L70)
 
 ___
 
@@ -1284,7 +1301,7 @@ TextareaElementProps.name
 
 #### Defined in
 
-[src/Input/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L24)
+[src/Input/index.tsx:24](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L24)
 
 ___
 
@@ -2484,7 +2501,7 @@ TextareaElementProps.postfix
 
 #### Defined in
 
-[src/Input/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L42)
+[src/Input/index.tsx:42](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L42)
 
 ___
 
@@ -2500,7 +2517,7 @@ TextareaElementProps.postfixStyle
 
 #### Defined in
 
-[src/Input/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L52)
+[src/Input/index.tsx:54](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L54)
 
 ___
 
@@ -2516,7 +2533,7 @@ TextareaElementProps.prefix
 
 #### Defined in
 
-[src/Input/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L40)
+[src/Input/index.tsx:40](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L40)
 
 ___
 
@@ -2532,7 +2549,7 @@ TextareaElementProps.prefixStyle
 
 #### Defined in
 
-[src/Input/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L50)
+[src/Input/index.tsx:52](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L52)
 
 ___
 
@@ -2713,7 +2730,7 @@ TextareaElementProps.selectionColor
 
 #### Defined in
 
-[src/Input/index.tsx:76](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L76)
+[src/Input/index.tsx:78](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L78)
 
 ___
 
@@ -2800,7 +2817,7 @@ TextareaElementProps.style
 
 #### Defined in
 
-[src/Input/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L46)
+[src/Input/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L48)
 
 ___
 
@@ -2816,7 +2833,7 @@ TextareaElementProps.testID
 
 #### Defined in
 
-[src/Input/index.tsx:86](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L86)
+[src/Input/index.tsx:88](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L88)
 
 ___
 
@@ -2881,7 +2898,7 @@ TextareaElementProps.textColor
 
 #### Defined in
 
-[src/Input/index.tsx:60](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L60)
+[src/Input/index.tsx:62](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L62)
 
 ___
 
@@ -2954,7 +2971,7 @@ TextareaElementProps.textEntryContainerStyle
 
 #### Defined in
 
-[src/Input/index.tsx:54](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L54)
+[src/Input/index.tsx:56](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L56)
 
 ___
 
@@ -2970,7 +2987,7 @@ TextareaElementProps.textEntryStyle
 
 #### Defined in
 
-[src/Input/index.tsx:48](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L48)
+[src/Input/index.tsx:50](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L50)
 
 ___
 
@@ -2986,7 +3003,7 @@ TextareaElementProps.textEntryTestID
 
 #### Defined in
 
-[src/Input/index.tsx:88](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L88)
+[src/Input/index.tsx:90](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L90)
 
 ___
 
@@ -3108,7 +3125,7 @@ TextareaElementProps.validation
 
 #### Defined in
 
-[src/Input/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L28)
+[src/Input/index.tsx:28](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L28)
 
 ___
 
@@ -3148,4 +3165,4 @@ TextareaElementProps.onSubmitEditing
 
 #### Defined in
 
-[src/Input/index.tsx:44](https://github.com/chelsea-apps/react-native-elements/blob/dad3daa/src/Input/index.tsx#L44)
+[src/Input/index.tsx:46](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Input/index.tsx#L46)
