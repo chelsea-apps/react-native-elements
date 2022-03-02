@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Controller } from 'react-hook-form';
-import { Keyboard, Platform, TextInput, TouchableWithoutFeedback, View, } from 'react-native';
+import { Keyboard, Platform, TextInput, TouchableOpacity, TouchableWithoutFeedback, View, } from 'react-native';
 import { t } from 'react-native-tailwindcss';
 import { Txt } from '../..';
 import OptionalWrapper from '../../Wrapper/OptionalWrapper';
@@ -23,7 +23,7 @@ const ControlledTextEntry = React.forwardRef(({
 // Functionality
 name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
-textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, ...props }, ref) => {
+textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
     //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
@@ -77,7 +77,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                                 color: textColor,
                             },
                             textEntryStyle,
-                            postfix && t.wAuto
+                            postfix && t.wAuto,
                         ], hitSlop: {
                             top: 40,
                             left: 24,
@@ -94,7 +94,12 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         }, value: value, onSubmitEditing: () => onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss(), selectionColor: selectionColor, placeholder: '' // Needed to not be passed accidentally
                         , testID: textEntryTestID, defaultValue: defaultValue, ...props }),
                     React.createElement(OptionalWrapper, { data: postfix && (forceLabel || isFocused || currentValue) },
-                        React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix)))))) }));
+                        React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix))),
+                React.createElement(OptionalWrapper, { data: currentValue && isFocused },
+                    React.createElement(TouchableOpacity, { onPress: () => {
+                            setCurrentValue('');
+                            onChange('');
+                        }, style: [t.absolute, t.right0, t.top0, t.mT5, t.mR3] }, clearTextIcon))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map
