@@ -49,10 +49,7 @@ const ElementsForm = ({
 			name: 'country',
 			label: 'Single Dropdown Link',
 			items: [
-				{
-					value: 'uk',
-					label: 'United Kingdom',
-				},
+				{ value: 'uk', label: 'United Kingdom' },
 				{ value: 'ro', label: 'Romania' },
 				{ value: 'it', label: 'Italy' },
 			],
