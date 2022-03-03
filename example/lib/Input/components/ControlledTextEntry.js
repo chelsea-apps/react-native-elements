@@ -18,6 +18,16 @@ const styles = {
     input: [t.wFull, t.fontSans],
     prefix: [t.fontSans, t.textGray900, t.mR1],
     postfix: [t.fontSans, t.textGray900, t.mL1],
+    clearTextIconContainer: [
+        t.flex,
+        t.justifyCenter,
+        t.itemsCenter,
+        t.absolute,
+        t.right0,
+        t.top0,
+        t.mT5,
+        t.mR3,
+    ],
 };
 const ControlledTextEntry = React.forwardRef(({ 
 // Functionality
@@ -99,7 +109,10 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                     React.createElement(TouchableOpacity, { onPress: () => {
                             setCurrentValue('');
                             onChange('');
-                        }, style: clearTextIconContainerStyle }, clearTextIcon))))) }));
+                        }, style: [
+                            styles.clearTextIconContainer,
+                            clearTextIconContainerStyle,
+                        ] }, clearTextIcon))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map

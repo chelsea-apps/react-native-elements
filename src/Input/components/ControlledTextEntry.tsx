@@ -31,6 +31,16 @@ const styles = {
   input: [t.wFull, t.fontSans],
   prefix: [t.fontSans, t.textGray900, t.mR1],
   postfix: [t.fontSans, t.textGray900, t.mL1],
+  clearTextIconContainer: [
+    t.flex,
+    t.justifyCenter,
+    t.itemsCenter,
+    t.absolute,
+    t.right0,
+    t.top0,
+    t.mT5,
+    t.mR3,
+  ],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -212,7 +222,10 @@ const ControlledTextEntry = React.forwardRef(
                     setCurrentValue('')
                     onChange('')
                   }}
-                  style={clearTextIconContainerStyle}
+                  style={[
+                    styles.clearTextIconContainer,
+                    clearTextIconContainerStyle,
+                  ]}
                 >
                   {clearTextIcon}
                 </TouchableOpacity>

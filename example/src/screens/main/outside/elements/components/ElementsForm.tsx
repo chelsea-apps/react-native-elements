@@ -181,16 +181,10 @@ const ElementsForm = ({
 						name="x"
 						color={color.gray700}
 						size={22}
-						style={{ marginTop: 3 }}
 					/>
 				}
 				clearTextIconContainerStyle={[
-					t.absolute,
-					t.right0,
-					t.top0,
-					t.mT5,
-					t.mR3,
-					t.bgGray400,
+					t.bgGray200,
 					t.w7,
 					t.h7,
 					{ borderRadius: 13 },
