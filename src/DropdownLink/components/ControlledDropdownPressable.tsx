@@ -22,7 +22,7 @@ const styles = {
     t.itemsCenter,
     t.justifyBetween,
   ],
-  label: [t.textGray400, t.fontSans, t.textBase, t.textSm, t.mB1],
+  label: [t.textGray700, t.fontSans, t.textBase, t.textSm, t.mB1],
   placeholder: [t.textGray400, t.textLg],
   value: [t.textWhite, t.fontSans],
 }
@@ -124,7 +124,7 @@ const ControlledDropdownPressable = ({
             if (onPress) onPress()
           }}
         >
-          <View style={t.pR8}>
+          <View style={t.w10_12}>
             {/* Placeholder */}
             <OptionalWrapper data={!labelsText}>
               <Txt style={[styles.placeholder, placeholderStyle]}>
@@ -146,7 +146,7 @@ const ControlledDropdownPressable = ({
             <Icon
               type='font'
               fontName='Feather'
-              name={iconName ?? 'chevron-down'}
+              name={iconName ?? 'chevron-right'}
               color={iconColor ?? color.white}
               size={iconSize ?? 24}
               style={[iconStyle]}

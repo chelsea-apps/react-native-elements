@@ -18,7 +18,7 @@ const styles = {
         t.itemsCenter,
         t.justifyBetween,
     ],
-    label: [t.textGray400, t.fontSans, t.textBase, t.textSm, t.mB1],
+    label: [t.textGray700, t.fontSans, t.textBase, t.textSm, t.mB1],
     placeholder: [t.textGray400, t.textLg],
     value: [t.textWhite, t.fontSans],
 };
@@ -84,7 +84,7 @@ placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, 
                 if (onPress)
                     onPress();
             } },
-            React.createElement(View, { style: t.pR8 },
+            React.createElement(View, { style: t.w10_12 },
                 React.createElement(OptionalWrapper, { data: !labelsText },
                     React.createElement(Txt, { style: [styles.placeholder, placeholderStyle] }, dropdown === null || dropdown === void 0 ? void 0 : dropdown.label)),
                 React.createElement(OptionalWrapper, { data: labelsText },
@@ -92,7 +92,7 @@ placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, 
                         React.createElement(Txt, { style: [styles.label, labelStyle] }, dropdown === null || dropdown === void 0 ? void 0 : dropdown.label)),
                     React.createElement(Txt, { style: [styles.value, disabled && t.opacity50, textStyle] }, labelsText))),
             icon,
-            !icon && (React.createElement(Icon, { type: 'font', fontName: 'Feather', name: iconName !== null && iconName !== void 0 ? iconName : 'chevron-down', color: iconColor !== null && iconColor !== void 0 ? iconColor : color.white, size: iconSize !== null && iconSize !== void 0 ? iconSize : 24, style: [iconStyle] })))) }));
+            !icon && (React.createElement(Icon, { type: 'font', fontName: 'Feather', name: iconName !== null && iconName !== void 0 ? iconName : 'chevron-right', color: iconColor !== null && iconColor !== void 0 ? iconColor : color.white, size: iconSize !== null && iconSize !== void 0 ? iconSize : 24, style: [iconStyle] })))) }));
 };
 export default ControlledDropdownPressable;
 //# sourceMappingURL=ControlledDropdownPressable.js.map
