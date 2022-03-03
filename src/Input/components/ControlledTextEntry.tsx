@@ -48,6 +48,7 @@ interface ControlledTextEntryProps extends InputProps {
   labelColor?: string
   focusedLabelColor?: string
   clearTextIcon?: React.ReactNode
+  clearTextIconContainerStyle?: StyleProp<any>
   onSubmitEditing?: () => void
 }
 
@@ -84,6 +85,7 @@ const ControlledTextEntry = React.forwardRef(
       labelColor,
       focusedLabelColor,
       clearTextIcon,
+      clearTextIconContainerStyle,
       ...props
     }: ControlledTextEntryProps,
     ref
@@ -210,7 +212,7 @@ const ControlledTextEntry = React.forwardRef(
                     setCurrentValue('')
                     onChange('')
                   }}
-                  style={[t.absolute, t.right0, t.top0, t.mT5, t.mR3]}
+                  style={clearTextIconContainerStyle}
                 >
                   {clearTextIcon}
                 </TouchableOpacity>

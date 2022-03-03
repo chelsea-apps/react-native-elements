@@ -2,7 +2,7 @@ import { CombinedError } from '@urql/core';
 import React, { LegacyRef, useContext } from 'react';
 import { Control, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-form';
 import { TextInput, View } from 'react-native';
-import { t } from 'react-native-tailwindcss';
+import { color, t } from 'react-native-tailwindcss';
 import { FieldsErrors, InputValidations } from '../../../../../../lib';
 import DefaultButton from '../../../../../common/components/elements/Button/Default';
 import OutlineButton from '../../../../../common/components/elements/Button/Outline';
@@ -173,17 +173,28 @@ const ElementsForm = ({
 				control={control}
 				error={errors.price}
 				validation={validation.price}
-				prefix="$"
 				forceLabel
 				clearTextIcon={
 					<Icon
 						type="font"
 						fontName="Feather"
 						name="x"
-						size={25}
+						color={color.gray700}
+						size={22}
 						style={{ marginTop: 3 }}
 					/>
 				}
+				clearTextIconContainerStyle={[
+					t.absolute,
+					t.right0,
+					t.top0,
+					t.mT5,
+					t.mR3,
+					t.bgGray400,
+					t.w7,
+					t.h7,
+					{ borderRadius: 13 },
+				]}
 			/>
 			<Input
 				name="days"

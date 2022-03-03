@@ -23,7 +23,7 @@ const ControlledTextEntry = React.forwardRef(({
 // Functionality
 name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
-textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, ...props }, ref) => {
+textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
     //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
@@ -99,7 +99,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                     React.createElement(TouchableOpacity, { onPress: () => {
                             setCurrentValue('');
                             onChange('');
-                        }, style: [t.absolute, t.right0, t.top0, t.mT5, t.mR3] }, clearTextIcon))))) }));
+                        }, style: clearTextIconContainerStyle }, clearTextIcon))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map

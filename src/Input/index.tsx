@@ -96,6 +96,8 @@ export interface InputProps extends TextInputProps {
   errorTestID?: string
   /** Clear text icon at end of input container */
   clearTextIcon?: React.ReactNode
+  /** Clear text icon container style */
+  clearTextIconContainerStyle?: StyleProp<any>
 }
 
 const Input = React.forwardRef(
@@ -138,6 +140,7 @@ const Input = React.forwardRef(
       textEntryTestID,
       labelTestID,
       clearTextIcon,
+      clearTextIconContainerStyle,
       ...props
     }: InputProps,
     ref
@@ -175,6 +178,7 @@ const Input = React.forwardRef(
           textEntryTestID={textEntryTestID}
           labelTestID={labelTestID}
           clearTextIcon={clearTextIcon}
+          clearTextIconContainerStyle={clearTextIconContainerStyle}
           {...props}
         />
         <InputInfoText
