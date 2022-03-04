@@ -15,6 +15,8 @@ interface ControlledTextEntryProps extends InputProps {
     textColor?: string;
     labelColor?: string;
     focusedLabelColor?: string;
+    clearTextIcon?: React.ReactNode;
+    clearTextIconContainerStyle?: StyleProp<any>;
     onSubmitEditing?: () => void;
 }
 declare const ControlledTextEntry: React.ForwardRefExoticComponent<ControlledTextEntryProps & React.RefAttributes<unknown>>;

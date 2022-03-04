@@ -2,11 +2,12 @@ import { CombinedError } from '@urql/core';
 import React, { LegacyRef, useContext } from 'react';
 import { Control, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-form';
 import { TextInput, View } from 'react-native';
-import { t } from 'react-native-tailwindcss';
+import { color, t } from 'react-native-tailwindcss';
 import { FieldsErrors, InputValidations } from '../../../../../../lib';
 import DefaultButton from '../../../../../common/components/elements/Button/Default';
 import OutlineButton from '../../../../../common/components/elements/Button/Outline';
 import DropdownLink from '../../../../../common/components/elements/DropdownLink';
+import Icon from '../../../../../common/components/elements/Icon';
 import Input from '../../../../../common/components/elements/Input';
 import InputPressable from '../../../../../common/components/elements/InputPressable';
 import SwitchRow from '../../../../../common/components/elements/SwitchRow';
@@ -165,6 +166,29 @@ const ElementsForm = ({
 				validation={validation.price}
 				prefix="$"
 				forceLabel
+			/>
+			<Input
+				name="name"
+				label="Name"
+				control={control}
+				error={errors.price}
+				validation={validation.price}
+				forceLabel
+				clearTextIcon={
+					<Icon
+						type="font"
+						fontName="Feather"
+						name="x"
+						color={color.gray700}
+						size={22}
+					/>
+				}
+				clearTextIconContainerStyle={[
+					t.bgGray200,
+					t.w7,
+					t.h7,
+					{ borderRadius: 13 },
+				]}
 			/>
 			<Input
 				name="days"

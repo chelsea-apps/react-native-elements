@@ -1,6 +1,6 @@
 {
   "name": "@chelseaapps/react-native-elements",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "React Native Frontend Library to be used inside Chelsea Apps Mobile applications.",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
   "main": "lib/index.js",
@@ -40,6 +40,7 @@
     "react": "^17.0.2",
     "react-hook-form": "^7.18.0",
     "react-native": "^0.66.1",
+    "react-native-device-info": "^8.4.9",
     "react-native-haptic-feedback": "^1.13.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.8.0",
@@ -49,8 +50,7 @@
     "typedoc": "^0.22.7",
     "typedoc-plugin-markdown": "^3.11.3",
     "typescript": "^4.4.4",
-    "urql": "^2.0.5",
-    "react-native-device-info": "^8.4.9"
+    "urql": "^2.0.5"
   },
   "peerDependencies": {
     "@react-navigation/native": "*",
@@ -59,13 +59,13 @@
     "react": "*",
     "react-hook-form": "7.x",
     "react-native": "*",
+    "react-native-device-info": "*",
     "react-native-haptic-feedback": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-tailwindcss": "*",
     "react-native-vector-icons": "*",
-    "urql": "*",
-    "react-native-device-info": "*"
+    "urql": "*"
   },
   "jest": {
     "preset": "react-native",
