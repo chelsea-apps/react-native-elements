@@ -6,6 +6,7 @@ import {
   StyleProp,
   TextInput,
   TextStyle,
+  TouchableOpacity,
   TouchableWithoutFeedback,
   View,
   ViewStyle,
@@ -30,6 +31,16 @@ const styles = {
   input: [t.wFull, t.fontSans],
   prefix: [t.fontSans, t.textGray900, t.mR1],
   postfix: [t.fontSans, t.textGray900, t.mL1],
+  clearTextIconContainer: [
+    t.flex,
+    t.justifyCenter,
+    t.itemsCenter,
+    t.absolute,
+    t.right0,
+    t.top0,
+    t.mT5,
+    t.mR3,
+  ],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -46,6 +57,8 @@ interface ControlledTextEntryProps extends InputProps {
   textColor?: string
   labelColor?: string
   focusedLabelColor?: string
+  clearTextIcon?: React.ReactNode
+  clearTextIconContainerStyle?: StyleProp<any>
   onSubmitEditing?: () => void
 }
 
@@ -81,6 +94,8 @@ const ControlledTextEntry = React.forwardRef(
       textColor,
       labelColor,
       focusedLabelColor,
+      clearTextIcon,
+      clearTextIconContainerStyle,
       ...props
     }: ControlledTextEntryProps,
     ref
@@ -104,7 +119,7 @@ const ControlledTextEntry = React.forwardRef(
       if (defaultValue) setCurrentValue(defaultValue)
     }, [defaultValue])
 
-    const inputRef = React.createRef<LegacyRef<TextInput>>();
+    const inputRef = React.createRef<LegacyRef<TextInput>>()
 
     return (
       <Controller
@@ -113,13 +128,15 @@ const ControlledTextEntry = React.forwardRef(
         defaultValue={defaultValue}
         rules={validation}
         render={({ field: { onChange, onBlur, value } }) => (
-          <TouchableWithoutFeedback onPress={() => {
-            setIsFocused(true)
-            // @ts-expect-error
-            if (ref?.current?.focus()) return ref.current.focus()
-            // @ts-expect-error
-            if (inputRef?.current?.focus()) inputRef?.current?.focus()
-          }}>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setIsFocused(true)
+              // @ts-expect-error
+              if (ref?.current?.focus()) return ref.current.focus()
+              // @ts-expect-error
+              if (inputRef?.current?.focus()) inputRef?.current?.focus()
+            }}
+          >
             <View style={t.relative}>
               <OptionalWrapper data={label}>
                 <InputLabel
@@ -164,7 +181,7 @@ const ControlledTextEntry = React.forwardRef(
                       color: textColor,
                     },
                     textEntryStyle,
-                    postfix && t.wAuto
+                    postfix && t.wAuto,
                   ]}
                   hitSlop={{
                     top: 40,
@@ -199,6 +216,20 @@ const ControlledTextEntry = React.forwardRef(
                   <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
                 </OptionalWrapper>
               </View>
+              <OptionalWrapper data={currentValue && isFocused}>
+                <TouchableOpacity
+                  onPress={() => {
+                    setCurrentValue('')
+                    onChange('')
+                  }}
+                  style={[
+                    styles.clearTextIconContainer,
+                    clearTextIconContainerStyle,
+                  ]}
+                >
+                  {clearTextIcon}
+                </TouchableOpacity>
+              </OptionalWrapper>
             </View>
           </TouchableWithoutFeedback>
         )}
