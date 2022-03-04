@@ -14,7 +14,7 @@
     "registry": "http://registry.chelsea-apps.com:4873"
   },
   "scripts": {
-    "compile": "rimraf lib && tsc -p . && rimraf /example/lib && cp-cli lib/ example/lib/",
+    "compile": "rm -rf lib && tsc -p . && rm -rf /example/lib && cp -a lib/ example/lib/",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "yarn compile",
     "test": "jest",
@@ -33,7 +33,6 @@
     "@types/react-native-vector-icons": "^6.4.9",
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^27.3.1",
-    "cp-cli": "^2.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.3.1",
