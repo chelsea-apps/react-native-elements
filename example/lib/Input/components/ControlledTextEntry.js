@@ -33,7 +33,7 @@ const ControlledTextEntry = React.forwardRef(({
 // Functionality
 name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
-textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, ...props }, ref) => {
+textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, noClear, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
     //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
@@ -104,15 +104,14 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         }, value: value, onSubmitEditing: () => onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss(), selectionColor: selectionColor, placeholder: '' // Needed to not be passed accidentally
                         , testID: textEntryTestID, defaultValue: defaultValue, ...props }),
                     React.createElement(OptionalWrapper, { data: postfix && (forceLabel || isFocused || currentValue) },
-                        React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix))),
-                React.createElement(OptionalWrapper, { data: currentValue && isFocused },
-                    React.createElement(TouchableOpacity, { onPress: () => {
-                            setCurrentValue('');
-                            onChange('');
-                        }, style: [
-                            styles.clearTextIconContainer,
-                            clearTextIconContainerStyle,
-                        ] }, clearTextIcon))))) }));
+                        React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix))), noClear !== null && noClear !== void 0 ? noClear : (React.createElement(OptionalWrapper, { data: currentValue && isFocused },
+                React.createElement(TouchableOpacity, { onPress: () => {
+                        setCurrentValue('');
+                        onChange('');
+                    }, style: [
+                        styles.clearTextIconContainer,
+                        clearTextIconContainerStyle,
+                    ] }, clearTextIcon)))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map
