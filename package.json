@@ -80,5 +80,8 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]
+  },
+  "dependencies": {
+    "react-native-reanimated": "^2.4.1"
   }
 }
