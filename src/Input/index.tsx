@@ -98,7 +98,7 @@ export interface InputProps extends TextInputProps {
   clearTextIcon?: React.ReactNode
   /** Clear text icon container style */
   clearTextIconContainerStyle?: StyleProp<any>
-  /** Clear text icon container style */
+  /** Prevent clear text icon showing */
   noClear?: boolean
 }
 
