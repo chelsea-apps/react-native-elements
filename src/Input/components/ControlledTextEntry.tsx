@@ -218,7 +218,7 @@ const ControlledTextEntry = React.forwardRef(
                   <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
                 </OptionalWrapper>
               </View>
-              {noClear ?? (
+              {!noClear && clearTextIcon && (
                 <OptionalWrapper data={currentValue && isFocused}>
                   <TouchableOpacity
                     onPress={() => {

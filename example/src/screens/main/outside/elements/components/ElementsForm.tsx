@@ -189,6 +189,7 @@ const ElementsForm = ({
 					t.h6,
 					{ borderRadius: 13 },
 				]}
+				noClear
 			/>
 			<Input
 				name="days"
