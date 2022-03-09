@@ -86,6 +86,8 @@ export interface InputProps extends TextInputProps {
     clearTextIcon?: React.ReactNode;
     /** Clear text icon container style */
     clearTextIconContainerStyle?: StyleProp<any>;
+    /** Prevent clear text icon showing */
+    noClear?: boolean;
 }
 declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<unknown>>;
 export default Input;

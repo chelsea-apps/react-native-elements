@@ -1,6 +1,6 @@
 {
   "name": "@chelseaapps/react-native-elements",
-  "version": "1.5.10",
+  "version": "1.5.11",
   "description": "React Native Frontend Library to be used inside Chelsea Apps Mobile applications.",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
   "main": "lib/index.js",
@@ -80,5 +80,8 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]
+  },
+  "dependencies": {
+    "react-native-reanimated": "^2.4.1"
   }
 }

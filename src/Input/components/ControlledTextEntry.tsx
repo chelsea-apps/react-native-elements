@@ -59,6 +59,7 @@ interface ControlledTextEntryProps extends InputProps {
   focusedLabelColor?: string
   clearTextIcon?: React.ReactNode
   clearTextIconContainerStyle?: StyleProp<any>
+  noClear?: boolean
   onSubmitEditing?: () => void
 }
 
@@ -96,6 +97,7 @@ const ControlledTextEntry = React.forwardRef(
       focusedLabelColor,
       clearTextIcon,
       clearTextIconContainerStyle,
+      noClear,
       onFocus,
       ...props
     }: ControlledTextEntryProps,
@@ -218,20 +220,22 @@ const ControlledTextEntry = React.forwardRef(
                   <Txt style={[styles.postfix, postfixStyle]}>{postfix}</Txt>
                 </OptionalWrapper>
               </View>
-              <OptionalWrapper data={currentValue && isFocused}>
-                <TouchableOpacity
-                  onPress={() => {
-                    setCurrentValue('')
-                    onChange('')
-                  }}
-                  style={[
-                    styles.clearTextIconContainer,
-                    clearTextIconContainerStyle,
-                  ]}
-                >
-                  {clearTextIcon}
-                </TouchableOpacity>
-              </OptionalWrapper>
+              {!noClear && clearTextIcon && (
+                <OptionalWrapper data={currentValue && isFocused}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      setCurrentValue('')
+                      onChange('')
+                    }}
+                    style={[
+                      styles.clearTextIconContainer,
+                      clearTextIconContainerStyle,
+                    ]}
+                  >
+                    {clearTextIcon}
+                  </TouchableOpacity>
+                </OptionalWrapper>
+              )}
             </View>
           </TouchableWithoutFeedback>
         )}

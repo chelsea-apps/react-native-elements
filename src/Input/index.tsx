@@ -98,6 +98,8 @@ export interface InputProps extends TextInputProps {
   clearTextIcon?: React.ReactNode
   /** Clear text icon container style */
   clearTextIconContainerStyle?: StyleProp<any>
+  /** Prevent clear text icon showing */
+  noClear?: boolean
 }
 
 const Input = React.forwardRef(
@@ -141,6 +143,7 @@ const Input = React.forwardRef(
       labelTestID,
       clearTextIcon,
       clearTextIconContainerStyle,
+      noClear,
       ...props
     }: InputProps,
     ref
@@ -179,6 +182,7 @@ const Input = React.forwardRef(
           labelTestID={labelTestID}
           clearTextIcon={clearTextIcon}
           clearTextIconContainerStyle={clearTextIconContainerStyle}
+          noClear={noClear}
           {...props}
         />
         <InputInfoText

@@ -180,15 +180,16 @@ const ElementsForm = ({
 						fontName="Feather"
 						name="x"
 						color={color.gray700}
-						size={22}
+						size={18}
 					/>
 				}
 				clearTextIconContainerStyle={[
 					t.bgGray200,
-					t.w7,
-					t.h7,
+					t.w6,
+					t.h6,
 					{ borderRadius: 13 },
 				]}
+				noClear
 			/>
 			<Input
 				name="days"
