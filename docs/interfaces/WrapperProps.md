@@ -475,7 +475,7 @@ WrapperElementProps.children
 
 #### Defined in
 
-[src/Wrapper/index.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L14)
+[src/Wrapper/index.tsx:14](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Wrapper/index.tsx#L14)
 
 ___
 
@@ -710,7 +710,7 @@ WrapperElementProps.fixed
 
 #### Defined in
 
-[src/Wrapper/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L18)
+[src/Wrapper/index.tsx:18](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Wrapper/index.tsx#L18)
 
 ___
 
@@ -923,7 +923,7 @@ WrapperElementProps.keyboardVerticalOffset
 
 #### Defined in
 
-[src/Wrapper/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L20)
+[src/Wrapper/index.tsx:20](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Wrapper/index.tsx#L20)
 
 ___
 
@@ -974,7 +974,7 @@ WrapperElementProps.maxWidth
 
 #### Defined in
 
-[src/Wrapper/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L22)
+[src/Wrapper/index.tsx:22](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Wrapper/index.tsx#L22)
 
 ___
 
@@ -2562,7 +2562,7 @@ WrapperElementProps.type
 
 #### Defined in
 
-[src/Wrapper/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Wrapper/index.tsx#L16)
+[src/Wrapper/index.tsx:16](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Wrapper/index.tsx#L16)
 
 ___
 
