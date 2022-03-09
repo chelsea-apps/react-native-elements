@@ -29,7 +29,7 @@ DropdownItemType.label
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:60](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L60)
+[src/DropdownLink/index.tsx:60](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/DropdownLink/index.tsx#L60)
 
 ___
 
@@ -45,4 +45,4 @@ DropdownItemType.value
 
 #### Defined in
 
-[src/DropdownLink/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/DropdownLink/index.tsx#L58)
+[src/DropdownLink/index.tsx:58](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/DropdownLink/index.tsx#L58)

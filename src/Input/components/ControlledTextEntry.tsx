@@ -96,6 +96,7 @@ const ControlledTextEntry = React.forwardRef(
       focusedLabelColor,
       clearTextIcon,
       clearTextIconContainerStyle,
+      onFocus,
       ...props
     }: ControlledTextEntryProps,
     ref
@@ -189,7 +190,8 @@ const ControlledTextEntry = React.forwardRef(
                     right: prefix ? 5 : 24,
                     bottom: 24,
                   }}
-                  onFocus={() => {
+                  onFocus={(e) => {
+                    if(onFocus) onFocus(e)
                     setIsFocused(true)
                   }}
                   onBlur={() => {
