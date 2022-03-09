@@ -305,7 +305,7 @@ TxtElementProps.children
 
 #### Defined in
 
-[src/Txt/index.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/19c284c/src/Txt/index.tsx#L15)
+[src/Txt/index.tsx:15](https://github.com/chelsea-apps/react-native-elements/blob/48c9f3e/src/Txt/index.tsx#L15)
 
 ___
 

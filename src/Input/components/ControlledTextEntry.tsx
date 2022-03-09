@@ -98,6 +98,7 @@ const ControlledTextEntry = React.forwardRef(
       clearTextIcon,
       clearTextIconContainerStyle,
       noClear,
+      onFocus,
       ...props
     }: ControlledTextEntryProps,
     ref
@@ -191,7 +192,8 @@ const ControlledTextEntry = React.forwardRef(
                     right: prefix ? 5 : 24,
                     bottom: 24,
                   }}
-                  onFocus={() => {
+                  onFocus={(e) => {
+                    if(onFocus) onFocus(e)
                     setIsFocused(true)
                   }}
                   onBlur={() => {
