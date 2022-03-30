@@ -41,6 +41,17 @@ const styles = {
     t.mT5,
     t.mR3,
   ],
+  rightComponentContainer: [
+    t.flex,
+    t.justifyCenter,
+    t.itemsCenter,
+    t.absolute,
+    t.right0,
+    t.top0,
+    t.bottom0,
+    t.mR2,
+    t.hFull,
+  ],
 }
 
 interface ControlledTextEntryProps extends InputProps {
@@ -72,6 +83,7 @@ const ControlledTextEntry = React.forwardRef(
       validation,
       defaultValue,
       label,
+      rightComponent,
       icon,
       onSubmitEditing,
       textEntryTestID,
@@ -97,6 +109,7 @@ const ControlledTextEntry = React.forwardRef(
       focusedLabelColor,
       clearTextIcon,
       clearTextIconContainerStyle,
+      rightComponentContainerSyle,
       noClear,
       onFocus,
       ...props
@@ -193,7 +206,7 @@ const ControlledTextEntry = React.forwardRef(
                     bottom: 24,
                   }}
                   onFocus={(e) => {
-                    if(onFocus) onFocus(e)
+                    if (onFocus) onFocus(e)
                     setIsFocused(true)
                   }}
                   onBlur={() => {
@@ -236,6 +249,16 @@ const ControlledTextEntry = React.forwardRef(
                   </TouchableOpacity>
                 </OptionalWrapper>
               )}
+              <OptionalWrapper data={rightComponent}>
+                <View
+                  style={[
+                    styles.rightComponentContainer,
+                    rightComponentContainerSyle,
+                  ]}
+                >
+                  {rightComponent}
+                </View>
+              </OptionalWrapper>
             </View>
           </TouchableWithoutFeedback>
         )}
