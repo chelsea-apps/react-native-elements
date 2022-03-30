@@ -160,7 +160,7 @@ const ElementsForm = ({
 			/>
 			<Input
 				name="email"
-				label="Input with right Icon"
+				label="Input with right component"
 				control={control}
 				error={errors.email}
 				validation={validation.email}
