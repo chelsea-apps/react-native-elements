@@ -1,7 +1,7 @@
 import { CombinedError } from '@urql/core';
 import React, { LegacyRef, useContext } from 'react';
 import { Control, UseFormHandleSubmit, UseFormSetValue } from 'react-hook-form';
-import { TextInput, View } from 'react-native';
+import { TextInput, TouchableOpacity, View } from 'react-native';
 import { color, t } from 'react-native-tailwindcss';
 import { FieldsErrors, InputValidations } from '../../../../../../lib';
 import DefaultButton from '../../../../../common/components/elements/Button/Default';
@@ -157,6 +157,34 @@ const ElementsForm = ({
 				error={errors.email}
 				validation={validation.email}
 				ref={Ref}
+			/>
+			<Input
+				name="email"
+				label="Input with right component"
+				control={control}
+				error={errors.email}
+				validation={validation.email}
+				forceLabel
+				rightComponent={
+					<TouchableOpacity
+						style={[
+							t.w10,
+							t.h10,
+							t.justifyCenter,
+							t.itemsCenter,
+							t.bgYellow400,
+							t.roundedFull,
+						]}
+					>
+						<Icon
+							type="font"
+							fontName="Feather"
+							name="chevron-right"
+							color={color.gray900}
+							size={22}
+						/>
+					</TouchableOpacity>
+				}
 			/>
 			<Input
 				name="price"

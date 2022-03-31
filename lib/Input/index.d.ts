@@ -28,6 +28,8 @@ export interface InputProps extends TextInputProps {
     prefix?: string;
     /** Characters to show after the user input text */
     postfix?: string;
+    /** Icon to show at the end of the input container */
+    rightComponent?: React.ReactNode;
     /** Forces the label to a focused state */
     forceLabel?: boolean;
     /** Additional action to be performed on input submission */
@@ -86,7 +88,7 @@ export interface InputProps extends TextInputProps {
     clearTextIcon?: React.ReactNode;
     /** Clear text icon container style */
     clearTextIconContainerStyle?: StyleProp<any>;
-    /** Clear text icon container style */
+    /** Prevent clear text icon showing */
     noClear?: boolean;
 }
 declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<unknown>>;

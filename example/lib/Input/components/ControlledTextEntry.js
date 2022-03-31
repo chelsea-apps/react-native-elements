@@ -28,10 +28,21 @@ const styles = {
         t.mT5,
         t.mR3,
     ],
+    rightComponentContainer: [
+        t.flex,
+        t.justifyCenter,
+        t.itemsCenter,
+        t.absolute,
+        t.right0,
+        t.top0,
+        t.bottom0,
+        t.mR2,
+        t.hFull,
+    ],
 };
 const ControlledTextEntry = React.forwardRef(({ 
 // Functionality
-name, control, validation, defaultValue, label, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
+name, control, validation, defaultValue, label, rightComponent, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
 textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, noClear, onFocus, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
@@ -114,7 +125,9 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         }, style: [
                             styles.clearTextIconContainer,
                             clearTextIconContainerStyle,
-                        ] }, clearTextIcon)))))) }));
+                        ] }, clearTextIcon))),
+                React.createElement(OptionalWrapper, { data: rightComponent },
+                    React.createElement(View, { style: styles.rightComponentContainer }, rightComponent))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map

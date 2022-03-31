@@ -40,6 +40,8 @@ export interface InputProps extends TextInputProps {
   prefix?: string
   /** Characters to show after the user input text */
   postfix?: string
+  /** Icon to show at the end of the input container */
+  rightComponent?: React.ReactNode
   /** Forces the label to a focused state */
   forceLabel?: boolean
   /** Additional action to be performed on input submission */
@@ -97,7 +99,9 @@ export interface InputProps extends TextInputProps {
   /** Clear text icon at end of input container */
   clearTextIcon?: React.ReactNode
   /** Clear text icon container style */
-  clearTextIconContainerStyle?: StyleProp<any>
+  clearTextIconContainerStyle?: StyleProp<ViewStyle>
+  /** Right Component container style */
+  rightComponentContainerSyle?: StyleProp<ViewStyle>
   /** Prevent clear text icon showing */
   noClear?: boolean
 }
@@ -123,6 +127,7 @@ const Input = React.forwardRef(
       prefixStyle,
       postfix,
       postfixStyle,
+      rightComponent,
       icon,
       style,
       textEntryStyle,
@@ -143,6 +148,7 @@ const Input = React.forwardRef(
       labelTestID,
       clearTextIcon,
       clearTextIconContainerStyle,
+      rightComponentContainerSyle,
       noClear,
       ...props
     }: InputProps,
@@ -162,6 +168,7 @@ const Input = React.forwardRef(
           icon={icon}
           prefix={prefix}
           postfix={postfix}
+          rightComponent={rightComponent}
           // Styling
           textEntryStyle={textEntryStyle}
           textEntryContainerStyle={textEntryContainerStyle}
@@ -182,6 +189,7 @@ const Input = React.forwardRef(
           labelTestID={labelTestID}
           clearTextIcon={clearTextIcon}
           clearTextIconContainerStyle={clearTextIconContainerStyle}
+          rightComponentContainerSyle={rightComponentContainerSyle}
           noClear={noClear}
           {...props}
         />
