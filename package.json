@@ -1,24 +1,28 @@
 {
   "name": "@chelseaapps/react-native-elements",
-  "version": "1.5.13",
+  "version": "1.6.0",
   "description": "React Native Frontend Library to be used inside Chelsea Apps Mobile applications.",
   "homepage": "https://github.com/chelsea-apps/react-native-elements",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "author": "Vlad Bibire <vlad@chelsea-apps.com>",
-  "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "registry": "http://registry.chelsea-apps.com:4873"
-  },
+  "author": "Chelsea Apps",
+  "license": "ISC",
   "scripts": {
     "compile": "rm -rf lib && tsc -p . && rm -rf /example/lib && cp -a lib/ example/lib/",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "yarn compile",
     "test": "jest",
-    "docs": "npx typedoc --out docs src/index.tsx"
+    "docs": "npx typedoc --out docs src/index.tsx",
+    "release": "standard-version --no-verify"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "react-native-reanimated": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -80,8 +84,5 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]
-  },
-  "dependencies": {
-    "react-native-reanimated": "^2.4.1"
   }
 }
