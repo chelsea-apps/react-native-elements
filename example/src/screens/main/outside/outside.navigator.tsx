@@ -18,7 +18,11 @@ const OutsideStack = () => {
 
 	return (
 		<Stack.Navigator headerMode="none">
-			<Stack.Screen name="Elements" component={ElementsScreen} />
+			<Stack.Screen
+				name="Elements"
+				component={ElementsScreen}
+				options={{ headerTransparent: true }}
+			/>
 			<Stack.Screen
 				name="SelectDropdown"
 				component={SelectDropdownScreen}
