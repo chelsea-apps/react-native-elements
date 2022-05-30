@@ -1,6 +1,7 @@
 import React, { LegacyRef, useEffect, useRef, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
+  InteractionManager,
   Keyboard,
   Platform,
   StyleProp,
@@ -136,6 +137,20 @@ const ControlledTextEntry = React.forwardRef(
     }, [defaultValue])
 
     const inputRef = React.createRef<LegacyRef<TextInput>>()
+
+    // useEffect(() => {
+    //   if (Platform.OS === 'android' && props.autoFocus) {
+    //     InteractionManager.runAfterInteractions(() => {
+    //       if (ref) {
+    //         // @ts-expect-error
+    //         ref.current?.focus()
+    //       } else {
+    //         // @ts-expect-error
+    //         inputRef.current?.focus()
+    //       }
+    //     })
+    //   }
+    // }, [])
 
     return (
       <Controller
