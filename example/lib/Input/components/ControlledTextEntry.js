@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Controller } from 'react-hook-form';
-import { Keyboard, Platform, TextInput, TouchableOpacity, TouchableWithoutFeedback, View, } from 'react-native';
+import { InteractionManager, Keyboard, Platform, TextInput, TouchableOpacity, TouchableWithoutFeedback, View, } from 'react-native';
 import { t } from 'react-native-tailwindcss';
 import { Txt } from '../..';
 import OptionalWrapper from '../../Wrapper/OptionalWrapper';
@@ -44,30 +44,35 @@ const ControlledTextEntry = React.forwardRef(({
 // Functionality
 name, control, validation, defaultValue, label, rightComponent, icon, onSubmitEditing, textEntryTestID, labelTestID, prefix, postfix, forceLabel, 
 // Styling
-textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, noClear, onFocus, ...props }, ref) => {
+textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigFontSize, labelSmallFontSize, bgColor, borderColor, focusedBorderColor, selectionColor, prefixStyle, postfixStyle, textColor, labelColor, focusedLabelColor, clearTextIcon, clearTextIconContainerStyle, rightComponentContainerSyle, noClear, onFocus, ...props }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
     const [currentValue, setCurrentValue] = useState(undefined);
-    //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
-    //   useEffect(() => {
-    //     if (inputRef.current) {
-    //       // @ts-expect-error-next-line
-    //       if (isFocused) inputRef.current.focus()
-    //       // @ts-expect-error-next-line
-    //       else inputRef.current.blur()
-    //     }
-    //   }, [isFocused, inputRef])
     useEffect(() => {
         if (defaultValue)
             setCurrentValue(defaultValue);
     }, [defaultValue]);
-    const inputRef = React.createRef();
+    const inputRef = useRef(null);
+    useEffect(() => {
+        if (Platform.OS === 'android' && props.autoFocus) {
+            InteractionManager.runAfterInteractions(() => {
+                var _a, _b;
+                // @ts-expect-error
+                if ((_a = ref === null || ref === void 0 ? void 0 : ref.current) === null || _a === void 0 ? void 0 : _a.focus) {
+                    // @ts-expect-error
+                    setTimeout(() => ref.current.focus(), 100);
+                }
+                else if ((_b = inputRef === null || inputRef === void 0 ? void 0 : inputRef.current) === null || _b === void 0 ? void 0 : _b.focus) {
+                    setTimeout(() => { var _a; return (_a = inputRef.current) === null || _a === void 0 ? void 0 : _a.focus(); }, 100);
+                }
+            });
+        }
+    }, []);
     return (React.createElement(Controller, { name: name !== null && name !== void 0 ? name : '', control: control, defaultValue: defaultValue, rules: validation, render: ({ field: { onChange, onBlur, value } }) => (React.createElement(TouchableWithoutFeedback, { onPress: () => {
                 var _a, _b, _c;
                 setIsFocused(true);
                 // @ts-expect-error
                 if ((_a = ref === null || ref === void 0 ? void 0 : ref.current) === null || _a === void 0 ? void 0 : _a.focus())
                     return ref.current.focus();
-                // @ts-expect-error
                 if ((_b = inputRef === null || inputRef === void 0 ? void 0 : inputRef.current) === null || _b === void 0 ? void 0 : _b.focus())
                     (_c = inputRef === null || inputRef === void 0 ? void 0 : inputRef.current) === null || _c === void 0 ? void 0 : _c.focus();
             } },
@@ -115,7 +120,7 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                             setCurrentValue(inputValue);
                             onChange(inputValue);
                         }, value: value, onSubmitEditing: () => onSubmitEditing ? onSubmitEditing() : Keyboard.dismiss(), selectionColor: selectionColor, placeholder: '' // Needed to not be passed accidentally
-                        , testID: textEntryTestID, defaultValue: defaultValue, ...props }),
+                        , testID: textEntryTestID, defaultValue: defaultValue, autoFocus: Platform.OS === 'android' ? false : props.autoFocus, ...props }),
                     React.createElement(OptionalWrapper, { data: postfix && (forceLabel || isFocused || currentValue) },
                         React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix))),
                 !noClear && clearTextIcon && (React.createElement(OptionalWrapper, { data: currentValue && isFocused },
@@ -127,7 +132,10 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                             clearTextIconContainerStyle,
                         ] }, clearTextIcon))),
                 React.createElement(OptionalWrapper, { data: rightComponent },
-                    React.createElement(View, { style: styles.rightComponentContainer }, rightComponent))))) }));
+                    React.createElement(View, { style: [
+                            styles.rightComponentContainer,
+                            rightComponentContainerSyle,
+                        ] }, rightComponent))))) }));
 });
 export default ControlledTextEntry;
 //# sourceMappingURL=ControlledTextEntry.js.map

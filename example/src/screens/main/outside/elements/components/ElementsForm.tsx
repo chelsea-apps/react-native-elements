@@ -239,6 +239,7 @@ const ElementsForm = ({
 				control={control}
 				error={errors.description}
 				validation={validation.description}
+				autoFocus
 			/>
 			<TextareaLink
 				name="bio"

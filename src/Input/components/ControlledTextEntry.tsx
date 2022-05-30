@@ -1,6 +1,7 @@
-import React, { LegacyRef, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Controller } from 'react-hook-form'
 import {
+  InteractionManager,
   Keyboard,
   Platform,
   StyleProp,
@@ -120,22 +121,25 @@ const ControlledTextEntry = React.forwardRef(
     const [currentValue, setCurrentValue] = useState<string | undefined>(
       undefined
     )
-    //   const inputRef = useRef<LegacyRef<TextInput> | undefined>()
-
-    //   useEffect(() => {
-    //     if (inputRef.current) {
-    //       // @ts-expect-error-next-line
-    //       if (isFocused) inputRef.current.focus()
-    //       // @ts-expect-error-next-line
-    //       else inputRef.current.blur()
-    //     }
-    //   }, [isFocused, inputRef])
-
     useEffect(() => {
       if (defaultValue) setCurrentValue(defaultValue)
     }, [defaultValue])
 
-    const inputRef = React.createRef<LegacyRef<TextInput>>()
+    const inputRef = useRef<any>(null)
+
+    useEffect(() => {
+      if (Platform.OS === 'android' && props.autoFocus) {
+        InteractionManager.runAfterInteractions(() => {
+          // @ts-expect-error
+          if (ref?.current?.focus) {
+            // @ts-expect-error
+            setTimeout(() => ref.current.focus(), 100)
+          } else if (inputRef?.current?.focus) {
+            setTimeout(() => inputRef.current?.focus(), 100)
+          }
+        })
+      }
+    }, [])
 
     return (
       <Controller
@@ -149,7 +153,6 @@ const ControlledTextEntry = React.forwardRef(
               setIsFocused(true)
               // @ts-expect-error
               if (ref?.current?.focus()) return ref.current.focus()
-              // @ts-expect-error
               if (inputRef?.current?.focus()) inputRef?.current?.focus()
             }}
           >
@@ -225,6 +228,9 @@ const ControlledTextEntry = React.forwardRef(
                   placeholder='' // Needed to not be passed accidentally
                   testID={textEntryTestID}
                   defaultValue={defaultValue}
+                  autoFocus={
+                    Platform.OS === 'android' ? false : props.autoFocus
+                  }
                   {...props}
                 />
                 <OptionalWrapper
