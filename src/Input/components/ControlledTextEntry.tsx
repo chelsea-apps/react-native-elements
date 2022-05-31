@@ -228,10 +228,10 @@ const ControlledTextEntry = React.forwardRef(
                   placeholder='' // Needed to not be passed accidentally
                   testID={textEntryTestID}
                   defaultValue={defaultValue}
+                  {...props}
                   autoFocus={
                     Platform.OS === 'android' ? false : props.autoFocus
                   }
-                  {...props}
                 />
                 <OptionalWrapper
                   data={postfix && (forceLabel || isFocused || currentValue)}
