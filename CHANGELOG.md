@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/chelsea-apps/react-native-elements/compare/v1.6.0...v1.6.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* Stop initial autofocus on android input ([c8b33b9](https://github.com/chelsea-apps/react-native-elements/commit/c8b33b91086480752e9918f45f7cb022f75deac0))
+
 ## 1.6.0 (2022-05-30)
 
 
