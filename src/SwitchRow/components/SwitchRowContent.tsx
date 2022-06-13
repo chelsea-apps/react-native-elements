@@ -32,7 +32,7 @@ const SwitchRowContent = ({
   trackDefaultColor,
   thumbColor,
   thumbActiveColor,
-  toggleOnSwitchIconPressOnly,
+  toggleOnSwitchOnly,
 }: SwitchRowProps) => {
   return (
     <View style={[styles.container, style]}>
@@ -54,7 +54,7 @@ const SwitchRowContent = ({
       <TouchableOpacity
         onPress={() => setActive(!active)}
         activeOpacity={1}
-        disabled={!toggleOnSwitchIconPressOnly}
+        disabled={!toggleOnSwitchOnly}
       >
         <Switch
           trackColor={{

@@ -24,7 +24,7 @@ export declare type SwitchRowProps = {
     /** Color of the thumb text when the switch is active */
     thumbActiveColor?: string;
     /** Boolean to set touch area for toggling switch */
-    toggleOnSwitchIconPressOnly?: boolean;
+    toggleOnSwitchOnly?: boolean;
 };
-declare const SwitchRow: ({ active, setActive, label, style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, thumbActiveColor, toggleOnSwitchIconPressOnly, }: SwitchRowProps) => JSX.Element;
+declare const SwitchRow: ({ active, setActive, label, style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, thumbActiveColor, toggleOnSwitchOnly, }: SwitchRowProps) => JSX.Element;
 export default SwitchRow;

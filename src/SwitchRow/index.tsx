@@ -26,7 +26,7 @@ export type SwitchRowProps = {
   /** Color of the thumb text when the switch is active */
   thumbActiveColor?: string
   /** Boolean to set touch area for toggling switch */
-  toggleOnSwitchIconPressOnly?: boolean
+  toggleOnSwitchOnly?: boolean
 }
 
 const SwitchRow = ({
@@ -43,7 +43,7 @@ const SwitchRow = ({
   trackDefaultColor,
   thumbColor,
   thumbActiveColor,
-  toggleOnSwitchIconPressOnly = false,
+  toggleOnSwitchOnly = false,
 }: SwitchRowProps) => {
   // Props for switchRow content
   const switchRowContentProps = {
@@ -57,15 +57,15 @@ const SwitchRow = ({
     trackDefaultColor,
     thumbColor,
     thumbActiveColor,
-    toggleOnSwitchIconPressOnly,
+    toggleOnSwitchOnly,
     style,
   }
 
-  return !toggleOnSwitchIconPressOnly ? (
+  return !toggleOnSwitchOnly ? (
     <TouchableOpacity
       onPress={() => setActive(!active)}
       activeOpacity={1}
-      disabled={toggleOnSwitchIconPressOnly}
+      disabled={toggleOnSwitchOnly}
     >
       <SwitchRowContent {...switchRowContentProps} />
     </TouchableOpacity>

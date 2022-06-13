@@ -19,7 +19,7 @@ const SwitchRowContent = ({
 // Functionality
 active, setActive, label, 
 // Styling
-style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, thumbActiveColor, toggleOnSwitchIconPressOnly, }) => {
+style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackDefaultColor, thumbColor, thumbActiveColor, toggleOnSwitchOnly, }) => {
     return (React.createElement(View, { style: [styles.container, style] },
         React.createElement(View, { style: [t.flexRow, t.itemsCenter] },
             React.createElement(Txt, { style: [
@@ -31,7 +31,7 @@ style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackD
                             : labelActiveColor !== null && labelActiveColor !== void 0 ? labelActiveColor : color.white,
                     },
                 ] }, label)),
-        React.createElement(TouchableOpacity, { onPress: () => setActive(!active), activeOpacity: 1, disabled: !toggleOnSwitchIconPressOnly },
+        React.createElement(TouchableOpacity, { onPress: () => setActive(!active), activeOpacity: 1, disabled: !toggleOnSwitchOnly },
             React.createElement(Switch, { trackColor: {
                     false: trackDefaultColor !== null && trackDefaultColor !== void 0 ? trackDefaultColor : color.black,
                     true: trackActiveColor !== null && trackActiveColor !== void 0 ? trackActiveColor : color.yellow400,
