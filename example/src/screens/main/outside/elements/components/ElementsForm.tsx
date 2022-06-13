@@ -269,6 +269,7 @@ const ElementsForm = ({
 				active={notificationActive}
 				setActive={setNotificationsActive}
 				label="Notifications enabled"
+				toggleOnSwitchIconPressOnly
 			/>
 			<ErrorWrapper
 				title="Something went wrong!"

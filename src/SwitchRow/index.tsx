@@ -34,6 +34,8 @@ export type SwitchRowProps = {
   thumbColor?: string
   /** Color of the thumb text when the switch is active */
   thumbActiveColor?: string
+  /** Boolean to set touch area for toggling switch */
+  toggleOnSwitchIconPressOnly?: boolean
 }
 
 const styles = {
@@ -64,12 +66,14 @@ const SwitchRow = ({
   trackDefaultColor,
   thumbColor,
   thumbActiveColor,
+  toggleOnSwitchIconPressOnly = false,
 }: SwitchRowProps) => {
   return (
     <TouchableOpacity
       style={[styles.container, style]}
       onPress={() => setActive(!active)}
       activeOpacity={1}
+      disabled={toggleOnSwitchIconPressOnly}
     >
       <View style={[t.flexRow, t.itemsCenter]}>
         <Txt
@@ -86,18 +90,24 @@ const SwitchRow = ({
           {label}
         </Txt>
       </View>
-      <Switch
-        trackColor={{
-          false: trackDefaultColor ?? color.black,
-          true: trackActiveColor ?? color.yellow400,
-        }}
-        ios_backgroundColor={trackDefaultColor ?? color.black}
-        thumbColor={
-          !active ? thumbColor ?? '#F4F3F4' : thumbActiveColor ?? '#F4F3F4'
-        }
-        onValueChange={(value) => setActive(value)}
-        value={active}
-      />
+      <TouchableOpacity
+        onPress={() => setActive(!active)}
+        activeOpacity={1}
+        disabled={!toggleOnSwitchIconPressOnly}
+      >
+        <Switch
+          trackColor={{
+            false: trackDefaultColor ?? color.black,
+            true: trackActiveColor ?? color.yellow400,
+          }}
+          ios_backgroundColor={trackDefaultColor ?? color.black}
+          thumbColor={
+            !active ? thumbColor ?? '#F4F3F4' : thumbActiveColor ?? '#F4F3F4'
+          }
+          onValueChange={(value) => setActive(value)}
+          value={active}
+        />
+      </TouchableOpacity>
     </TouchableOpacity>
   )
 }
