@@ -1,15 +1,6 @@
 import React from 'react'
-import {
-  StyleProp,
-  Switch,
-  TextStyle,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native'
-import { color, t } from 'react-native-tailwindcss'
-
-import Txt from '../Txt'
+import { StyleProp, TextStyle, TouchableOpacity, ViewStyle } from 'react-native'
+import SwitchRowContent from './components/SwitchRowContent'
 
 export type SwitchRowProps = {
   /** Current selection state */
@@ -38,20 +29,6 @@ export type SwitchRowProps = {
   toggleOnSwitchIconPressOnly?: boolean
 }
 
-const styles = {
-  container: [
-    t.flexRow,
-    t.justifyBetween,
-    t.itemsCenter,
-    t.borderOrange200,
-    t.mB4,
-    t.p4,
-    t.border,
-    t.borderYellow400,
-    t.rounded,
-  ],
-}
-
 const SwitchRow = ({
   // Functionality
   active,
@@ -68,47 +45,32 @@ const SwitchRow = ({
   thumbActiveColor,
   toggleOnSwitchIconPressOnly = false,
 }: SwitchRowProps) => {
-  return (
+  // Props for switchRow content
+  const switchRowContentProps = {
+    active,
+    setActive,
+    label,
+    labelStyle,
+    labelActiveColor,
+    labelDefaultColor,
+    trackActiveColor,
+    trackDefaultColor,
+    thumbColor,
+    thumbActiveColor,
+    toggleOnSwitchIconPressOnly,
+    style,
+  }
+
+  return !toggleOnSwitchIconPressOnly ? (
     <TouchableOpacity
-      style={[styles.container, style]}
       onPress={() => setActive(!active)}
       activeOpacity={1}
       disabled={toggleOnSwitchIconPressOnly}
     >
-      <View style={[t.flexRow, t.itemsCenter]}>
-        <Txt
-          style={[
-            t.textLg,
-            labelStyle,
-            {
-              color: !active
-                ? labelDefaultColor ?? color.gray400
-                : labelActiveColor ?? color.white,
-            },
-          ]}
-        >
-          {label}
-        </Txt>
-      </View>
-      <TouchableOpacity
-        onPress={() => setActive(!active)}
-        activeOpacity={1}
-        disabled={!toggleOnSwitchIconPressOnly}
-      >
-        <Switch
-          trackColor={{
-            false: trackDefaultColor ?? color.black,
-            true: trackActiveColor ?? color.yellow400,
-          }}
-          ios_backgroundColor={trackDefaultColor ?? color.black}
-          thumbColor={
-            !active ? thumbColor ?? '#F4F3F4' : thumbActiveColor ?? '#F4F3F4'
-          }
-          onValueChange={(value) => setActive(value)}
-          value={active}
-        />
-      </TouchableOpacity>
+      <SwitchRowContent {...switchRowContentProps} />
     </TouchableOpacity>
+  ) : (
+    <SwitchRowContent {...switchRowContentProps} />
   )
 }
 
