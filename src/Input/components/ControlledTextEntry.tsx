@@ -243,8 +243,8 @@ const ControlledTextEntry = React.forwardRef(
                 <OptionalWrapper data={currentValue && isFocused}>
                   <TouchableOpacity
                     onPress={() => {
-                      setCurrentValue('')
-                      onChange('')
+                      setCurrentValue(undefined)
+                      onChange(undefined)
                     }}
                     style={[
                       styles.clearTextIconContainer,

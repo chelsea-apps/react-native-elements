@@ -125,8 +125,8 @@ textEntryStyle, textEntryContainerStyle, labelStyle, labelTopPosition, labelBigF
                         React.createElement(Txt, { style: [styles.postfix, postfixStyle] }, postfix))),
                 !noClear && clearTextIcon && (React.createElement(OptionalWrapper, { data: currentValue && isFocused },
                     React.createElement(TouchableOpacity, { onPress: () => {
-                            setCurrentValue('');
-                            onChange('');
+                            setCurrentValue(undefined);
+                            onChange(undefined);
                         }, style: [
                             styles.clearTextIconContainer,
                             clearTextIconContainerStyle,
