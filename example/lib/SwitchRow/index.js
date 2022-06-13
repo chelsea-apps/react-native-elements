@@ -21,7 +21,7 @@ style, labelStyle, labelActiveColor, labelDefaultColor, trackActiveColor, trackD
         toggleOnSwitchOnly,
         style,
     };
-    return !toggleOnSwitchOnly ? (React.createElement(TouchableOpacity, { onPress: () => setActive(!active), activeOpacity: 1, disabled: toggleOnSwitchOnly },
+    return !toggleOnSwitchOnly ? (React.createElement(TouchableOpacity, { onPress: () => setActive(!active), activeOpacity: 1 },
         React.createElement(SwitchRowContent, { ...switchRowContentProps }))) : (React.createElement(SwitchRowContent, { ...switchRowContentProps }));
 };
 export default SwitchRow;

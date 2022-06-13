@@ -62,11 +62,7 @@ const SwitchRow = ({
   }
 
   return !toggleOnSwitchOnly ? (
-    <TouchableOpacity
-      onPress={() => setActive(!active)}
-      activeOpacity={1}
-      disabled={toggleOnSwitchOnly}
-    >
+    <TouchableOpacity onPress={() => setActive(!active)} activeOpacity={1}>
       <SwitchRowContent {...switchRowContentProps} />
     </TouchableOpacity>
   ) : (
