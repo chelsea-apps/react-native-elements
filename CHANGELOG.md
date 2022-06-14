@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/chelsea-apps/react-native-elements/compare/v1.6.2...v1.7.0) (2022-06-14)
+
+
+### Features
+
+* **switch:** Action switch on component press only prop ([092ba11](https://github.com/chelsea-apps/react-native-elements/commit/092ba11bcdacedab69e8ff0d8abb8ac788e71c0e))
+
 ### [1.6.2](https://github.com/chelsea-apps/react-native-elements/compare/v1.6.0...v1.6.2) (2022-05-31)
 
 
