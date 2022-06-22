@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/chelsea-apps/react-native-elements/compare/v1.7.0...v1.7.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* **input:** Fix input editable behaviour ([8393f70](https://github.com/chelsea-apps/react-native-elements/commit/8393f70f33358446d824df4de6225eadb487e1a8))
+
 ## [1.7.0](https://github.com/chelsea-apps/react-native-elements/compare/v1.6.2...v1.7.0) (2022-06-14)
 
 
