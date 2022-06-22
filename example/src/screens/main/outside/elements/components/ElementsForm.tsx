@@ -20,6 +20,7 @@ import useSwitch from '../../../../../common/hooks/useSwitch';
 import { MainContext } from '../../../main.provider';
 
 export type ElementsFormData = {
+	notEditable: string;
 	email: string;
 	price: string;
 	days: string;
@@ -150,6 +151,21 @@ const ElementsForm = ({
 
 	return (
 		<View style={[t.wFull]}>
+			<Input
+				name="notEditable"
+				label="This input is not editable"
+				defaultValue="10"
+				prefix="£"
+				editable={false}
+				control={control}
+				clearTextIcon={<Txt>X</Txt>}
+				clearTextIconContainerStyle={[
+					t.bgGray200,
+					t.w6,
+					t.h6,
+					{ borderRadius: 13, marginTop: 22 },
+				]}
+			/>
 			<Input
 				name="email"
 				label="Input"

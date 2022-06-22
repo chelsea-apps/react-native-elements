@@ -150,6 +150,7 @@ const ControlledTextEntry = React.forwardRef(
         render={({ field: { onChange, onBlur, value } }) => (
           <TouchableWithoutFeedback
             onPress={() => {
+              if (props.editable === false) return
               setIsFocused(true)
               // @ts-expect-error
               if (ref?.current?.focus()) return ref.current.focus()
