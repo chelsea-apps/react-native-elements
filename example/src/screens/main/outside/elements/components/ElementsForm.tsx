@@ -20,7 +20,7 @@ import useSwitch from '../../../../../common/hooks/useSwitch';
 import { MainContext } from '../../../main.provider';
 
 export type ElementsFormData = {
-	notEditable: string;
+	notEditable?: string;
 	email: string;
 	price: string;
 	days: string;
