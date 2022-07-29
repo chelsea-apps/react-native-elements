@@ -40,6 +40,10 @@ export interface DropdownLinkProps extends IconStylingProps {
     borderColor?: string;
     /** Error Txt styles */
     errorTextStyle?: StyleProp<TextStyle>;
+    /** Clear Dropdown Component */
+    clearComponent?: React.ReactNode;
+    /** Clear Dropdown Component Visible */
+    clearComponentVisible?: boolean;
 }
 export declare type DropdownItem = {
     /** Selection value that will validated */

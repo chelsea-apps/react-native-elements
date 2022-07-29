@@ -272,6 +272,7 @@ const ElementsForm = ({
 				setValue={setValue}
 				validation={validation.country}
 				error={errors.country}
+				clearComponentVisible
 			/>
 			<DropdownLink
 				dropdown={fruitsDropdown}

@@ -50,6 +50,10 @@ export interface DropdownLinkProps extends IconStylingProps {
   borderColor?: string
   /** Error Txt styles */
   errorTextStyle?: StyleProp<TextStyle>
+  /** Clear Dropdown Component */
+  clearComponent?: React.ReactNode
+  /** Clear Dropdown Component Visible */
+  clearComponentVisible?: boolean
   // + IconStylingProps
 }
 
