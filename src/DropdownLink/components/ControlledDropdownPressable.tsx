@@ -41,6 +41,7 @@ const ControlledDropdownPressable = ({
   onPress,
   clearComponent,
   clearComponentVisible,
+  onClearPress,
   // Styling
   placeholderStyle,
   labelStyle,
@@ -148,6 +149,7 @@ const ControlledDropdownPressable = ({
           dropdown?.currentValues?.length ? (
             <TouchableOpacity
               onPress={() => {
+                if (onClearPress) return onClearPress()
                 if (setDropdown && dropdown)
                   setDropdown({
                     ...dropdown,

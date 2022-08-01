@@ -44,6 +44,8 @@ export interface DropdownLinkProps extends IconStylingProps {
     clearComponent?: React.ReactNode;
     /** Clear Dropdown Component Visible */
     clearComponentVisible?: boolean;
+    /** Function called when clear button pressed */
+    onClearPress?: () => void;
 }
 export declare type DropdownItem = {
     /** Selection value that will validated */

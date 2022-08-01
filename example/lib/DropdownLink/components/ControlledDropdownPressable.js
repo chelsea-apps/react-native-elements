@@ -24,7 +24,7 @@ const styles = {
 };
 const ControlledDropdownPressable = ({ 
 // Functionality
-dropdown, setDropdown, control, validation, setValue, disabled, hideLabel, delimiter, navigateTo, onPress, clearComponent, clearComponentVisible, 
+dropdown, setDropdown, control, validation, setValue, disabled, hideLabel, delimiter, navigateTo, onPress, clearComponent, clearComponentVisible, onClearPress, 
 // Styling
 placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, iconSize, iconStyle, iconName, }) => {
     var _a;
@@ -96,6 +96,8 @@ placeholderStyle, labelStyle, textStyle, bgColor, borderColor, icon, iconColor, 
                 clearComponentVisible &&
                     clearComponent &&
                     ((_a = dropdown === null || dropdown === void 0 ? void 0 : dropdown.currentValues) === null || _a === void 0 ? void 0 : _a.length) ? (React.createElement(TouchableOpacity, { onPress: () => {
+                        if (onClearPress)
+                            return onClearPress();
                         if (setDropdown && dropdown)
                             setDropdown({
                                 ...dropdown,
