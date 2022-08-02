@@ -39,6 +39,9 @@ const ControlledDropdownPressable = ({
   delimiter,
   navigateTo,
   onPress,
+  clearComponent,
+  clearComponentVisible,
+  onClearPress,
   // Styling
   placeholderStyle,
   labelStyle,
@@ -141,16 +144,35 @@ const ControlledDropdownPressable = ({
               </Txt>
             </OptionalWrapper>
           </View>
-          {icon}
-          {!icon && (
-            <Icon
-              type='font'
-              fontName='Feather'
-              name={iconName ?? 'chevron-right'}
-              color={iconColor ?? color.white}
-              size={iconSize ?? 24}
-              style={[iconStyle]}
-            />
+          {clearComponentVisible &&
+          clearComponent &&
+          dropdown?.currentValues?.length ? (
+            <TouchableOpacity
+              onPress={() => {
+                if (onClearPress) return onClearPress()
+                if (setDropdown && dropdown)
+                  setDropdown({
+                    ...dropdown,
+                    currentValues: undefined,
+                  })
+              }}
+            >
+              {clearComponent}
+            </TouchableOpacity>
+          ) : (
+            <>
+              {icon}
+              {!icon && (
+                <Icon
+                  type='font'
+                  fontName='Feather'
+                  name={iconName ?? 'chevron-right'}
+                  color={iconColor ?? color.white}
+                  size={iconSize ?? 24}
+                  style={[iconStyle]}
+                />
+              )}
+            </>
           )}
         </TouchableOpacity>
       )}
