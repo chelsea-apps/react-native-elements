@@ -22,7 +22,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "react-native-reanimated": "^2.4.1"
+    "react-native-reanimated": "^2.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
